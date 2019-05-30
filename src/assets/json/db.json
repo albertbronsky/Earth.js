@@ -265,15 +265,15 @@
   },
   {
     "country": "Буркіна-Фасо",
-    "city": "Ouagadougou",
+    "city": "Уагадугу",
     "continent": "Африка",
     "government": "Республіка",
     "population": "19193382",
     "area": 274000
   },
   {
-    "country": "Burundi",
-    "city": "Bujumbura",
+    "country": "Бурунді",
+    "city": "Бужумбура",
     "continent": "Африка",
     "government": "Республіка",
     "population": "10864245",
@@ -288,394 +288,394 @@
     "area": 181035
   },
   {
-    "country": "Cameroon",
-    "city": "Yaound",
+    "country": "Камерун",
+    "city": "Яунд",
     "continent": "Африка",
     "government": "Республіка",
     "population": "24053727",
     "area": 475442
   },
   {
-    "country": "Canada",
-    "city": "Ottawa",
+    "country": "Канада",
+    "city": "Оттава",
     "continent": "Північна Америка",
     "government": "Конституційна монархія, Federation",
     "population": "36624199",
     "area": 9970610
   },
   {
-    "country": "Cape Verde",
-    "city": "Praia",
+    "country": "Кабо-Верде",
+    "city": "Прая",
     "continent": "Африка",
     "government": "Республіка",
     "population": "546388",
     "area": 4033
   },
   {
-    "country": "Cayman Islands",
-    "city": "George Town",
+    "country": "Кайманові острови",
+    "city": "Джорджтаун",
     "continent": "Північна Америка",
     "government": "Залежні території Великобританії",
     "population": "61559",
     "area": 264
   },
   {
-    "country": "Central Африкаn Республіка",
-    "city": "Bangui",
+    "country": "Центральна Африканська Республіка",
+    "city": "Бангі",
     "continent": "Африка",
     "government": "Республіка",
     "population": "4659080",
     "area": 622984
   },
   {
-    "country": "Chad",
-    "city": "N'Djam",
+    "country": "Чад",
+    "city": "Нджамена",
     "continent": "Африка",
     "government": "Республіка",
     "population": "14899994",
     "area": 1284000
   },
   {
-    "country": "Chile",
-    "city": "Santiago de Chile",
+    "country": "Чилі",
+    "city": "Сантьяго де Чилі",
     "continent": "Південна Америка",
     "government": "Республіка",
     "population": "18054726",
     "area": 756626
   },
   {
-    "country": "China",
-    "city": "Peking",
+    "country": "Китай",
+    "city": "Пекін",
     "continent": "Азія",
-    "government": "People's Республіка",
+    "government": "Народна республіка",
     "population": "1409517397",
     "area": 9572900
   },
   {
-    "country": "Christmas Island",
-    "city": "Flying Fish Cove",
+    "country": "Острів Різдва",
+    "city": "Флаїнг-Фіш-Коув",
     "continent": "Океанія",
-    "government": "Territory of Australia",
+    "government": "Територія Австралії",
     "population": "2500",
     "area": 135
   },
   {
-    "country": "Cocos (Keeling) Islands",
-    "city": "West Island",
+    "country": "Кокосові (Кілінг) острови",
+    "city": "Західний острів",
     "continent": "Океанія",
-    "government": "Territory of Australia",
+    "government": "Територія Австралії",
     "population": "600",
     "area": 14
   },
   {
-    "country": "Colombia",
-    "city": "Santaf",
+    "country": "Колумбія",
+    "city": "Богота",
     "continent": "Південна Америка",
     "government": "Республіка",
     "population": "49065615",
     "area": 1138914
   },
   {
-    "country": "Comoros",
-    "city": "Moroni",
+    "country": "Коморські острови",
+    "city": "Мороній",
     "continent": "Африка",
     "government": "Республіка",
     "population": "813912",
     "area": 1862
   },
   {
-    "country": "Congo",
-    "city": "Brazzaville",
+    "country": "Конго",
+    "city": "Браззавіль",
     "continent": "Африка",
     "government": "Республіка",
     "population": "5260750",
     "area": 342000
   },
   {
-    "country": "Cook Islands",
-    "city": "Avarua",
+    "country": "Острови Кука",
+    "city": "Аваруа",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of New Zealand",
+    "government": "Неметрополітична територія Нової Зеландії",
     "population": "17380",
     "area": 236
   },
   {
-    "country": "Costa Rica",
-    "city": "San Jos",
+    "country": "Коста-Ріка",
+    "city": "Сан-Хосе",
     "continent": "Північна Америка",
     "government": "Республіка",
     "population": "4905769",
     "area": 51100
   },
   {
-    "country": "Croatia",
-    "city": "Zagreb",
+    "country": "Хорватія",
+    "city": "Загреб",
     "continent": "Європа",
     "government": "Республіка",
     "population": "4189353",
     "area": 56538
   },
   {
-    "country": "Cuba",
-    "city": "La Habana",
+    "country": "Куба",
+    "city": "Ла-Гавана",
     "continent": "Північна Америка",
-    "government": "Socialistic Республіка",
+    "government": "Соціалістична республіка",
     "population": "11484636",
     "area": 110861
   },
   {
-    "country": "Cyprus",
-    "city": "Nicosia",
+    "country": "Кіпр",
+    "city": "Нікосія",
     "continent": "Азія",
     "government": "Республіка",
     "population": "1179551",
     "area": 9251
   },
   {
-    "country": "Czech Республіка",
-    "city": "Praha",
+    "country": "Чеська республіка",
+    "city": "Прага",
     "continent": "Європа",
     "government": "Республіка",
     "population": "10618303",
     "area": 78866
   },
   {
-    "country": "Denmark",
-    "city": "Copenhagen",
+    "country": "Данія",
+    "city": "Копенгаген",
     "continent": "Європа",
     "government": "Конституційна монархія",
     "population": "5733551",
     "area": 43094
   },
   {
-    "country": "Djibouti",
-    "city": "Djibouti",
+    "country": "Джибуті",
+    "city": "Джибуті",
     "continent": "Африка",
     "government": "Республіка",
     "population": "956985",
     "area": 23200
   },
   {
-    "country": "Dominica",
-    "city": "Roseau",
+    "country": "Домініка",
+    "city": "Розо",
     "continent": "Північна Америка",
     "government": "Республіка",
     "population": "73925",
     "area": 751
   },
   {
-    "country": "Dominican Республіка",
-    "city": "Santo Domingo de Guzm",
+    "country": "Домініканська республіка",
+    "city": "Санто-Домінго-де-Гусман",
     "continent": "Північна Америка",
     "government": "Республіка",
     "population": "10766998",
     "area": 48511
   },
   {
-    "country": "East Timor",
-    "city": "Dili",
+    "country": "Східний Тимор",
+    "city": "Ділі",
     "continent": "Азія",
-    "government": "Administrated by the UN",
+    "government": "Керується ООН",
     "population": "1296311",
     "area": 14874
   },
   {
-    "country": "Ecuador",
-    "city": "Quito",
+    "country": "Еквадор",
+    "city": "Кіто",
     "continent": "Південна Америка",
     "government": "Республіка",
     "population": "16624858",
     "area": 283561
   },
   {
-    "country": "Egypt",
-    "city": "Cairo",
+    "country": "Єгипет",
+    "city": "Каїр",
     "continent": "Африка",
     "government": "Республіка",
     "population": "97553151",
     "area": 1001449
   },
   {
-    "country": "El Salvador",
-    "city": "San Salvador",
+    "country": "Сальвадор",
+    "city": "Сан-Сальвадор",
     "continent": "Північна Америка",
     "government": "Республіка",
     "population": "6377853",
     "area": 21041
   },
   {
-    "country": "Equatorial Guinea",
-    "city": "Malabo",
+    "country": "Екваторіальна Гвінея",
+    "city": "Малабо",
     "continent": "Африка",
     "government": "Республіка",
     "population": "1267689",
     "area": 28051
   },
   {
-    "country": "Eritrea",
-    "city": "Asmara",
+    "country": "Еритрея",
+    "city": "Асмара",
     "continent": "Африка",
     "government": "Республіка",
     "population": "5068831",
     "area": 117600
   },
   {
-    "country": "Estonia",
-    "city": "Tallinn",
+    "country": "Естонія",
+    "city": "Таллінн",
     "continent": "Європа",
     "government": "Республіка",
     "population": "1309632",
     "area": 45227
   },
   {
-    "country": "Ethiopia",
-    "city": "Addis Abeba",
+    "country": "Ефіопія",
+    "city": "Аддіс Абеба",
     "continent": "Африка",
     "government": "Республіка",
     "population": "104957438",
     "area": 1104300
   },
   {
-    "country": "Falkland Islands",
-    "city": "Stanley",
+    "country": "Фолклендські острови",
+    "city": "Стенлі",
     "continent": "Південна Америка",
     "government": "Залежні території Великобританії",
     "population": "2910",
     "area": 12173
   },
   {
-    "country": "Faroe Islands",
-    "city": "Tórshavn",
+    "country": "Фарерські острови",
+    "city": "Торсхавн",
     "continent": "Європа",
-    "government": "Part of Denmark",
+    "government": "Частина Данії",
     "population": "49290",
     "area": 1399
   },
   {
-    "country": "Fiji Islands",
-    "city": "Suva",
+    "country": "Острови Фіджі",
+    "city": "Сува",
     "continent": "Океанія",
     "government": "Республіка",
     "population": "905502",
     "area": 18274
   },
   {
-    "country": "Finland",
-    "city": "Helsinki [Helsingfors]",
+    "country": "Фінляндія",
+    "city": "Гельсінкі",
     "continent": "Європа",
     "government": "Республіка",
     "population": "5523231",
     "area": 338145
   },
   {
-    "country": "France",
-    "city": "Paris",
+    "country": "Франція",
+    "city": "Париж",
     "continent": "Європа",
     "government": "Республіка",
     "population": "64979548",
     "area": 551500
   },
   {
-    "country": "French Guiana",
-    "city": "Cayenne",
+    "country": "Французька Гвіана",
+    "city": "Каєнна",
     "continent": "Південна Америка",
-    "government": "Overseas Department of France",
+    "government": "Заморський департамент Франції",
     "population": "282731",
     "area": 90000
   },
   {
-    "country": "French Polynesia",
-    "city": "Papeete",
+    "country": "Французька Полінезія",
+    "city": "Папеете",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of France",
+    "government": "Неметропольська територія Франції",
     "population": "283007",
     "area": 4000
   },
   {
-    "country": "French Southern territories",
+    "country": "Французькі південні території",
     "city": null,
     "continent": "Антарктида",
-    "government": "Nonmetropolitan Territory of France",
+    "government": "Неметропольська територія Франції",
     "population": null,
     "area": 7780
   },
   {
-    "country": "Gabon",
-    "city": "Libreville",
+    "country": "Габон",
+    "city": "Лібревіль",
     "continent": "Африка",
     "government": "Республіка",
     "population": "2025137",
     "area": 267668
   },
   {
-    "country": "Gambia",
-    "city": "Banjul",
+    "country": "Гамбія",
+    "city": "Банжул",
     "continent": "Африка",
     "government": "Республіка",
     "population": "2100568",
     "area": 11295
   },
   {
-    "country": "Georgia",
-    "city": "Tbilisi",
+    "country": "Грузія",
+    "city": "Тбілісі",
     "continent": "Азія",
     "government": "Республіка",
     "population": "3912061",
     "area": 69700
   },
   {
-    "country": "Germany",
-    "city": "Berlin",
+    "country": "Німеччина",
+    "city": "Берлін",
     "continent": "Європа",
     "government": "Федеральна республіка",
     "population": "82114224",
     "area": 357022
   },
   {
-    "country": "Ghana",
-    "city": "Accra",
+    "country": "Гана",
+    "city": "Аккра",
     "continent": "Африка",
     "government": "Республіка",
     "population": "28833629",
     "area": 238533
   },
   {
-    "country": "Gibraltar",
-    "city": "Gibraltar",
+    "country": "Гібралтар",
+    "city": "Гібралтар",
     "continent": "Європа",
     "government": "Залежні території Великобританії",
     "population": "34571",
     "area": 6
   },
   {
-    "country": "Greece",
-    "city": "Athenai",
+    "country": "Греція",
+    "city": "Афіни",
     "continent": "Європа",
     "government": "Республіка",
     "population": "11159773",
     "area": 131626
   },
   {
-    "country": "Greenland",
-    "city": "Nuuk",
+    "country": "Гренландія",
+    "city": "Нуук",
     "continent": "Північна Америка",
-    "government": "Part of Denmark",
+    "government": "Частина Данії",
     "population": "56480",
     "area": 2166090
   },
   {
-    "country": "Grenada",
-    "city": "Saint George's",
+    "country": "Гренада",
+    "city": "Сент-Джорджес",
     "continent": "Північна Америка",
     "government": "Конституційна монархія",
     "population": "107825",
     "area": 344
   },
   {
-    "country": "Guadeloupe",
-    "city": "Basse-Terre",
+    "country": "Гваделупа",
+    "city": "Бас-Тер",
     "continent": "Північна Америка",
-    "government": "Overseas Department of France",
+    "government": "Заморський департамент Франції",
     "population": "449568",
     "area": 1705
   },
@@ -683,8 +683,7 @@
     "country": "Guam",
     "city": "Aga",
     "continent": "Океанія",
-    "government": "
-Територія США",
+    "government": "Територія США",
     "population": "164229",
     "area": 549
   },
@@ -732,7 +731,7 @@
     "country": "Heard Island and McDonald Islands",
     "city": null,
     "continent": "Антарктида",
-    "government": "Territory of Australia",
+    "government": "Територія Австралії",
     "population": null,
     "area": 359
   },
@@ -1044,7 +1043,7 @@
     "country": "Martinique",
     "city": "Fort-de-France",
     "continent": "Північна Америка",
-    "government": "Overseas Department of France",
+    "government": "Заморський департамент Франції",
     "population": "384896",
     "area": 1102
   },
@@ -1180,7 +1179,7 @@
     "country": "New Caledonia",
     "city": "Noum",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of France",
+    "government": "Неметропольська територія Франції",
     "population": "276255",
     "area": 18575
   },
@@ -1220,7 +1219,7 @@
     "country": "Niue",
     "city": "Alofi",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of New Zealand",
+    "government": "Неметрополітична територія Нової Зеландії",
     "population": "1618",
     "area": 260
   },
@@ -1228,7 +1227,7 @@
     "country": "Norfolk Island",
     "city": "Kingston",
     "continent": "Океанія",
-    "government": "Territory of Australia",
+    "government": "Територія Австралії",
     "population": "2000",
     "area": 36
   },
@@ -1236,7 +1235,7 @@
     "country": "North Korea",
     "city": "Pyongyang",
     "continent": "Азія",
-    "government": "Socialistic Республіка",
+    "government": "Соціалістична республіка",
     "population": "25490965",
     "area": 120538
   },
@@ -1380,7 +1379,7 @@
     "country": "Reunion",
     "city": "Saint-Denis",
     "continent": "Африка",
-    "government": "Overseas Department of France",
+    "government": "Заморський департамент Франції",
     "population": "699000",
     "area": 2510
   },
@@ -1676,7 +1675,7 @@
     "country": "Tokelau",
     "city": "Fakaofo",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of New Zealand",
+    "government": "Неметрополітична територія Нової Зеландії",
     "population": "1300",
     "area": 12
   },
@@ -1820,7 +1819,7 @@
     "country": "Vietnam",
     "city": "Hanoi",
     "continent": "Азія",
-    "government": "Socialistic Республіка",
+    "government": "Соціалістична республіка",
     "population": "95540800",
     "area": 331689
   },
@@ -1828,7 +1827,7 @@
     "country": "Wallis and Futuna",
     "city": "Mata-Utu",
     "continent": "Океанія",
-    "government": "Nonmetropolitan Territory of France",
+    "government": "Неметропольська територія Франції",
     "population": "11773",
     "area": 200
   },
