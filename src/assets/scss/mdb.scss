@@ -94,8 +94,8 @@ body {
 
 #gt{
   border: 1.2px solid #323232;
-  background-color: #1b1b1b !important;
-  color: #fff!important;
+  background-color: #1b1b1b;
+  color: #fff;
   flex: 0.5;
   height: 35px;
   width: -webkit-fill-available;
@@ -108,6 +108,26 @@ body {
 
 #gt:focus{
   outline: #289dff solid 1.8px;
+}
+.custom-select:focus{
+  border-color: transparent;
+  box-shadow: 0 0 0 0 transparent;
+  outline: #289dff solid 1.8px;
+}
+
+.custom-select{
+  background-color: #1b1b1b;
+  background-image: url(../img/svg/arrow-down.svg);
+  background-position-y: center;
+  background-size: 17px 40px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  color: #fff;
+  border: 1.2px solid #323232;
+  border-radius: 0;
 }
 
 
