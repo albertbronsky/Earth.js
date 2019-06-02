@@ -80,25 +80,12 @@ body {
   color: #e3e8ec;
 }
 
-.main{
-  display: flex;
-  //flex: 0.5;
-  justify-content: center;
-  padding-right: 0;
-  width: auto;
-}
-
-//.search-option{
-//  flex: 0.5;
-//}
-
 #gt{
   border: 1.2px solid #323232;
   background-color: #1b1b1b;
   color: #fff;
-  flex: 0.5;
   height: 35px;
-  width: -webkit-fill-available;
+  max-width: 600px;
 }
 
 .m{
@@ -131,8 +118,10 @@ body {
 }
 
 .search-option{
-  margin-top: 20px;
+  //margin-top: 20px;
   display: flex;
+  justify-content: center;
+  max-width: 600px;
 }
 
 .option-label{
@@ -145,6 +134,48 @@ body {
 #options{
   flex: 1;
   margin-right: 20px;
+}
+
+.search-form{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  //margin: 0!important;
+}
+
+.option, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active{
+  background-color: #303132!important;
+}
+
+.btn-secondary:not([disabled]):not(.disabled):active.option, .btn-secondary:not([disabled]):not(.disabled).active.option{
+  border: 1.2px solid #0f92ff;
+}
+
+.option{
+  margin: 6px!important;
+  padding: .84rem 0.14rem;
+  //border: 1.2px solid #0f92ff;
+  border: 1.2px solid #1b1b1b;
+}
+
+.row{
+  margin: auto;
+}
+
+.search{
+  padding: .7rem 3.6rem!important;
+  font-size: .81rem!important;
+  margin-top: 20px;
+}
+
+.search-btn{
+  display: flex;
+  justify-content: center;
 }
 
 
