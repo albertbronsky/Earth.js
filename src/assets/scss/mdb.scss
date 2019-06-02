@@ -118,7 +118,6 @@ body {
 }
 
 .search-option{
-  //margin-top: 20px;
   display: flex;
   justify-content: center;
   max-width: 600px;
@@ -145,7 +144,6 @@ body {
 .flex-center{
   display: flex;
   justify-content: center;
-  //margin: 0!important;
 }
 
 .option, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active{
@@ -159,7 +157,6 @@ body {
 .option{
   margin: 6px!important;
   padding: .84rem 0.14rem;
-  //border: 1.2px solid #0f92ff;
   border: 1.2px solid #1b1b1b;
 }
 
