@@ -130,5 +130,22 @@ body {
   border-radius: 0;
 }
 
+.search-option{
+  margin-top: 20px;
+  display: flex;
+}
+
+.option-label{
+  flex: 1;
+  margin-top: -4px;
+  align-self: center;
+  text-align: center;
+}
+
+#options{
+  flex: 1;
+  margin-right: 20px;
+}
+
 
 
