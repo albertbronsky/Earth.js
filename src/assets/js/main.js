@@ -7,7 +7,16 @@
 //     area: area;
 // }
 
-$.getJSON( "assets/json/db.json", function( data ) {
+// Check input
+var lastValue = '';
+$("#textbox").on('input', function () {
+    if ($(this).val() != lastValue) {
+        lastValue = $(this).val();
+        console.log(lastValue)
+    }
+});
+
+$.getJSON("assets/json/db.json", function (data) {
     // console.log(data.find(x => x.country === 'Aruba').population);
     // console.log(items[0]);
     for (i in data) {
