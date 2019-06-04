@@ -32,7 +32,7 @@ function country_search(term) {
         }
     }
 
-    var user001 = new Country("John", "Smith", 1985);
+    var user001 = new Country("test", "Smith", 1985);
 }
 
 $.getJSON("assets/json/db.json", function (data) {
