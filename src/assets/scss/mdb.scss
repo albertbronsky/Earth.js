@@ -80,7 +80,7 @@ body {
   color: #e3e8ec;
 }
 
-#gt{
+#gt {
   border: 1.2px solid #323232;
   background-color: #1b1b1b;
   color: #fff;
@@ -88,21 +88,22 @@ body {
   max-width: 600px;
 }
 
-.m{
+.m {
   margin: 20px;
   display: flex;
 }
 
-#gt:focus{
+#gt:focus {
   outline: #289dff solid 1.8px;
 }
-.custom-select:focus{
+
+.custom-select:focus {
   border-color: transparent;
   box-shadow: 0 0 0 0 transparent;
   outline: #289dff solid 1.8px;
 }
 
-.custom-select{
+.custom-select {
   background-color: #1b1b1b;
   background-image: url(../img/svg/arrow-down.svg);
   background-position-y: center;
@@ -117,63 +118,63 @@ body {
   border-radius: 0;
 }
 
-.search-option{
+.search-option {
   display: flex;
   justify-content: center;
   max-width: 600px;
 }
 
-.option-label{
+.option-label {
   flex: 1;
   margin-top: -4px;
   align-self: center;
   text-align: center;
 }
 
-#options{
+#options {
   flex: 1;
   margin-right: 20px;
 }
 
-.search-form{
+.search-form {
   display: flex;
   flex: 1;
   justify-content: center;
 }
 
-.flex-center{
+.flex-center-option {
   display: flex;
   justify-content: center;
 }
 
-.option, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active{
-  background-color: #303132!important;
+.option,
+.btn-secondary:not([disabled]):not(.disabled):active,
+.btn-secondary:not([disabled]):not(.disabled).active {
+  background-color: #303132 !important;
 }
 
-.btn-secondary:not([disabled]):not(.disabled):active.option, .btn-secondary:not([disabled]):not(.disabled).active.option{
+.btn-secondary:not([disabled]):not(.disabled):active.option,
+.btn-secondary:not([disabled]):not(.disabled).active.option {
   border: 1.2px solid #0f92ff;
 }
 
-.option{
-  margin: 6px!important;
+.option {
+  margin: 6px !important;
   padding: .84rem 0.14rem;
   border: 1.2px solid #1b1b1b;
 }
 
-.row{
+.row {
   margin: auto;
 }
 
-.search{
-  padding: .7rem 3.6rem!important;
-  font-size: .81rem!important;
+.search {
+  padding: .7rem 3.6rem !important;
+  font-size: .81rem !important;
   margin-top: 20px;
 }
 
-.search-btn{
+.search-btn {
   display: flex;
   justify-content: center;
 }
-
-
-
