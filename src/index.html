@@ -11,27 +11,43 @@
 <body>
     <div class="container">
         <div class="search-input">
-            <form action="" class="search-form">
+            <form action="" class="search-form row">
                 <input id="gt" class="col-md-12 m" type="text" name="guide-title">
+                <div class="flex-center-results col-md-12">
+                    <div class="result list-group-item list-group-item-action">Qdfgfdfssdf</div>
+                    <div class="result list-group-item list-group-item-action">Qdgdd</div>
+                    <div class="result list-group-item list-group-item-action">Qfvfdvf</div>
+                    <div class="result list-group-item list-group-item-action">Qdfgdfggggggggg</div>
+                    <div class="result list-group-item list-group-item-action">Qdfgfgfgd</div>
+                    <div class="result list-group-item list-group-item-action">Qsdfsdfsfdsdf</div>
+                </div>
             </form>
+
+
         </div>
         <div class="row search-option flex-center-option">
-            <div class="col-12 col-sm-4 option-label">Критерій пошуку:</div>
-            <div class="btn-group btn-group-toggle col-12 col-sm-8" data-toggle="buttons">
-                <label class="btn btn-secondary col option">
-                    <input type="radio" name="options" id="option1" autocomplete="off"> Материки
-                </label>
-                <label class="btn btn-secondary col option">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Країни
-                </label>
-                <label class="btn btn-secondary col option">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> Регіони
-                </label>
-                <label class="btn btn-secondary col option">
-                    <input type="radio" name="options" id="option4" autocomplete="off"> Міста
-                </label>
+            <div class="col-12 col-sm-2 option-label">Критерій пошуку:</div>
+            <div class="btn-group btn-group-toggle col-12 col-sm-5 option-group" data-toggle="buttons">
+                <div class="custom-control custom-radio btn btn-secondary col option">
+                    <input type="radio" class="custom-control-input" id="option1" name="groupOfDefaultRadios">
+                    <label class="custom-control-label" for="option1">Материки</label>
+                </div>
+                <div class="custom-control custom-radio btn btn-secondary col option">
+                    <input type="radio" class="custom-control-input" id="option2" name="groupOfDefaultRadios" checked>
+                    <label class="custom-control-label " for="option2">Країни</label>
+                </div>
+                <div class="custom-control custom-radio btn btn-secondary col option">
+                    <input type="radio" class="custom-control-input" id="option3" name="groupOfDefaultRadios">
+                    <label class="custom-control-label" for="option3">Регіони</label>
+                </div>
+                <div class="custom-control custom-radio btn btn-secondary col option">
+                    <input type="radio" class="custom-control-input" id="option4" name="groupOfDefaultRadios">
+                    <label class="custom-control-label" for="option4"> Міста</label>
+                </div>
             </div>
         </div>
+
+
     </div>
     <div class="container search-btn">
         <a href="#" class="btn search btn-primary btn-rounded btn-sm waves-effect waves-light">Пошук</a>
