@@ -88,7 +88,7 @@ body {
   max-width: 600px;
   min-width: 190px;
   border-radius: 1.2rem;
-  border-left: 1.2px solid #adb5bd !important;
+  border: 1.2px solid #adb5bd !important;
 }
 
 .m {
@@ -237,7 +237,8 @@ body {
 }
 
 .flex-center-results {
-  display: flex;
+  // display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
