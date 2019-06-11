@@ -163,7 +163,7 @@ body {
 
 .option {
   margin: 2px !important;
-  padding: .84rem 0.14rem;
+  padding: 0.84rem 0.14rem;
   border: 1.2px solid #1b1b1b;
   min-width: 90px;
   max-width: 90px;
@@ -174,8 +174,8 @@ body {
 }
 
 .search {
-  padding: .7rem 3.6rem !important;
-  font-size: .81rem !important;
+  padding: 0.7rem 3.6rem !important;
+  font-size: 0.81rem !important;
   margin-top: 20px;
 }
 
@@ -233,9 +233,9 @@ body {
   color: #fff !important;
 }
 
-
 .flex-center-results {
   display: flex;
+  // display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
@@ -243,4 +243,15 @@ body {
   margin-right: 20px;
   padding-right: 0px;
   padding-left: 0px;
+}
+
+#mapid {
+  height: 700px;
+  width: 1000px;
+}
+
+.map {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
 }
