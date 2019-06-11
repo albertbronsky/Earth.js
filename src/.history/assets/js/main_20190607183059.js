@@ -1,4 +1,108 @@
-{
+$(document).ready(function() {
+  // get_json();
+  input_check();
+});
+
+// function object_check(obj) {
+//   if (typeof obj === "object" && obj !== null) {
+//     return true;
+//   }
+// }
+
+// function country_search(term, data) {
+//   country_data = data.find(e => e.country === term);
+//   if (object_check(country_data)) {
+//     console.log(country_data.city);
+//     // new Country()
+//   }
+
+//   class Country {
+//     constructor(name, capital, continent, government, population, area) {
+//       this.name = name;
+//       this.capital = capital;
+//       this.continent = continent;
+//       this.government = government;
+//       this.population = population;
+//       this.area = area;
+
+//       this.getName = function() {
+//         return "Country name: " + this.name;
+//       };
+//     }
+//   }
+
+//   // var user001 = new Country("test", "Smith", 1985);
+// }
+
+// class Search {
+//   constructor(name, capital, continent, government, population, area) {
+//     this.name = name;
+//     this.capital = capital;
+//     this.continent = continent;
+//     this.government = government;
+//     this.population = population;
+//     this.area = area;
+//     // country_data = data.find(e => e.country === term)
+
+//     this.getName = function() {
+//       return "Country name: " + this.name;
+//     };
+//   }
+// }
+
+// valid categories: countries,
+var json;
+
+function get_json() {
+  $.getJSON(`assets/json/db.json`, function(data) {
+    json = data;
+  });
+}
+
+function toTitleCase(phrase) {
+  return phrase
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function input_check() {
+  const category = "countries";
+
+  $("#gt").on("input", function() {
+    value = toTitleCase($(this).val());
+
+    if (value) {
+      render_suggestions(value);
+    } else {
+      $("#search-results").empty();
+    }
+  });
+
+  // $("#search-result").on("click", function() {
+  //   console.log($(this), html());
+  // });
+}
+
+function render_suggestions(term) {
+  filtered = db.Countries.filter(e => e.country_uk.startsWith(term));
+
+  let items = [];
+
+  for (item in filtered) {
+    items.push("<li id='" + item + "'>" + filtered[item].country_uk + "</li>");
+  }
+
+  $("#search-results").html(
+    $("<ul/>", {
+      class: "my-new-list",
+      html: items.join("")
+    })
+  );
+}
+
+const db = {
   "Countries": [
     {
       "country_uk": "Святий Престол (Держава Ватикану)",
@@ -9,316 +113,6 @@
       "area": 0.4,
       "country_en": "Holy See (Vatican City State)",
       "capital_en": "Citt"
-    },
-    {
-      "country_uk": "Монако",
-      "city": "Монако",
-      "continent": "Європа",
-      "government": "Конституційна монархія",
-      "population": "38695",
-      "area": 1.5,
-      "country_en": "Monaco",
-      "capital_en": "Monaco-Ville"
-    },
-    {
-      "country_uk": "Гібралтар",
-      "city": "Гібралтар",
-      "continent": "Європа",
-      "government": "Залежні території Великобританії",
-      "population": "34571",
-      "area": 6,
-      "country_en": "Gibraltar",
-      "capital_en": "Gibraltar"
-    },
-    {
-      "country_uk": "Токелау",
-      "city": "Факаофо",
-      "continent": "Океанія",
-      "government": "Неметрополітична територія Нової Зеландії",
-      "population": "1300",
-      "area": 12,
-      "country_en": "Tokelau",
-      "capital_en": "Fakaofo"
-    },
-    {
-      "country_uk": "Кокосові (Кілінг) острови",
-      "city": "Західний острів",
-      "continent": "Океанія",
-      "government": "Територія Австралії",
-      "population": "600",
-      "area": 14,
-      "country_en": "Cocos (Keeling) Islands",
-      "capital_en": "West Island"
-    },
-    {
-      "country_uk": "Зовнішні малі острови США",
-      "city": null,
-      "continent": "Океанія",
-      "government": "Залежні території США",
-      "population": null,
-      "area": 16,
-      "country_en": "United States Minor Outlying Islands",
-      "capital_en": null
-    },
-    {
-      "country_uk": "Макао",
-      "city": "Макао",
-      "continent": "Азія",
-      "government": "Спеціальний адміністративний район Китаю",
-      "population": "473000",
-      "area": 18,
-      "country_en": "Macao",
-      "capital_en": "Macao"
-    },
-    {
-      "country_uk": "Науру",
-      "city": "Ярен",
-      "continent": "Океанія",
-      "government": "Республіка",
-      "population": "11359",
-      "area": 21,
-      "country_en": "Nauru",
-      "capital_en": "Yaren"
-    },
-    {
-      "country_uk": "Тувалу",
-      "city": "Фунафуті",
-      "continent": "Океанія",
-      "government": "Конституційна монархія",
-      "population": "11192",
-      "area": 26,
-      "country_en": "Tuvalu",
-      "capital_en": "Funafuti"
-    },
-    {
-      "country_uk": "Острів Норфолк",
-      "city": "Кінгстон",
-      "continent": "Океанія",
-      "government": "Територія Австралії",
-      "population": "2000",
-      "area": 36,
-      "country_en": "Norfolk Island",
-      "capital_en": "Kingston"
-    },
-    {
-      "country_uk": "Піткерн",
-      "city": "Адамстаун",
-      "continent": "Океанія",
-      "government": "Залежні території Великобританії",
-      "population": "50",
-      "area": 49,
-      "country_en": "Pitcairn",
-      "capital_en": "Adamstown"
-    },
-    {
-      "country_uk": "Бермудські острови",
-      "city": "Гамільтон",
-      "continent": "Північна Америка",
-      "government": "Залежні території Великобританії",
-      "population": "61349",
-      "area": 53,
-      "country_en": "Bermuda",
-      "capital_en": "Hamilton"
-    },
-    {
-      "country_uk": "Острів Буве",
-      "city": null,
-      "continent": "Антарктида",
-      "government": "Залежні території Норвегії",
-      "population": null,
-      "area": 59,
-      "country_en": "Bouvet Island",
-      "capital_en": null
-    },
-    {
-      "country_uk": "Сан-Марино",
-      "city": "Сан-Марино",
-      "continent": "Європа",
-      "government": "Республіка",
-      "population": "33400",
-      "area": 61,
-      "country_en": "San Marino",
-      "capital_en": "San Marino"
-    },
-    {
-      "country_uk": "Британські території Індійського океану",
-      "city": null,
-      "continent": "Африка",
-      "government": "Залежні території Великобританії",
-      "population": null,
-      "area": 78,
-      "country_en": "British Indian Ocean Territory",
-      "capital_en": null
-    },
-    {
-      "country_uk": "Ангілья",
-      "city": "Валлі",
-      "continent": "Північна Америка",
-      "government": "Залежні території Великобританії",
-      "population": "14909",
-      "area": 96,
-      "country_en": "Anguilla",
-      "capital_en": "The Valley"
-    },
-    {
-      "country_uk": "Монтсеррат",
-      "city": "Плімут",
-      "continent": "Північна Америка",
-      "government": "Залежні території Великобританії",
-      "population": "5177",
-      "area": 102,
-      "country_en": "Montserrat",
-      "capital_en": "Plymouth"
-    },
-    {
-      "country_uk": "Острів Різдва",
-      "city": "Флаїнг-Фіш-Коув",
-      "continent": "Океанія",
-      "government": "Територія Австралії",
-      "population": "2500",
-      "area": 135,
-      "country_en": "Christmas Island",
-      "capital_en": "Flying Fish Cove"
-    },
-    {
-      "country_uk": "Ліхтенштейн",
-      "city": "Вадуц",
-      "continent": "Європа",
-      "government": "Конституційна монархія",
-      "population": "37922",
-      "area": 160,
-      "country_en": "Liechtenstein",
-      "capital_en": "Vaduz"
-    },
-    {
-      "country_uk": "Маршаллові острови",
-      "city": "Маджуро",
-      "continent": "Океанія",
-      "government": "Республіка",
-      "population": "53127",
-      "area": 181,
-      "country_en": "Marshall Islands",
-      "capital_en": "Dalap-Uliga-Darrit"
-    },
-    {
-      "country_uk": "Аруба",
-      "city": "Оран'єстад",
-      "continent": "Північна Америка",
-      "government": "Неметропольська територія Нідерландів",
-      "population": "105264",
-      "area": 193,
-      "country_en": "Aruba",
-      "capital_en": "Oranjestad"
-    },
-    {
-      "country_uk": "Американське Самоа",
-      "city": "Фагатого",
-      "continent": "Океанія",
-      "government": "Територія США",
-      "population": "55641",
-      "area": 199,
-      "country_en": "American Samoa",
-      "capital_en": "Fagatogo"
-    },
-    {
-      "country_uk": "Волліс і Футуна",
-      "city": "Мата-Уту",
-      "continent": "Океанія",
-      "government": "Неметропольська територія Франції",
-      "population": "11773",
-      "area": 200,
-      "country_en": "Wallis and Futuna",
-      "capital_en": "Mata-Utu"
-    },
-    {
-      "country_uk": "Острови Кука",
-      "city": "Аваруа",
-      "continent": "Океанія",
-      "government": "Неметрополітична територія Нової Зеландії",
-      "population": "17380",
-      "area": 236,
-      "country_en": "Cook Islands",
-      "capital_en": "Avarua"
-    },
-    {
-      "country_uk": "Сен-П'єр і Мікелон",
-      "city": "Сен-П'єр",
-      "continent": "Північна Америка",
-      "government": "Департамент Франції",
-      "population": "6320",
-      "area": 242,
-      "country_en": "Saint Pierre and Miquelon",
-      "capital_en": "Saint-Pierre"
-    },
-    {
-      "country_uk": "Ніуе",
-      "city": "Алофі",
-      "continent": "Океанія",
-      "government": "Неметрополітична територія Нової Зеландії",
-      "population": "1618",
-      "area": 260,
-      "country_en": "Niue",
-      "capital_en": "Alofi"
-    },
-    {
-      "country_uk": "Сент-Кітс і Невіс",
-      "city": "Бастер",
-      "continent": "Північна Америка",
-      "government": "Конституційна монархія",
-      "population": "55345",
-      "area": 261,
-      "country_en": "Saint Kitts and Nevis",
-      "capital_en": "Basseterre"
-    },
-    {
-      "country_uk": "Кайманові острови",
-      "city": "Джорджтаун",
-      "continent": "Північна Америка",
-      "government": "Залежні території Великобританії",
-      "population": "61559",
-      "area": 264,
-      "country_en": "Cayman Islands",
-      "capital_en": "George Town"
-    },
-    {
-      "country_uk": "Мальдіви",
-      "city": "Мале",
-      "continent": "Азія",
-      "government": "Республіка",
-      "population": "436330",
-      "area": 298,
-      "country_en": "Maldives",
-      "capital_en": "Male"
-    },
-    {
-      "country_uk": "Острів Святої Олени",
-      "city": "Джеймстаун",
-      "continent": "Африка",
-      "government": "Залежні території Великобританії",
-      "population": "4049",
-      "area": 314,
-      "country_en": "Saint Helena",
-      "capital_en": "Jamestown"
-    },
-    {
-      "country_uk": "Мальта",
-      "city": "Валетта",
-      "continent": "Європа",
-      "government": "Республіка",
-      "population": "430835",
-      "area": 316,
-      "country_en": "Malta",
-      "capital_en": "Valletta"
-    },
-    {
-      "country_uk": "Гренада",
-      "city": "Сент-Джорджес",
-      "continent": "Північна Америка",
-      "government": "Конституційна монархія",
-      "population": "107825",
-      "area": 344,
-      "country_en": "Grenada",
-      "capital_en": "Saint George's"
     },
     {
       "country_uk": "Острів Герд і Острови Макдональд",
