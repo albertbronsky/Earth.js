@@ -251,4 +251,22 @@ body {
 .main-search {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  #mapid {
+  height: 690px;
+  width: 1250px;
+}
+
+.map {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.search-info {
+  padding: 20px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 400;
 }
