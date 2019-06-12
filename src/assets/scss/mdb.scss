@@ -234,8 +234,8 @@ body {
 }
 
 .flex-center-results {
-  display: flex;
-  // display: none;
+  // display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
@@ -246,12 +246,20 @@ body {
 }
 
 #mapid {
-  height: 700px;
-  width: 1000px;
+  height: 690px;
+  width: 1250px;
 }
 
 .map {
   display: flex;
   justify-content: end;
   padding: 20px;
+  flex-wrap: wrap;
+}
+
+.search-info {
+  padding: 20px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 400;
 }
