@@ -77,36 +77,30 @@ function input_check() {
     if (value) {
       render_suggestions(value);
     } else {
-      $("#search-results").empty();
+      $(".flex-center-results").empty();
     }
   });
 }
 
 function render_suggestions(term) {
   filtered = json.Countries.filter(e => String(e.country_uk).startsWith(term));
-
   let items = [];
 
   for (item in filtered) {
     country_name = filtered[item].country_uk;
     items.push(
-      "<li class='search-result' data-country-name=" +
+      "<div class='result list-group-item list-group-item-action' data-country-name=" +
         country_name +
         ">" +
         country_name +
-        "</li>"
+        "</div>"
     );
   }
-
-  $("#search-results").html(
-    $("<ul>", {
-      html: items.join("")
-    })
-  );
+  $(".flex-center-results").html(items.join(""));
 }
 
 function show_details() {
-  $("body").on("click", ".search-result", function() {
+  $("body").on("click", ".result", function() {
     console.log($(this).data("country-name"));
   });
 }
