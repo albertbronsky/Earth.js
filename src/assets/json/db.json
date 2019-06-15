@@ -2,7 +2,7 @@
   "Countries": [
     {
       "country_uk": "Святий Престол (Держава Ватикану)",
-      "city": "Ватикан",
+      "capital_uk": "Ватикан",
       "continent": "Європа",
       "government": "Незалежна церковна держава",
       "population": "1000",
@@ -12,7 +12,7 @@
     },
     {
       "country_uk": "Монако",
-      "city": "Монако",
+      "capital_uk": "Монако",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "38695",
@@ -22,7 +22,7 @@
     },
     {
       "country_uk": "Гібралтар",
-      "city": "Гібралтар",
+      "capital_uk": "Гібралтар",
       "continent": "Європа",
       "government": "Залежні території Великобританії",
       "population": "34571",
@@ -32,7 +32,7 @@
     },
     {
       "country_uk": "Токелау",
-      "city": "Факаофо",
+      "capital_uk": "Факаофо",
       "continent": "Океанія",
       "government": "Неметрополітична територія Нової Зеландії",
       "population": "1300",
@@ -42,7 +42,7 @@
     },
     {
       "country_uk": "Кокосові (Кілінг) острови",
-      "city": "Західний острів",
+      "capital_uk": "Західний острів",
       "continent": "Океанія",
       "government": "Територія Австралії",
       "population": "600",
@@ -52,7 +52,7 @@
     },
     {
       "country_uk": "Зовнішні малі острови США",
-      "city": null,
+      "capital_uk": null,
       "continent": "Океанія",
       "government": "Залежні території США",
       "population": null,
@@ -62,7 +62,7 @@
     },
     {
       "country_uk": "Макао",
-      "city": "Макао",
+      "capital_uk": "Макао",
       "continent": "Азія",
       "government": "Спеціальний адміністративний район Китаю",
       "population": "473000",
@@ -72,7 +72,7 @@
     },
     {
       "country_uk": "Науру",
-      "city": "Ярен",
+      "capital_uk": "Ярен",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "11359",
@@ -82,7 +82,7 @@
     },
     {
       "country_uk": "Тувалу",
-      "city": "Фунафуті",
+      "capital_uk": "Фунафуті",
       "continent": "Океанія",
       "government": "Конституційна монархія",
       "population": "11192",
@@ -92,7 +92,7 @@
     },
     {
       "country_uk": "Острів Норфолк",
-      "city": "Кінгстон",
+      "capital_uk": "Кінгстон",
       "continent": "Океанія",
       "government": "Територія Австралії",
       "population": "2000",
@@ -102,7 +102,7 @@
     },
     {
       "country_uk": "Піткерн",
-      "city": "Адамстаун",
+      "capital_uk": "Адамстаун",
       "continent": "Океанія",
       "government": "Залежні території Великобританії",
       "population": "50",
@@ -112,7 +112,7 @@
     },
     {
       "country_uk": "Бермудські острови",
-      "city": "Гамільтон",
+      "capital_uk": "Гамільтон",
       "continent": "Північна Америка",
       "government": "Залежні території Великобританії",
       "population": "61349",
@@ -122,7 +122,7 @@
     },
     {
       "country_uk": "Острів Буве",
-      "city": null,
+      "capital_uk": null,
       "continent": "Антарктида",
       "government": "Залежні території Норвегії",
       "population": null,
@@ -132,7 +132,7 @@
     },
     {
       "country_uk": "Сан-Марино",
-      "city": "Сан-Марино",
+      "capital_uk": "Сан-Марино",
       "continent": "Європа",
       "government": "Республіка",
       "population": "33400",
@@ -142,7 +142,7 @@
     },
     {
       "country_uk": "Британські території Індійського океану",
-      "city": null,
+      "capital_uk": null,
       "continent": "Африка",
       "government": "Залежні території Великобританії",
       "population": null,
@@ -152,7 +152,7 @@
     },
     {
       "country_uk": "Ангілья",
-      "city": "Валлі",
+      "capital_uk": "Валлі",
       "continent": "Північна Америка",
       "government": "Залежні території Великобританії",
       "population": "14909",
@@ -162,7 +162,7 @@
     },
     {
       "country_uk": "Монтсеррат",
-      "city": "Плімут",
+      "capital_uk": "Плімут",
       "continent": "Північна Америка",
       "government": "Залежні території Великобританії",
       "population": "5177",
@@ -172,7 +172,7 @@
     },
     {
       "country_uk": "Острів Різдва",
-      "city": "Флаїнг-Фіш-Коув",
+      "capital_uk": "Флаїнг-Фіш-Коув",
       "continent": "Океанія",
       "government": "Територія Австралії",
       "population": "2500",
@@ -182,7 +182,7 @@
     },
     {
       "country_uk": "Ліхтенштейн",
-      "city": "Вадуц",
+      "capital_uk": "Вадуц",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "37922",
@@ -192,7 +192,7 @@
     },
     {
       "country_uk": "Маршаллові острови",
-      "city": "Маджуро",
+      "capital_uk": "Маджуро",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "53127",
@@ -202,7 +202,7 @@
     },
     {
       "country_uk": "Аруба",
-      "city": "Оран'єстад",
+      "capital_uk": "Оран'єстад",
       "continent": "Північна Америка",
       "government": "Неметропольська територія Нідерландів",
       "population": "105264",
@@ -212,7 +212,7 @@
     },
     {
       "country_uk": "Американське Самоа",
-      "city": "Фагатого",
+      "capital_uk": "Фагатого",
       "continent": "Океанія",
       "government": "Територія США",
       "population": "55641",
@@ -222,7 +222,7 @@
     },
     {
       "country_uk": "Волліс і Футуна",
-      "city": "Мата-Уту",
+      "capital_uk": "Мата-Уту",
       "continent": "Океанія",
       "government": "Неметропольська територія Франції",
       "population": "11773",
@@ -232,7 +232,7 @@
     },
     {
       "country_uk": "Острови Кука",
-      "city": "Аваруа",
+      "capital_uk": "Аваруа",
       "continent": "Океанія",
       "government": "Неметрополітична територія Нової Зеландії",
       "population": "17380",
@@ -242,7 +242,7 @@
     },
     {
       "country_uk": "Сен-П'єр і Мікелон",
-      "city": "Сен-П'єр",
+      "capital_uk": "Сен-П'єр",
       "continent": "Північна Америка",
       "government": "Департамент Франції",
       "population": "6320",
@@ -252,7 +252,7 @@
     },
     {
       "country_uk": "Ніуе",
-      "city": "Алофі",
+      "capital_uk": "Алофі",
       "continent": "Океанія",
       "government": "Неметрополітична територія Нової Зеландії",
       "population": "1618",
@@ -262,7 +262,7 @@
     },
     {
       "country_uk": "Сент-Кітс і Невіс",
-      "city": "Бастер",
+      "capital_uk": "Бастер",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "55345",
@@ -272,7 +272,7 @@
     },
     {
       "country_uk": "Кайманові острови",
-      "city": "Джорджтаун",
+      "capital_uk": "Джорджтаун",
       "continent": "Північна Америка",
       "government": "Залежні території Великобританії",
       "population": "61559",
@@ -282,7 +282,7 @@
     },
     {
       "country_uk": "Мальдіви",
-      "city": "Мале",
+      "capital_uk": "Мале",
       "continent": "Азія",
       "government": "Республіка",
       "population": "436330",
@@ -292,7 +292,7 @@
     },
     {
       "country_uk": "Острів Святої Олени",
-      "city": "Джеймстаун",
+      "capital_uk": "Джеймстаун",
       "continent": "Африка",
       "government": "Залежні території Великобританії",
       "population": "4049",
@@ -302,7 +302,7 @@
     },
     {
       "country_uk": "Мальта",
-      "city": "Валетта",
+      "capital_uk": "Валетта",
       "continent": "Європа",
       "government": "Республіка",
       "population": "430835",
@@ -312,7 +312,7 @@
     },
     {
       "country_uk": "Гренада",
-      "city": "Сент-Джорджес",
+      "capital_uk": "Сент-Джорджес",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "107825",
@@ -322,7 +322,7 @@
     },
     {
       "country_uk": "Острів Герд і Острови Макдональд",
-      "city": null,
+      "capital_uk": null,
       "continent": "Антарктида",
       "government": "Територія Австралії",
       "population": null,
@@ -332,7 +332,7 @@
     },
     {
       "country_uk": "Майотта",
-      "city": "Мамудзу",
+      "capital_uk": "Мамудзу",
       "continent": "Африка",
       "government": "Департамент Франції",
       "population": "253045",
@@ -342,7 +342,7 @@
     },
     {
       "country_uk": "Сент-Вінсент і Гренадини",
-      "city": "Кінгстаун",
+      "capital_uk": "Кінгстаун",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "109897",
@@ -360,7 +360,7 @@
     },
     {
       "country_uk": "Антигуа і Барбуда",
-      "city": "Сент-Джонс",
+      "capital_uk": "Сент-Джонс",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "102012",
@@ -370,7 +370,7 @@
     },
     {
       "country_uk": "Сейшели",
-      "city": "Вікторія",
+      "capital_uk": "Вікторія",
       "continent": "Африка",
       "government": "Республіка",
       "population": "94737",
@@ -380,7 +380,7 @@
     },
     {
       "country_uk": "Палау",
-      "city": "Корор",
+      "capital_uk": "Корор",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "21729",
@@ -390,7 +390,7 @@
     },
     {
       "country_uk": "Північні Маріанські острови",
-      "city": "Гарапан",
+      "capital_uk": "Гарапан",
       "continent": "Океанія",
       "government": "Володіння США",
       "population": "55144",
@@ -400,7 +400,7 @@
     },
     {
       "country_uk": "Андорра",
-      "city": "Андорра-ла-Велья",
+      "capital_uk": "Андорра-ла-Велья",
       "continent": "Європа",
       "government": "Парламентарне князівство",
       "population": "76965",
@@ -410,7 +410,7 @@
     },
     {
       "country_uk": "Гуам",
-      "city": "Ага",
+      "capital_uk": "Ага",
       "continent": "Океанія",
       "government": "Територія США",
       "population": "164229",
@@ -420,7 +420,7 @@
     },
     {
       "country_uk": "Сінгапур",
-      "city": "Сінґапур",
+      "capital_uk": "Сінґапур",
       "continent": "Азія",
       "government": "Республіка",
       "population": "5708844",
@@ -430,7 +430,7 @@
     },
     {
       "country_uk": "Сент-Люсія",
-      "city": "Кастрі",
+      "capital_uk": "Кастрі",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "178844",
@@ -440,7 +440,7 @@
     },
     {
       "country_uk": "Тонга",
-      "city": "Нукуалофа",
+      "capital_uk": "Нукуалофа",
       "continent": "Океанія",
       "government": "Монархія",
       "population": "108020",
@@ -450,7 +450,7 @@
     },
     {
       "country_uk": "Бахрейн",
-      "city": "Аль-Манама",
+      "capital_uk": "Аль-Манама",
       "continent": "Азія",
       "government": "Монархія (емірат)",
       "population": "1492584",
@@ -460,7 +460,7 @@
     },
     {
       "country_uk": "Кірибаті",
-      "city": "Байрікі",
+      "capital_uk": "Байрікі",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "116398",
@@ -470,7 +470,7 @@
     },
     {
       "country_uk": "Домініка",
-      "city": "Розо",
+      "capital_uk": "Розо",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "73925",
@@ -480,7 +480,7 @@
     },
     {
       "country_uk": "Нідерландські Антильські острови",
-      "city": "Віллемстад",
+      "capital_uk": "Віллемстад",
       "continent": "Північна Америка",
       "government": "Неметропольська територія Нідерландів",
       "population": "217000",
@@ -490,7 +490,7 @@
     },
     {
       "country_uk": "Сан-Томе і Принсіпі",
-      "city": "Сан-Томе",
+      "capital_uk": "Сан-Томе",
       "continent": "Африка",
       "government": "Республіка",
       "population": "204327",
@@ -500,7 +500,7 @@
     },
     {
       "country_uk": "Гонконг",
-      "city": "Вікторія",
+      "capital_uk": "Вікторія",
       "continent": "Азія",
       "government": "Спеціальний адміністративний район Китаю",
       "population": "7364883",
@@ -510,7 +510,7 @@
     },
     {
       "country_uk": "Мартиніка",
-      "city": "Фор-де-Франс",
+      "capital_uk": "Фор-де-Франс",
       "continent": "Північна Америка",
       "government": "Заморський департамент Франції",
       "population": "384896",
@@ -520,7 +520,7 @@
     },
     {
       "country_uk": "Фарерські острови",
-      "city": "Торсхавн",
+      "capital_uk": "Торсхавн",
       "continent": "Європа",
       "government": "Частина Данії",
       "population": "49290",
@@ -530,7 +530,7 @@
     },
     {
       "country_uk": "Гваделупа",
-      "city": "Бас-Тер",
+      "capital_uk": "Бас-Тер",
       "continent": "Північна Америка",
       "government": "Заморський департамент Франції",
       "population": "449568",
@@ -540,7 +540,7 @@
     },
     {
       "country_uk": "Коморські острови",
-      "city": "Мороній",
+      "capital_uk": "Мороній",
       "continent": "Африка",
       "government": "Республіка",
       "population": "813912",
@@ -550,7 +550,7 @@
     },
     {
       "country_uk": "Маврикій",
-      "city": "Порт-Луї",
+      "capital_uk": "Порт-Луї",
       "continent": "Африка",
       "government": "Республіка",
       "population": "1265138",
@@ -560,7 +560,7 @@
     },
     {
       "country_uk": "Реюньйон",
-      "city": "Сен-Дені",
+      "capital_uk": "Сен-Дені",
       "continent": "Африка",
       "government": "Заморський департамент Франції",
       "population": "699000",
@@ -570,7 +570,7 @@
     },
     {
       "country_uk": "Люксембург",
-      "city": "Люксембург",
+      "capital_uk": "Люксембург",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "583455",
@@ -580,7 +580,7 @@
     },
     {
       "country_uk": "Самоа",
-      "city": "Апіа",
+      "capital_uk": "Апіа",
       "continent": "Океанія",
       "government": "Парламентська монархія",
       "population": "196440",
@@ -590,7 +590,7 @@
     },
     {
       "country_uk": "Південна Джорджія та Південні Сандвічеві Острови",
-      "city": "Грютвікен",
+      "capital_uk": "Грютвікен",
       "continent": "Антарктида",
       "government": "Залежні території Великобританії",
       "population": null,
@@ -600,7 +600,7 @@
     },
     {
       "country_uk": "Французька Полінезія",
-      "city": "Папеете",
+      "capital_uk": "Папеете",
       "continent": "Океанія",
       "government": "Неметропольська територія Франції",
       "population": "283007",
@@ -610,7 +610,7 @@
     },
     {
       "country_uk": "Кабо-Верде",
-      "city": "Прая",
+      "capital_uk": "Прая",
       "continent": "Африка",
       "government": "Республіка",
       "population": "546388",
@@ -620,7 +620,7 @@
     },
     {
       "country_uk": "Тринідад і Тобаго",
-      "city": "Порт-оф-Спейн",
+      "capital_uk": "Порт-оф-Спейн",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "1369125",
@@ -630,7 +630,7 @@
     },
     {
       "country_uk": "Бруней",
-      "city": "Бандар Сері Бегаван",
+      "capital_uk": "Бандар Сері Бегаван",
       "continent": "Азія",
       "government": "Монархія (Султанат)",
       "population": "428697",
@@ -640,7 +640,7 @@
     },
     {
       "country_uk": "Палестина",
-      "city": "Газа",
+      "capital_uk": "Газа",
       "continent": "Азія",
       "government": "Автономний район",
       "population": "4920724",
@@ -650,7 +650,7 @@
     },
     {
       "country_uk": "Французькі південні території",
-      "city": null,
+      "capital_uk": null,
       "continent": "Антарктида",
       "government": "Неметропольська територія Франції",
       "population": null,
@@ -660,7 +660,7 @@
     },
     {
       "country_uk": "Пуерто-Ріко",
-      "city": "Сан-Хуан ",
+      "capital_uk": "Сан-Хуан ",
       "continent": "Північна Америка",
       "government": "Володіння США",
       "population": "3663131",
@@ -670,7 +670,7 @@
     },
     {
       "country_uk": "Кіпр",
-      "city": "Нікосія",
+      "capital_uk": "Нікосія",
       "continent": "Азія",
       "government": "Республіка",
       "population": "1179551",
@@ -680,7 +680,7 @@
     },
     {
       "country_uk": "Ліван",
-      "city": "Бейрут",
+      "capital_uk": "Бейрут",
       "continent": "Азія",
       "government": "Республіка",
       "population": "6082357",
@@ -690,7 +690,7 @@
     },
     {
       "country_uk": "Ямайка",
-      "city": "Кінгстон",
+      "capital_uk": "Кінгстон",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "2890299",
@@ -700,7 +700,7 @@
     },
     {
       "country_uk": "Катар",
-      "city": "Доха",
+      "capital_uk": "Доха",
       "continent": "Азія",
       "government": "Монархія",
       "population": "2639211",
@@ -710,7 +710,7 @@
     },
     {
       "country_uk": "Гамбія",
-      "city": "Банжул",
+      "capital_uk": "Банжул",
       "continent": "Африка",
       "government": "Республіка",
       "population": "2100568",
@@ -720,7 +720,7 @@
     },
     {
       "country_uk": "Фолклендські острови",
-      "city": "Стенлі",
+      "capital_uk": "Стенлі",
       "continent": "Південна Америка",
       "government": "Залежні території Великобританії",
       "population": "2910",
@@ -730,7 +730,7 @@
     },
     {
       "country_uk": "Вануату",
-      "city": "Порт-Віла",
+      "capital_uk": "Порт-Віла",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "276244",
@@ -740,7 +740,7 @@
     },
     {
       "country_uk": "Багамські острови",
-      "city": "Нассау",
+      "capital_uk": "Нассау",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "395361",
@@ -750,7 +750,7 @@
     },
     {
       "country_uk": "Східний Тимор",
-      "city": "Ділі",
+      "capital_uk": "Ділі",
       "continent": "Азія",
       "government": "Керується ООН",
       "population": "1296311",
@@ -760,7 +760,7 @@
     },
     {
       "country_uk": "Есватіні",
-      "city": "Лобамба",
+      "capital_uk": "Лобамба",
       "continent": "Африка",
       "government": "Монархія",
       "population": "1008000",
@@ -770,7 +770,7 @@
     },
     {
       "country_uk": "Кувейт",
-      "city": "Кувейт",
+      "capital_uk": "Кувейт",
       "continent": "Азія",
       "government": "Конституційна монархія (емірат)",
       "population": "4136528",
@@ -780,7 +780,7 @@
     },
     {
       "country_uk": "Острови Фіджі",
-      "city": "Сува",
+      "capital_uk": "Сува",
       "continent": "Океанія",
       "government": "Республіка",
       "population": "905502",
@@ -790,7 +790,7 @@
     },
     {
       "country_uk": "Нова Каледонія",
-      "city": "Нумеа",
+      "capital_uk": "Нумеа",
       "continent": "Океанія",
       "government": "Неметропольська територія Франції",
       "population": "276255",
@@ -800,7 +800,7 @@
     },
     {
       "country_uk": "Словенія",
-      "city": "Любляна",
+      "capital_uk": "Любляна",
       "continent": "Європа",
       "government": "Республіка",
       "population": "2079976",
@@ -810,7 +810,7 @@
     },
     {
       "country_uk": "Сальвадор",
-      "city": "Сан-Сальвадор",
+      "capital_uk": "Сан-Сальвадор",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "6377853",
@@ -820,7 +820,7 @@
     },
     {
       "country_uk": "Ізраїль",
-      "city": "Єрусалим",
+      "capital_uk": "Єрусалим",
       "continent": "Азія",
       "government": "Республіка",
       "population": "8321570",
@@ -830,7 +830,7 @@
     },
     {
       "country_uk": "Беліз",
-      "city": "Бельмопан",
+      "capital_uk": "Бельмопан",
       "continent": "Північна Америка",
       "government": "Конституційна монархія",
       "population": "374681",
@@ -840,7 +840,7 @@
     },
     {
       "country_uk": "Джибуті",
-      "city": "Джибуті",
+      "capital_uk": "Джибуті",
       "continent": "Африка",
       "government": "Республіка",
       "population": "956985",
@@ -850,7 +850,7 @@
     },
     {
       "country_uk": "Північна Македонія",
-      "city": "Скоп'є",
+      "capital_uk": "Скоп'є",
       "continent": "Європа",
       "government": "Республіка",
       "population": "2024000",
@@ -860,7 +860,7 @@
     },
     {
       "country_uk": "Руанда",
-      "city": "Кігалі",
+      "capital_uk": "Кігалі",
       "continent": "Африка",
       "government": "Республіка",
       "population": "12208407",
@@ -870,7 +870,7 @@
     },
     {
       "country_uk": "Гаїті",
-      "city": "Порт-о-Пренс",
+      "capital_uk": "Порт-о-Пренс",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "10981229",
@@ -880,7 +880,7 @@
     },
     {
       "country_uk": "Бурунді",
-      "city": "Бужумбура",
+      "capital_uk": "Бужумбура",
       "continent": "Африка",
       "government": "Республіка",
       "population": "10864245",
@@ -890,7 +890,7 @@
     },
     {
       "country_uk": "Екваторіальна Гвінея",
-      "city": "Малабо",
+      "capital_uk": "Малабо",
       "continent": "Африка",
       "government": "Республіка",
       "population": "1267689",
@@ -900,7 +900,7 @@
     },
     {
       "country_uk": "Албанія",
-      "city": "Тирана",
+      "capital_uk": "Тирана",
       "continent": "Європа",
       "government": "Республіка",
       "population": "2930187",
@@ -910,7 +910,7 @@
     },
     {
       "country_uk": "Соломонові острови",
-      "city": "Хоніара",
+      "capital_uk": "Хоніара",
       "continent": "Океанія",
       "government": "Конституційна монархія",
       "population": "611343",
@@ -920,7 +920,7 @@
     },
     {
       "country_uk": "Вірменія",
-      "city": "Єреван",
+      "capital_uk": "Єреван",
       "continent": "Азія",
       "government": "Республіка",
       "population": "2930450",
@@ -930,7 +930,7 @@
     },
     {
       "country_uk": "Лесото",
-      "city": "Масеру",
+      "capital_uk": "Масеру",
       "continent": "Африка",
       "government": "Конституційна монархія",
       "population": "2233339",
@@ -940,7 +940,7 @@
     },
     {
       "country_uk": "Бельгія",
-      "city": "Брюссель",
+      "capital_uk": "Брюссель",
       "continent": "Європа",
       "government": "Федеральна конституційна монархія",
       "population": "11429336",
@@ -950,7 +950,7 @@
     },
     {
       "country_uk": "Молдова",
-      "city": "Кишинів",
+      "capital_uk": "Кишинів",
       "continent": "Європа",
       "government": "Республіка",
       "population": "4051212",
@@ -960,7 +960,7 @@
     },
     {
       "country_uk": "Гвінея-Бісау",
-      "city": "Бісау",
+      "capital_uk": "Бісау",
       "continent": "Африка",
       "government": "Республіка",
       "population": "1861283",
@@ -970,7 +970,7 @@
     },
     {
       "country_uk": "Швейцарія",
-      "city": "Берн",
+      "capital_uk": "Берн",
       "continent": "Європа",
       "government": "Federation",
       "population": "8476005",
@@ -980,7 +980,7 @@
     },
     {
       "country_uk": "Нідерланди",
-      "city": "Амстердам",
+      "capital_uk": "Амстердам",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "17035938",
@@ -990,7 +990,7 @@
     },
     {
       "country_uk": "Данія",
-      "city": "Копенгаген",
+      "capital_uk": "Копенгаген",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "5733551",
@@ -1000,7 +1000,7 @@
     },
     {
       "country_uk": "Естонія",
-      "city": "Таллінн",
+      "capital_uk": "Таллінн",
       "continent": "Європа",
       "government": "Республіка",
       "population": "1309632",
@@ -1010,7 +1010,7 @@
     },
     {
       "country_uk": "Бутан",
-      "city": "Тхімпху",
+      "capital_uk": "Тхімпху",
       "continent": "Азія",
       "government": "Монархія",
       "population": "807610",
@@ -1020,7 +1020,7 @@
     },
     {
       "country_uk": "Домініканська республіка",
-      "city": "Санто-Домінго-де-Гусман",
+      "capital_uk": "Санто-Домінго-де-Гусман",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "10766998",
@@ -1030,7 +1030,7 @@
     },
     {
       "country_uk": "Словаччина",
-      "city": "Братислава",
+      "capital_uk": "Братислава",
       "continent": "Європа",
       "government": "Республіка",
       "population": "5447662",
@@ -1040,7 +1040,7 @@
     },
     {
       "country_uk": "Коста-Ріка",
-      "city": "Сан-Хосе",
+      "capital_uk": "Сан-Хосе",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "4905769",
@@ -1050,7 +1050,7 @@
     },
     {
       "country_uk": "Боснія і Герцеговина",
-      "city": "Сараєво",
+      "capital_uk": "Сараєво",
       "continent": "Європа",
       "government": "Федеральна республіка",
       "population": "3507017",
@@ -1060,7 +1060,7 @@
     },
     {
       "country_uk": "Хорватія",
-      "city": "Загреб",
+      "capital_uk": "Загреб",
       "continent": "Європа",
       "government": "Республіка",
       "population": "4189353",
@@ -1070,7 +1070,7 @@
     },
     {
       "country_uk": "Того",
-      "city": "Ломе",
+      "capital_uk": "Ломе",
       "continent": "Африка",
       "government": "Республіка",
       "population": "7797694",
@@ -1080,7 +1080,7 @@
     },
     {
       "country_uk": "Шпіцберген та Ян-Маєн",
-      "city": "Лонг'їр",
+      "capital_uk": "Лонг'їр",
       "continent": "Європа",
       "government": "Залежні території Норвегії",
       "population": "3200",
@@ -1090,7 +1090,7 @@
     },
     {
       "country_uk": "Латвія",
-      "city": "Рига",
+      "capital_uk": "Рига",
       "continent": "Європа",
       "government": "Республіка",
       "population": "1949670",
@@ -1100,7 +1100,7 @@
     },
     {
       "country_uk": "Литва",
-      "city": "Вільнюс",
+      "capital_uk": "Вільнюс",
       "continent": "Європа",
       "government": "Республіка",
       "population": "2890297",
@@ -1110,7 +1110,7 @@
     },
     {
       "country_uk": "Грузія",
-      "city": "Тбілісі",
+      "capital_uk": "Тбілісі",
       "continent": "Азія",
       "government": "Республіка",
       "population": "3912061",
@@ -1120,7 +1120,7 @@
     },
     {
       "country_uk": "Ірландія",
-      "city": "Дублін",
+      "capital_uk": "Дублін",
       "continent": "Європа",
       "government": "Республіка",
       "population": "4761657",
@@ -1130,7 +1130,7 @@
     },
     {
       "country_uk": "Сьєрра-Леоне",
-      "city": "Фрітаун",
+      "capital_uk": "Фрітаун",
       "continent": "Африка",
       "government": "Республіка",
       "population": "7557212",
@@ -1140,7 +1140,7 @@
     },
     {
       "country_uk": "Панама",
-      "city": "Панама",
+      "capital_uk": "Панама",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "4098587",
@@ -1150,7 +1150,7 @@
     },
     {
       "country_uk": "Чеська республіка",
-      "city": "Прага",
+      "capital_uk": "Прага",
       "continent": "Європа",
       "government": "Республіка",
       "population": "10618303",
@@ -1160,7 +1160,7 @@
     },
     {
       "country_uk": "Об'єднані Арабські Емірати",
-      "city": "Абу-Дабі",
+      "capital_uk": "Абу-Дабі",
       "continent": "Азія",
       "government": "Федерація емірату",
       "population": "9400145",
@@ -1170,7 +1170,7 @@
     },
     {
       "country_uk": "Австрія",
-      "city": "Відень",
+      "capital_uk": "Відень",
       "continent": "Європа",
       "government": "Федеральна республіка",
       "population": "8735453",
@@ -1180,7 +1180,7 @@
     },
     {
       "country_uk": "Азербайджан",
-      "city": "Баку",
+      "capital_uk": "Баку",
       "continent": "Азія",
       "government": "Федеральна республіка",
       "population": "9827589",
@@ -1190,7 +1190,7 @@
     },
     {
       "country_uk": "Йорданія",
-      "city": "Амман",
+      "capital_uk": "Амман",
       "continent": "Азія",
       "government": "Конституційна монархія",
       "population": "9702353",
@@ -1200,7 +1200,7 @@
     },
     {
       "country_uk": "Французька Гвіана",
-      "city": "Каєнна",
+      "capital_uk": "Каєнна",
       "continent": "Південна Америка",
       "government": "Заморський департамент Франції",
       "population": "282731",
@@ -1210,7 +1210,7 @@
     },
     {
       "country_uk": "Португалія",
-      "city": "Лісабон",
+      "capital_uk": "Лісабон",
       "continent": "Європа",
       "government": "Республіка",
       "population": "10329506",
@@ -1220,7 +1220,7 @@
     },
     {
       "country_uk": "Угорщина",
-      "city": "Будапешт",
+      "capital_uk": "Будапешт",
       "continent": "Європа",
       "government": "Республіка",
       "population": "9721559",
@@ -1230,7 +1230,7 @@
     },
     {
       "country_uk": "Південна Корея",
-      "city": "Сеул",
+      "capital_uk": "Сеул",
       "continent": "Азія",
       "government": "Республіка",
       "population": "50982212",
@@ -1243,7 +1243,7 @@
     },
     {
       "country_uk": "Ісландія",
-      "city": "Рейк'явік",
+      "capital_uk": "Рейк'явік",
       "continent": "Європа",
       "government": "Республіка",
       "population": "335025",
@@ -1253,7 +1253,7 @@
     },
     {
       "country_uk": "Гватемала",
-      "city": "Гватемала",
+      "capital_uk": "Гватемала",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "16913503",
@@ -1263,7 +1263,7 @@
     },
     {
       "country_uk": "Куба",
-      "city": "Ла-Гавана",
+      "capital_uk": "Ла-Гавана",
       "continent": "Північна Америка",
       "government": "Соціалістична республіка",
       "population": "11484636",
@@ -1273,7 +1273,7 @@
     },
     {
       "country_uk": "Болгарія",
-      "city": "Софія",
+      "capital_uk": "Софія",
       "continent": "Європа",
       "government": "Республіка",
       "population": "7084571",
@@ -1283,7 +1283,7 @@
     },
     {
       "country_uk": "Ліберія",
-      "city": "Монровія",
+      "capital_uk": "Монровія",
       "continent": "Африка",
       "government": "Республіка",
       "population": "4731906",
@@ -1293,7 +1293,7 @@
     },
     {
       "country_uk": "Гондурас",
-      "city": "Тегусігальпа",
+      "capital_uk": "Тегусігальпа",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "9265067",
@@ -1303,7 +1303,7 @@
     },
     {
       "country_uk": "Бенін",
-      "city": "Порто-Ново",
+      "capital_uk": "Порто-Ново",
       "continent": "Африка",
       "government": "Республіка",
       "population": "11175692",
@@ -1313,7 +1313,7 @@
     },
     {
       "country_uk": "Еритрея",
-      "city": "Асмара",
+      "capital_uk": "Асмара",
       "continent": "Африка",
       "government": "Республіка",
       "population": "5068831",
@@ -1323,7 +1323,7 @@
     },
     {
       "country_uk": "Малаві",
-      "city": "Лілонгве",
+      "capital_uk": "Лілонгве",
       "continent": "Африка",
       "government": "Республіка",
       "population": "18622104",
@@ -1333,7 +1333,7 @@
     },
     {
       "country_uk": "Північна Корея",
-      "city": "Пхеньян",
+      "capital_uk": "Пхеньян",
       "continent": "Азія",
       "government": "Соціалістична республіка",
       "population": "25490965",
@@ -1343,7 +1343,7 @@
     },
     {
       "country_uk": "Нікарагуа",
-      "city": "Манагуа",
+      "capital_uk": "Манагуа",
       "continent": "Північна Америка",
       "government": "Республіка",
       "population": "6217581",
@@ -1353,7 +1353,7 @@
     },
     {
       "country_uk": "Греція",
-      "city": "Афіни",
+      "capital_uk": "Афіни",
       "continent": "Європа",
       "government": "Республіка",
       "population": "11159773",
@@ -1363,7 +1363,7 @@
     },
     {
       "country_uk": "Таджикистан",
-      "city": "Душанбе",
+      "capital_uk": "Душанбе",
       "continent": "Азія",
       "government": "Республіка",
       "population": "8921343",
@@ -1373,7 +1373,7 @@
     },
     {
       "country_uk": "Бангладеш",
-      "city": "Дакка",
+      "capital_uk": "Дакка",
       "continent": "Азія",
       "government": "Республіка",
       "population": "164669751",
@@ -1383,7 +1383,7 @@
     },
     {
       "country_uk": "Непал",
-      "city": "Катманду",
+      "capital_uk": "Катманду",
       "continent": "Азія",
       "government": "Федеральна парламентська республіка",
       "population": "29304998",
@@ -1393,7 +1393,7 @@
     },
     {
       "country_uk": "Суринам",
-      "city": "Парамарібо",
+      "capital_uk": "Парамарібо",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "563402",
@@ -1403,7 +1403,7 @@
     },
     {
       "country_uk": "Туніс",
-      "city": "Туніс",
+      "capital_uk": "Туніс",
       "continent": "Африка",
       "government": "Республіка",
       "population": "11532127",
@@ -1413,7 +1413,7 @@
     },
     {
       "country_uk": "Уругвай",
-      "city": "Монтевідео",
+      "capital_uk": "Монтевідео",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "3456750",
@@ -1423,7 +1423,7 @@
     },
     {
       "country_uk": "Cambodia",
-      "city": "Phnom Penh",
+      "capital_uk": "Phnom Penh",
       "continent": "Азія",
       "government": "Конституційна монархія",
       "population": "16005373",
@@ -1433,7 +1433,7 @@
     },
     {
       "country_uk": "Сирія",
-      "city": "Дамаск",
+      "capital_uk": "Дамаск",
       "continent": "Азія",
       "government": "Республіка",
       "population": "18269868",
@@ -1443,7 +1443,7 @@
     },
     {
       "country_uk": "Сенегал",
-      "city": "Дакар",
+      "capital_uk": "Дакар",
       "continent": "Африка",
       "government": "Республіка",
       "population": "15850567",
@@ -1453,7 +1453,7 @@
     },
     {
       "country_uk": "Киргизстан",
-      "city": "Бішкек",
+      "capital_uk": "Бішкек",
       "continent": "Азія",
       "government": "Республіка",
       "population": "6045117",
@@ -1463,7 +1463,7 @@
     },
     {
       "country_uk": "Білорусь",
-      "city": "Мінськ",
+      "capital_uk": "Мінськ",
       "continent": "Європа",
       "government": "Республіка",
       "population": "9468338",
@@ -1473,7 +1473,7 @@
     },
     {
       "country_uk": "Гайана",
-      "city": "Джорджтаун",
+      "capital_uk": "Джорджтаун",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "777859",
@@ -1483,7 +1483,7 @@
     },
     {
       "country_uk": "Лаос",
-      "city": "В'єнтьян",
+      "capital_uk": "В'єнтьян",
       "continent": "Азія",
       "government": "Республіка",
       "population": "6858160",
@@ -1493,7 +1493,7 @@
     },
     {
       "country_uk": "Румунія",
-      "city": "Бухарест",
+      "capital_uk": "Бухарест",
       "continent": "Європа",
       "government": "Республіка",
       "population": "19679306",
@@ -1503,7 +1503,7 @@
     },
     {
       "country_uk": "Гана",
-      "city": "Аккра",
+      "capital_uk": "Аккра",
       "continent": "Африка",
       "government": "Республіка",
       "population": "28833629",
@@ -1513,7 +1513,7 @@
     },
     {
       "country_uk": "Уганда",
-      "city": "Кампала",
+      "capital_uk": "Кампала",
       "continent": "Африка",
       "government": "Республіка",
       "population": "42862958",
@@ -1523,7 +1523,7 @@
     },
     {
       "country_uk": "Об'єднане Королівство",
-      "city": "Лондон",
+      "capital_uk": "Лондон",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "66181585",
@@ -1533,7 +1533,7 @@
     },
     {
       "country_uk": "Гвінея",
-      "city": "Конакри",
+      "capital_uk": "Конакри",
       "continent": "Африка",
       "government": "Республіка",
       "population": "12717176",
@@ -1543,7 +1543,7 @@
     },
     {
       "country_uk": "Західна Сахара",
-      "city": "Ель-Аюн",
+      "capital_uk": "Ель-Аюн",
       "continent": "Африка",
       "government": null,
       "population": "552628",
@@ -1553,7 +1553,7 @@
     },
     {
       "country_uk": "Габон",
-      "city": "Лібревіль",
+      "capital_uk": "Лібревіль",
       "continent": "Африка",
       "government": "Республіка",
       "population": "2025137",
@@ -1563,7 +1563,7 @@
     },
     {
       "country_uk": "Нова Зеландія",
-      "city": "Веллінгтон",
+      "capital_uk": "Веллінгтон",
       "continent": "Океанія",
       "government": "Конституційна монархія",
       "population": "4705818",
@@ -1573,7 +1573,7 @@
     },
     {
       "country_uk": "Буркіна-Фасо",
-      "city": "Уагадугу",
+      "capital_uk": "Уагадугу",
       "continent": "Африка",
       "government": "Республіка",
       "population": "19193382",
@@ -1583,7 +1583,7 @@
     },
     {
       "country_uk": "Еквадор",
-      "city": "Кіто",
+      "capital_uk": "Кіто",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "16624858",
@@ -1593,7 +1593,7 @@
     },
     {
       "country_uk": "Філіппіни",
-      "city": "Маніла",
+      "capital_uk": "Маніла",
       "continent": "Азія",
       "government": "Республіка",
       "population": "104918090",
@@ -1603,7 +1603,7 @@
     },
     {
       "country_uk": "Італія",
-      "city": "Рим",
+      "capital_uk": "Рим",
       "continent": "Європа",
       "government": "Республіка",
       "population": "59359900",
@@ -1613,7 +1613,7 @@
     },
     {
       "country_uk": "Оман",
-      "city": "Маскат",
+      "capital_uk": "Маскат",
       "continent": "Азія",
       "government": "Монархія (Султанат)",
       "population": "4636262",
@@ -1623,7 +1623,7 @@
     },
     {
       "country_uk": "Кот-д'Івуар",
-      "city": "Ямусукро",
+      "capital_uk": "Ямусукро",
       "continent": "Африка",
       "government": "Республіка",
       "population": "24294750",
@@ -1633,7 +1633,7 @@
     },
     {
       "country_uk": "Польща",
-      "city": "Варшава",
+      "capital_uk": "Варшава",
       "continent": "Європа",
       "government": "Республіка",
       "population": "38170712",
@@ -1643,7 +1643,7 @@
     },
     {
       "country_uk": "Норвегія",
-      "city": "Осло",
+      "capital_uk": "Осло",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "5305383",
@@ -1653,7 +1653,7 @@
     },
     {
       "country_uk": "Малайзія",
-      "city": "Куала-Лумпур",
+      "capital_uk": "Куала-Лумпур",
       "continent": "Азія",
       "government": "Конституційна монархія",
       "population": "31624264",
@@ -1663,7 +1663,7 @@
     },
     {
       "country_uk": "В'єтнам",
-      "city": "Ханой",
+      "capital_uk": "Ханой",
       "continent": "Азія",
       "government": "Соціалістична республіка",
       "population": "95540800",
@@ -1673,7 +1673,7 @@
     },
     {
       "country_uk": "Фінляндія",
-      "city": "Гельсінкі",
+      "capital_uk": "Гельсінкі",
       "continent": "Європа",
       "government": "Республіка",
       "population": "5523231",
@@ -1683,7 +1683,7 @@
     },
     {
       "country_uk": "Конго",
-      "city": "Браззавіль",
+      "capital_uk": "Браззавіль",
       "continent": "Африка",
       "government": "Республіка",
       "population": "5260750",
@@ -1693,7 +1693,7 @@
     },
     {
       "country_uk": "Німеччина",
-      "city": "Берлін",
+      "capital_uk": "Берлін",
       "continent": "Європа",
       "government": "Федеральна республіка",
       "population": "82114224",
@@ -1703,7 +1703,7 @@
     },
     {
       "country_uk": "Японія",
-      "city": "Токіо",
+      "capital_uk": "Токіо",
       "continent": "Азія",
       "government": "Конституційна монархія",
       "population": "127484450",
@@ -1713,7 +1713,7 @@
     },
     {
       "country_uk": "Зімбабве",
-      "city": "Хараре",
+      "capital_uk": "Хараре",
       "continent": "Африка",
       "government": "Республіка",
       "population": "16529904",
@@ -1723,7 +1723,7 @@
     },
     {
       "country_uk": "Парагвай",
-      "city": "Асунці",
+      "capital_uk": "Асунці",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "6811297",
@@ -1733,7 +1733,7 @@
     },
     {
       "country_uk": "Ірак",
-      "city": "Багдад",
+      "capital_uk": "Багдад",
       "continent": "Азія",
       "government": "Республіка",
       "population": "38274618",
@@ -1743,7 +1743,7 @@
     },
     {
       "country_uk": "Марокко",
-      "city": "Рабат",
+      "capital_uk": "Рабат",
       "continent": "Африка",
       "government": "Конституційна монархія",
       "population": "35739580",
@@ -1753,7 +1753,7 @@
     },
     {
       "country_uk": "Узбекистан",
-      "city": "Ташкент",
+      "capital_uk": "Ташкент",
       "continent": "Азія",
       "government": "Республіка",
       "population": "31910641",
@@ -1763,7 +1763,7 @@
     },
     {
       "country_uk": "Швеція",
-      "city": "Стокгольм",
+      "capital_uk": "Стокгольм",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "9910701",
@@ -1773,7 +1773,7 @@
     },
     {
       "country_uk": "Папуа Нова Гвінея",
-      "city": "Порт-Морсбі",
+      "capital_uk": "Порт-Морсбі",
       "continent": "Океанія",
       "government": "Конституційна монархія",
       "population": "8251162",
@@ -1783,7 +1783,7 @@
     },
     {
       "country_uk": "Камерун",
-      "city": "Яунд",
+      "capital_uk": "Яунд",
       "continent": "Африка",
       "government": "Республіка",
       "population": "24053727",
@@ -1793,7 +1793,7 @@
     },
     {
       "country_uk": "Туркменістан",
-      "city": "Ашхабад",
+      "capital_uk": "Ашхабад",
       "continent": "Азія",
       "government": "Республіка",
       "population": "5758075",
@@ -1803,7 +1803,7 @@
     },
     {
       "country_uk": "Іспанія",
-      "city": "Мадрид",
+      "capital_uk": "Мадрид",
       "continent": "Європа",
       "government": "Конституційна монархія",
       "population": "46354321",
@@ -1813,7 +1813,7 @@
     },
     {
       "country_uk": "Таїланд",
-      "city": "Бангкок",
+      "capital_uk": "Бангкок",
       "continent": "Азія",
       "government": "Конституційна монархія",
       "population": "69037513",
@@ -1823,7 +1823,7 @@
     },
     {
       "country_uk": "Ємен",
-      "city": "Сана",
+      "capital_uk": "Сана",
       "continent": "Азія",
       "government": "Республіка",
       "population": "28250420",
@@ -1833,7 +1833,7 @@
     },
     {
       "country_uk": "Франція",
-      "city": "Париж",
+      "capital_uk": "Париж",
       "continent": "Європа",
       "government": "Республіка",
       "population": "64979548",
@@ -1843,7 +1843,7 @@
     },
     {
       "country_uk": "Кенія",
-      "city": "Найробі",
+      "capital_uk": "Найробі",
       "continent": "Африка",
       "government": "Республіка",
       "population": "49699862",
@@ -1853,7 +1853,7 @@
     },
     {
       "country_uk": "Ботсвана",
-      "city": "Габороне",
+      "capital_uk": "Габороне",
       "continent": "Африка",
       "government": "Республіка",
       "population": "2291661",
@@ -1863,7 +1863,7 @@
     },
     {
       "country_uk": "Мадагаскар",
-      "city": "Антананаріву",
+      "capital_uk": "Антананаріву",
       "continent": "Африка",
       "government": "Федеральна республіка",
       "population": "25570895",
@@ -1873,7 +1873,7 @@
     },
     {
       "country_uk": "Україна",
-      "city": "Київ",
+      "capital_uk": "Київ",
       "continent": "Європа",
       "government": "Республіка",
       "population": "44222947",
@@ -1883,7 +1883,7 @@
     },
     {
       "country_uk": "Південний Судан",
-      "city": "Джуба",
+      "capital_uk": "Джуба",
       "continent": "Африка",
       "government": null,
       "population": "12575714",
@@ -1893,7 +1893,7 @@
     },
     {
       "country_uk": "Центральна Африканська Республіка",
-      "city": "Бангі",
+      "capital_uk": "Бангі",
       "continent": "Африка",
       "government": "Республіка",
       "population": "4659080",
@@ -1903,7 +1903,7 @@
     },
     {
       "country_uk": "Сомалі",
-      "city": "Могадішо",
+      "capital_uk": "Могадішо",
       "continent": "Африка",
       "government": "Республіка",
       "population": "14742523",
@@ -1913,7 +1913,7 @@
     },
     {
       "country_uk": "Афганістан",
-      "city": "Кабул",
+      "capital_uk": "Кабул",
       "continent": "Азія",
       "government": "Ісламський Емірат",
       "population": "35530081",
@@ -1923,7 +1923,7 @@
     },
     {
       "country_uk": "М'янма",
-      "city": "Рангун",
+      "capital_uk": "Рангун",
       "continent": "Азія",
       "government": "Республіка",
       "population": "53370609",
@@ -1933,7 +1933,7 @@
     },
     {
       "country_uk": "Замбія",
-      "city": "Лусака",
+      "capital_uk": "Лусака",
       "continent": "Африка",
       "government": "Республіка",
       "population": "17094130",
@@ -1943,7 +1943,7 @@
     },
     {
       "country_uk": "Чилі",
-      "city": "Сантьяго де Чилі",
+      "capital_uk": "Сантьяго де Чилі",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "18054726",
@@ -1953,7 +1953,7 @@
     },
     {
       "country_uk": "Туреччина",
-      "city": "Анкара",
+      "capital_uk": "Анкара",
       "continent": "Азія",
       "government": "Республіка",
       "population": "80745020",
@@ -1963,7 +1963,7 @@
     },
     {
       "country_uk": "Пакистан",
-      "city": "Ісламабад",
+      "capital_uk": "Ісламабад",
       "continent": "Азія",
       "government": "Республіка",
       "population": "197015955",
@@ -1973,7 +1973,7 @@
     },
     {
       "country_uk": "Мозамбік",
-      "city": "Мапуту",
+      "capital_uk": "Мапуту",
       "continent": "Африка",
       "government": "Республіка",
       "population": "29668834",
@@ -1983,7 +1983,7 @@
     },
     {
       "country_uk": "Намібія",
-      "city": "Віндгук",
+      "capital_uk": "Віндгук",
       "continent": "Африка",
       "government": "Республіка",
       "population": "2533794",
@@ -1993,7 +1993,7 @@
     },
     {
       "country_uk": "Танзанія",
-      "city": "Додома",
+      "capital_uk": "Додома",
       "continent": "Африка",
       "government": "Республіка",
       "population": "57310019",
@@ -2003,7 +2003,7 @@
     },
     {
       "country_uk": "Венесуела",
-      "city": "Каракас",
+      "capital_uk": "Каракас",
       "continent": "Південна Америка",
       "government": "Федеральна республіка",
       "population": "31977065",
@@ -2013,7 +2013,7 @@
     },
     {
       "country_uk": "Нігерія",
-      "city": "Абуджа",
+      "capital_uk": "Абуджа",
       "continent": "Африка",
       "government": "Федеральна республіка",
       "population": "190886311",
@@ -2023,7 +2023,7 @@
     },
     {
       "country_uk": "Єгипет",
-      "city": "Каїр",
+      "capital_uk": "Каїр",
       "continent": "Африка",
       "government": "Республіка",
       "population": "97553151",
@@ -2033,7 +2033,7 @@
     },
     {
       "country_uk": "Мавританія",
-      "city": "Нуакшот",
+      "capital_uk": "Нуакшот",
       "continent": "Африка",
       "government": "Республіка",
       "population": "4420184",
@@ -2043,7 +2043,7 @@
     },
     {
       "country_uk": "Болівія",
-      "city": "Ла-Пас",
+      "capital_uk": "Ла-Пас",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "11051600",
@@ -2053,7 +2053,7 @@
     },
     {
       "country_uk": "Ефіопія",
-      "city": "Аддіс Абеба",
+      "capital_uk": "Аддіс Абеба",
       "continent": "Африка",
       "government": "Республіка",
       "population": "104957438",
@@ -2063,7 +2063,7 @@
     },
     {
       "country_uk": "Колумбія",
-      "city": "Богота",
+      "capital_uk": "Богота",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "49065615",
@@ -2073,7 +2073,7 @@
     },
     {
       "country_uk": "Південна Африка",
-      "city": "Преторія",
+      "capital_uk": "Преторія",
       "continent": "Африка",
       "government": "Республіка",
       "population": "56717156",
@@ -2083,7 +2083,7 @@
     },
     {
       "country_uk": "Малі",
-      "city": "Бамако",
+      "capital_uk": "Бамако",
       "continent": "Африка",
       "government": "Республіка",
       "population": "18541980",
@@ -2093,7 +2093,7 @@
     },
     {
       "country_uk": "Ангола",
-      "city": "Луанда",
+      "capital_uk": "Луанда",
       "continent": "Африка",
       "government": "Республіка",
       "population": "29784193",
@@ -2103,7 +2103,7 @@
     },
     {
       "country_uk": "Нігер",
-      "city": "Ніамей",
+      "capital_uk": "Ніамей",
       "continent": "Африка",
       "government": "Республіка",
       "population": "21477348",
@@ -2113,7 +2113,7 @@
     },
     {
       "country_uk": "Чад",
-      "city": "Нджамена",
+      "capital_uk": "Нджамена",
       "continent": "Африка",
       "government": "Республіка",
       "population": "14899994",
@@ -2123,7 +2123,7 @@
     },
     {
       "country_uk": "Перу",
-      "city": "Ліма",
+      "capital_uk": "Ліма",
       "continent": "Південна Америка",
       "government": "Республіка",
       "population": "32165485",
@@ -2133,7 +2133,7 @@
     },
     {
       "country_uk": "Монголія",
-      "city": "Улан-Батор",
+      "capital_uk": "Улан-Батор",
       "continent": "Азія",
       "government": "Республіка",
       "population": "3075647",
@@ -2143,7 +2143,7 @@
     },
     {
       "country_uk": "Іран",
-      "city": "Тегеран",
+      "capital_uk": "Тегеран",
       "continent": "Азія",
       "government": "Ісламська республіка",
       "population": "81162788",
@@ -2153,7 +2153,7 @@
     },
     {
       "country_uk": "Лівія",
-      "city": "Триполі",
+      "capital_uk": "Триполі",
       "continent": "Африка",
       "government": "Соціалістична держава",
       "population": "5605000",
@@ -2163,7 +2163,7 @@
     },
     {
       "country_uk": "Судан",
-      "city": "Хартум",
+      "capital_uk": "Хартум",
       "continent": "Африка",
       "government": "Ісламська республіка",
       "population": "40533330",
@@ -2173,7 +2173,7 @@
     },
     {
       "country_uk": "Індонезія",
-      "city": "Джакарта",
+      "capital_uk": "Джакарта",
       "continent": "Азія",
       "government": "Республіка",
       "population": "263991379",
@@ -2183,7 +2183,7 @@
     },
     {
       "country_uk": "Мексика",
-      "city": "Мехіко",
+      "capital_uk": "Мехіко",
       "continent": "Північна Америка",
       "government": "Федеральна республіка",
       "population": "129163276",
@@ -2193,7 +2193,7 @@
     },
     {
       "country_uk": "Саудівська Аравія",
-      "city": "Ер-Ріяд",
+      "capital_uk": "Ер-Ріяд",
       "continent": "Азія",
       "government": "Монархія",
       "population": "32938213",
@@ -2203,7 +2203,7 @@
     },
     {
       "country_uk": "Гренландія",
-      "city": "Нуук",
+      "capital_uk": "Нуук",
       "continent": "Північна Америка",
       "government": "Частина Данії",
       "population": "56480",
@@ -2213,7 +2213,7 @@
     },
     {
       "country_uk": "Алжир",
-      "city": "Алжир",
+      "capital_uk": "Алжир",
       "continent": "Африка",
       "government": "Республіка",
       "population": "41318142",
@@ -2223,7 +2223,7 @@
     },
     {
       "country_uk": "Казахстан",
-      "city": "Астана",
+      "capital_uk": "Астана",
       "continent": null,
       "government": "Республіка",
       "population": "18204499",
@@ -2233,7 +2233,7 @@
     },
     {
       "country_uk": "Аргентина",
-      "city": "Буенос-Айрес",
+      "capital_uk": "Буенос-Айрес",
       "continent": "Південна Америка",
       "government": "Федеральна республіка",
       "population": "44271041",
@@ -2243,7 +2243,7 @@
     },
     {
       "country_uk": "Індія",
-      "city": "Нью-Делі",
+      "capital_uk": "Нью-Делі",
       "continent": "Азія",
       "government": "Федеральна республіка",
       "population": "1339180127",
@@ -2253,7 +2253,7 @@
     },
     {
       "country_uk": "Австралія",
-      "city": "Канберра",
+      "capital_uk": "Канберра",
       "continent": "Океанія",
       "government": "Федеральна конституційна монархія",
       "population": "24450561",
@@ -2263,7 +2263,7 @@
     },
     {
       "country_uk": "Бразилія",
-      "city": "Бразиліа",
+      "capital_uk": "Бразиліа",
       "continent": "Південна Америка",
       "government": "Федеральна республіка",
       "population": "209288278",
@@ -2273,7 +2273,7 @@
     },
     {
       "country_uk": "Сполучені Штати Америки",
-      "city": "Вашингтон",
+      "capital_uk": "Вашингтон",
       "continent": "Північна Америка",
       "government": "Федеральна республіка",
       "population": "324459463",
@@ -2283,7 +2283,7 @@
     },
     {
       "country_uk": "Китай",
-      "city": "Пекін",
+      "capital_uk": "Пекін",
       "continent": "Азія",
       "government": "Народна республіка",
       "population": "1409517397",
@@ -2293,7 +2293,7 @@
     },
     {
       "country_uk": "Канада",
-      "city": "Оттава",
+      "capital_uk": "Оттава",
       "continent": "Північна Америка",
       "government": "Конституційна монархія, Federation",
       "population": "36624199",
@@ -2303,7 +2303,7 @@
     },
     {
       "country_uk": "Антарктида",
-      "city": null,
+      "capital_uk": null,
       "continent": "Антарктида",
       "government": "Спільне адміністрування",
       "population": null,
@@ -2313,7 +2313,7 @@
     },
     {
       "country_uk": "Росія",
-      "city": "Москва",
+      "capital_uk": "Москва",
       "continent": "Європа",
       "government": "Федеральна республіка",
       "population": "143989754",

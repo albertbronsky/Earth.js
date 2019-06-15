@@ -4,54 +4,6 @@ $(document).ready(function() {
   show_details();
 });
 
-// function object_check(obj) {
-//   if (typeof obj === "object" && obj !== null) {
-//     return true;
-//   }
-// }
-
-// function country_search(term, data) {
-//   country_data = data.find(e => e.country === term);
-//   if (object_check(country_data)) {
-//     console.log(country_data.city);
-//     // new Country()
-//   }
-
-//   class Country {
-//     constructor(name, capital, continent, government, population, area) {
-//       this.name = name;
-//       this.capital = capital;
-//       this.continent = continent;
-//       this.government = government;
-//       this.population = population;
-//       this.area = area;
-
-//       this.getName = function() {
-//         return "Country name: " + this.name;
-//       };
-//     }
-//   }
-
-//   // var user001 = new Country("test", "Smith", 1985);
-// }
-
-// class Search {
-//   constructor(name, capital, continent, government, population, area) {
-//     this.name = name;
-//     this.capital = capital;
-//     this.continent = continent;
-//     this.government = government;
-//     this.population = population;
-//     this.area = area;
-//     // country_data = data.find(e => e.country === term)
-
-//     this.getName = function() {
-//       return "Country name: " + this.name;
-//     };
-//   }
-// }
-
-// valid categories: countries,
 var json;
 
 function get_json() {
@@ -72,35 +24,77 @@ function input_check() {
   const category = "countries";
 
   $("#gt").on("input", function() {
-    value = toTitleCase($(this).val());
+    let value = toTitleCase($(this).val());
 
     if (value) {
       render_suggestions(value);
     } else {
-      $(".flex-center-results").empty();
+      $(".flex-center-results, .search-info").empty();
+      $(".map").css({ visibility: "hidden" });
     }
   });
 }
 
 function render_suggestions(term) {
-  filtered = json.Countries.filter(e => String(e.country_uk).startsWith(term));
-  let items = [];
+  let filtered = json.Countries.filter(e =>
+    String(e.country_uk).startsWith(term)
+  );
 
-  for (item in filtered) {
-    country_name = filtered[item].country_uk;
-    items.push(
-      "<div class='result list-group-item list-group-item-action' data-country-name=" +
-        country_name +
-        ">" +
-        country_name +
-        "</div>"
-    );
-  }
-  $(".flex-center-results").html(items.join(""));
+  $(".flex-center-results").html(
+    filtered
+      .map(
+        field =>
+          `<div class='result list-group-item list-group-item-action'>${
+            field.country_uk
+          }</div>`
+      )
+      .join(" ")
+  );
 }
 
 function show_details() {
-  $("body").on("click", ".result", function() {
-    console.log($(this).data("country-name"));
+  class Entity {
+    constructor(name) {
+      this.name = name;
+    }
+
+    getField(field, term) {
+      return json.Countries.find(e => e["country_uk"] === term)[field];
+    }
+  }
+
+  class Country extends Entity {
+    constructor(name) {
+      super(name);
+      this.capital_uk = super.getField("capital_uk", name);
+      this.continent = super.getField("continent", name);
+      this.government = super.getField("government", name);
+      this.population = super.getField("population", name);
+      this.area = super.getField("area", name);
+    }
+
+    output() {
+      let items = [
+        "Назва країни: " + this.name,
+        "Столиця: " + this.capital_uk,
+        "Материк: " + this.continent,
+        "Форма правління: " + this.government,
+        "Населення: " + this.population,
+        "Площа: " + this.area
+      ];
+
+      return items.map(field => `<div>${field}</div>`).join(" ");
+    }
+  }
+
+  $("body").on("click", ".result", function(event) {
+    let country_name = $(this).text();
+    const result = new Country(country_name);
+
+    $(".search-info").html(result.output());
+    $(".map").css({ visibility: "visible" });
+
+    // Double click trigger fix
+    event.stopImmediatePropagation();
   });
 }
