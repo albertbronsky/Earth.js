@@ -59,10 +59,12 @@
   <div class="map col-12">
     <div class="search-info  col-md-4">
       <div class="info">Країна: Україна</div>
+      <div class="info">Материк: Європа</div>
       <div class="info">Столиця: Київ</div>
       <div class="info">Чисельність населення: 6734636434</div>
       <div class="info">Площа: 603628 км²</div>
       <div class="info">Форма правління: унітарна парламентсько-президентська республіка</div>
+
     </div>
     <div id="mapid" class="col-md-8"></div>
   </div>
@@ -80,6 +82,10 @@
   crossorigin=""></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.3.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet'
+  href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.3.0/mapbox-gl-geocoder.css' type='text/css' />
+
 <script>
   mapboxgl.accessToken =
     'pk.eyJ1IjoiYW5ubWdlcmlhbiIsImEiOiJjandtOTdqZmUwMHFiM3lxa213bTVqc202In0.RPkZsjxRE_EkSelXcm_7og';
@@ -92,8 +98,31 @@
     zoom: 3
   });
 
-  map.on('load', function () {
+  // var geocoder = new MapboxGeocoder({
+  //   accessToken: mapboxgl.accessToken,
+  //   language: 'uk-UA',
+  //   mapboxgl: mapboxgl
+  // });
+  // map.addControl(geocoder);
+  // var language = 2;
+  // Use setLayoutProperty to set the value of a layout property in a style layer.
+  // The three arguments are the id of the layer, the name of the layout property,
+  // and the new property value.
 
+  // map.setLayoutProperty('country-label', 'text-field', ['get', 'name_' + Russian]);
+
+  map.on('load', function () {
+    // map.setLayoutProperty('country-label', 'text-field', ['get', 'name_' + ru]);
+    map.setLayoutProperty('country-label', 'text-field', ['format',
+      ['get', 'name_en'], {
+        'font-scale': 1.2
+      },
+      '\n', {},
+      ['get', 'name'], {
+        'font-scale': 0.8,
+        'text-font': ['literal', ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']]
+      }
+    ]);
     map.addLayer({
       'id': 'maine',
       'type': 'fill',
