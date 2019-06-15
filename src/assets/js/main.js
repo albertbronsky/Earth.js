@@ -59,7 +59,12 @@ function show_details() {
     }
 
     getField(field, term) {
-      return json.Countries.find(e => e["country_uk"] === term)[field];
+      let retrieved = json.Countries.find(e => e["country_uk"] === term)[field];
+      if (retrieved) {
+        return retrieved;
+      } else {
+        return "немає даних";
+      }
     }
   }
 
@@ -91,6 +96,7 @@ function show_details() {
     let country_name = $(this).text();
     const result = new Country(country_name);
 
+    $(".flex-center-results").empty();
     $(".search-info").html(result.output());
     $(".map").css({ visibility: "visible" });
 
