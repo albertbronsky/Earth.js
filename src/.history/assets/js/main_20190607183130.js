@@ -1,7 +1,6 @@
 $(document).ready(function() {
   get_json();
   input_check();
-  show_details();
 });
 
 // function object_check(obj) {
@@ -80,33 +79,25 @@ function input_check() {
       $("#search-results").empty();
     }
   });
+
+  // $("#search-result").on("click", function() {
+  //   console.log($(this), html());
+  // });
 }
 
 function render_suggestions(term) {
-  filtered = json.Countries.filter(e => String(e.country_uk).startsWith(term));
+  filtered = json.Countries.filter(e => e.country_uk.startsWith(term));
 
   let items = [];
 
   for (item in filtered) {
-    country_name = filtered[item].country_uk;
-    items.push(
-      "<li class='search-result' data-country-name=" +
-        country_name +
-        ">" +
-        country_name +
-        "</li>"
-    );
+    items.push("<li id='" + item + "'>" + filtered[item].country_uk + "</li>");
   }
 
   $("#search-results").html(
-    $("<ul>", {
+    $("<ul/>", {
+      class: "my-new-list",
       html: items.join("")
     })
   );
-}
-
-function show_details() {
-  $("body").on("click", ".search-result", function() {
-    console.log($(this).data("country-name"));
-  });
 }
