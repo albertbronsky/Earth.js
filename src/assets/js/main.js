@@ -61,7 +61,7 @@ function show_details() {
     getField(field, term) {
       let retrieved = json.Countries.find(e => e["country_uk"] === term)[field];
       if (retrieved) {
-        return retrieved;
+        return retrieved.toLocaleString();
       } else {
         return "немає даних";
       }
@@ -80,12 +80,12 @@ function show_details() {
 
     output() {
       let items = [
-        "Назва країни: " + this.name,
-        "Столиця: " + this.capital_uk,
-        "Материк: " + this.continent,
-        "Форма правління: " + this.government,
-        "Населення: " + this.population,
-        "Площа: " + this.area
+        `Назва країни: ${this.name}`,
+        `Столиця: ${this.capital_uk}`,
+        `Материк: ${this.continent}`,
+        `Форма правління: ${this.government}`,
+        `Населення: ${this.population} осіб`,
+        `Площа: ${this.area} км²`
       ];
 
       return items.map(field => `<div>${field}</div>`).join(" ");
