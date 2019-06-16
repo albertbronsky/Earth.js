@@ -2950,7 +2950,7 @@
       "countryAlpha3": "PRK", 
       "countryAlpha2": "KP", 
       "categoryId": "140", 
-      "categoryName": ""місто" прямого підпорядкування"
+      "categoryName": "місто прямого підпорядкування"
     }, 
     {
       "alpha3": "KP-05", 
@@ -2966,7 +2966,7 @@
       "countryAlpha3": "PRK", 
       "countryAlpha2": "KP", 
       "categoryId": "140", 
-      "categoryName": ""місто" прямого підпорядкування"
+      "categoryName": "місто прямого підпорядкування"
     }, 
     {
       "alpha3": "KP-08", 
@@ -7678,7 +7678,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-LAA", 
@@ -7702,7 +7702,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-MMN", 
@@ -7710,7 +7710,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-AZI", 
@@ -7774,7 +7774,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-13", 
@@ -7838,7 +7838,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-10", 
@@ -7926,7 +7926,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-CHE", 
@@ -7942,7 +7942,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-INE", 
@@ -7950,7 +7950,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-HAJ", 
@@ -7982,7 +7982,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-OUJ", 
@@ -7990,7 +7990,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-ZAG", 
@@ -8006,7 +8006,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-ESM", 
@@ -8054,7 +8054,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-BOM", 
@@ -8078,7 +8078,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-SIK", 
@@ -8142,7 +8142,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-SAF", 
@@ -8174,7 +8174,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-OUD", 
@@ -8270,7 +8270,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-03", 
@@ -8286,7 +8286,7 @@
       "countryAlpha3": "MAR", 
       "countryAlpha2": "MA", 
       "categoryId": "161", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "MA-TIZ", 
@@ -8394,7 +8394,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-KO", 
@@ -8402,7 +8402,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-KE", 
@@ -8410,7 +8410,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-MD", 
@@ -8418,7 +8418,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-GA", 
@@ -8426,7 +8426,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-BE", 
@@ -8434,7 +8434,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-NZ", 
@@ -8442,7 +8442,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-L", 
@@ -8458,7 +8458,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-D", 
@@ -8482,7 +8482,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-KS", 
@@ -8490,7 +8490,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-MM", 
@@ -8498,7 +8498,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-FR", 
@@ -8506,7 +8506,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-BK", 
@@ -8514,7 +8514,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-DL", 
@@ -8522,7 +8522,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-F", 
@@ -8546,7 +8546,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-LE", 
@@ -8554,7 +8554,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-N", 
@@ -8570,7 +8570,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-PI", 
@@ -8578,7 +8578,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-DU", 
@@ -8586,7 +8586,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-FA", 
@@ -8594,7 +8594,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-KA", 
@@ -8602,7 +8602,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-GU", 
@@ -8610,7 +8610,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-LA", 
@@ -8618,7 +8618,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-CO", 
@@ -8626,7 +8626,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-SI", 
@@ -8634,7 +8634,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-DI", 
@@ -8642,7 +8642,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-ML", 
@@ -8650,7 +8650,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-FO", 
@@ -8658,7 +8658,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-KB", 
@@ -8666,7 +8666,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-B", 
@@ -8682,7 +8682,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-C", 
@@ -8698,7 +8698,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "GN-TO", 
@@ -8706,7 +8706,7 @@
       "countryAlpha3": "GIN", 
       "countryAlpha2": "GN", 
       "categoryId": "415", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }
   ], 
   "FIN": [
@@ -9528,7 +9528,7 @@
       "countryAlpha3": "THA", 
       "countryAlpha2": "TH", 
       "categoryId": "348", 
-      "categoryName": "special administrative city"
+      "categoryName": "муніципальна територія з самоврядуванням"
     }, 
     {
       "alpha3": "TH-86", 
@@ -9736,7 +9736,7 @@
       "countryAlpha3": "THA", 
       "countryAlpha2": "TH", 
       "categoryId": "134", 
-      "categoryName": "metropolitan administration"
+      "categoryName": "особливий адміністративний округ"
     }, 
     {
       "alpha3": "TH-27", 
@@ -10228,7 +10228,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-4", 
@@ -10244,7 +10244,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-BH", 
@@ -10252,7 +10252,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-2", 
@@ -10268,7 +10268,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-MA", 
@@ -10276,7 +10276,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-DH", 
@@ -10284,7 +10284,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-BA", 
@@ -10292,7 +10292,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-JA", 
@@ -10300,7 +10300,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-5", 
@@ -10316,7 +10316,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-1", 
@@ -10340,7 +10340,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-3", 
@@ -10356,7 +10356,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-KA", 
@@ -10364,7 +10364,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-5", 
@@ -10380,7 +10380,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }, 
     {
       "alpha3": "NP-2", 
@@ -10404,7 +10404,7 @@
       "countryAlpha3": "NPL", 
       "countryAlpha2": "NP", 
       "categoryId": "258", 
-      "categoryName": "zone"
+      "categoryName": "зона"
     }
   ], 
   "LAO": [
@@ -10438,7 +10438,7 @@
       "countryAlpha3": "LAO", 
       "countryAlpha2": "LA", 
       "categoryId": "273", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "LA-XA", 
@@ -38132,7 +38132,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-LB", 
@@ -38140,7 +38140,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-KB", 
@@ -38156,7 +38156,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-KG", 
@@ -38164,7 +38164,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-HK", 
@@ -38172,7 +38172,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-MP", 
@@ -38180,7 +38180,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-BGF", 
@@ -38196,7 +38196,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-MB", 
@@ -38204,7 +38204,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-BB", 
@@ -38212,7 +38212,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-NM", 
@@ -38220,7 +38220,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-AC", 
@@ -38228,7 +38228,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-BK", 
@@ -38236,7 +38236,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-AC", 
@@ -38244,7 +38244,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-BGF", 
@@ -38260,7 +38260,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-SE", 
@@ -38276,7 +38276,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-VK", 
@@ -38284,7 +38284,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-KB", 
@@ -38300,7 +38300,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-LB", 
@@ -38308,7 +38308,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-BK", 
@@ -38316,7 +38316,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-UK", 
@@ -38324,7 +38324,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-HS", 
@@ -38332,7 +38332,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-HM", 
@@ -38340,7 +38340,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-SE", 
@@ -38356,7 +38356,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-OP", 
@@ -38364,7 +38364,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-MB", 
@@ -38372,7 +38372,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "CF-UK", 
@@ -38380,7 +38380,7 @@
       "countryAlpha3": "CAF", 
       "countryAlpha2": "CF", 
       "categoryId": "339", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }
   ], 
   "SVK": [
@@ -38480,7 +38480,7 @@
       "countryAlpha3": "KOR", 
       "countryAlpha2": "KR", 
       "categoryId": "226", 
-      "categoryName": ""місто" прямого підпорядкування"
+      "categoryName": "місто прямого підпорядкування"
     }, 
     {
       "alpha3": "KR-46", 
@@ -42630,7 +42630,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-34", 
@@ -42638,7 +42638,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-39", 
@@ -42646,7 +42646,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-13", 
@@ -42654,7 +42654,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-21", 
@@ -42662,7 +42662,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-23", 
@@ -42670,7 +42670,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-27", 
@@ -42678,7 +42678,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-17", 
@@ -42686,7 +42686,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-44", 
@@ -42694,7 +42694,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-11", 
@@ -42702,7 +42702,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-07", 
@@ -42710,7 +42710,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-10", 
@@ -42718,7 +42718,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-29", 
@@ -42726,7 +42726,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-37", 
@@ -42734,7 +42734,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-34", 
@@ -42742,7 +42742,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-40", 
@@ -42750,7 +42750,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-12", 
@@ -42758,7 +42758,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-36", 
@@ -42766,7 +42766,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-03", 
@@ -42774,7 +42774,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-13", 
@@ -42782,7 +42782,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-18", 
@@ -42790,7 +42790,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-14", 
@@ -42798,7 +42798,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-01", 
@@ -42806,7 +42806,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-40", 
@@ -42814,7 +42814,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-42", 
@@ -42822,7 +42822,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-32", 
@@ -42830,7 +42830,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-17", 
@@ -42838,7 +42838,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-28", 
@@ -42846,7 +42846,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-27", 
@@ -42854,7 +42854,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-15", 
@@ -42862,7 +42862,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-35", 
@@ -42870,7 +42870,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-07", 
@@ -42878,7 +42878,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-23", 
@@ -42886,7 +42886,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-30", 
@@ -42894,7 +42894,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-02", 
@@ -42902,7 +42902,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-28", 
@@ -42910,7 +42910,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-43", 
@@ -42918,7 +42918,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-21", 
@@ -42926,7 +42926,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-47", 
@@ -42934,7 +42934,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-44", 
@@ -42942,7 +42942,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-08", 
@@ -42950,7 +42950,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-22", 
@@ -42958,7 +42958,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-36", 
@@ -42966,7 +42966,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-05", 
@@ -42974,7 +42974,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-12", 
@@ -42982,7 +42982,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-01", 
@@ -42990,7 +42990,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-19", 
@@ -42998,7 +42998,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-24", 
@@ -43006,7 +43006,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-04", 
@@ -43014,7 +43014,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-26", 
@@ -43022,7 +43022,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-38", 
@@ -43030,7 +43030,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-09", 
@@ -43038,7 +43038,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-09", 
@@ -43046,7 +43046,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-39", 
@@ -43054,7 +43054,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-18", 
@@ -43062,7 +43062,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-46", 
@@ -43070,7 +43070,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-25", 
@@ -43078,7 +43078,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-25", 
@@ -43086,7 +43086,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-45", 
@@ -43094,7 +43094,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-32", 
@@ -43102,7 +43102,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-26", 
@@ -43110,7 +43110,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-16", 
@@ -43118,7 +43118,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-19", 
@@ -43126,7 +43126,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-46", 
@@ -43134,7 +43134,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-22", 
@@ -43142,7 +43142,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-41", 
@@ -43150,7 +43150,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-31", 
@@ -43158,7 +43158,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-33", 
@@ -43166,7 +43166,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }, 
     {
       "alpha3": "JP-35", 
@@ -43174,7 +43174,7 @@
       "countryAlpha3": "JPN", 
       "countryAlpha2": "JP", 
       "categoryId": "247", 
-      "categoryName": "prefecture"
+      "categoryName": "префектура"
     }
   ], 
   "KGZ": [
