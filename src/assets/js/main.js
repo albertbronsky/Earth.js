@@ -50,14 +50,12 @@ function get_flag(country_code) {
 function render_suggestions(term) {
   function gather(fcl) {
     let res;
-    // $(".loader").show();
     $.getJSON(
       `http://api.geonames.org/searchJSON?lang=uk&name_startsWith=${term}&featureClass=${fcl}&username=zen`,
       function(data) {
         res = data.geonames.filter(e => e.population > 0);
       }
     );
-    // $(".loader").hide();
     return res;
   }
 
