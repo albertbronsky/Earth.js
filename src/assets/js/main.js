@@ -1,3 +1,7 @@
+$.ajaxSetup({
+  async: false
+});
+
 $(document).ready(function() {
   get_json();
   input_check();
@@ -5,10 +9,13 @@ $(document).ready(function() {
 });
 
 var json;
-
+var flags;
 function get_json() {
   $.getJSON(`assets/json/db.json`, function(data) {
     json = data;
+  });
+  $.getJSON(`assets/json/flags.json`, function(data) {
+    flags = data;
   });
 }
 
@@ -22,11 +29,12 @@ function toTitleCase(phrase) {
 
 function input_check() {
   const category = "countries";
+  const letters = /^[а-яА-Яієґї-]+$/;
 
   $("#gt").on("input", function() {
     let value = toTitleCase($(this).val());
 
-    if (value) {
+    if (value && value.match(letters)) {
       render_suggestions(value);
     } else {
       $(".flex-center-results, .search-info").empty();
@@ -35,18 +43,31 @@ function input_check() {
   });
 }
 
+function get_flag(country_code) {
+  return flags.find(e => e.code === country_code).emoji;
+}
+
 function render_suggestions(term) {
-  let filtered = json.Countries.filter(e =>
-    String(e.country_uk).startsWith(term)
-  );
+  function gather(fcl) {
+    let res;
+    // $(".loader").show();
+    $.getJSON(
+      `http://api.geonames.org/searchJSON?lang=uk&name_startsWith=${term}&featureClass=${fcl}&username=zen`,
+      function(data) {
+        res = data.geonames.filter(e => e.population > 0);
+      }
+    );
+    // $(".loader").hide();
+    return res;
+  }
 
   $(".flex-center-results").html(
-    filtered
+    gather("P")
       .map(
         field =>
-          `<div class='result list-group-item list-group-item-action'>${
-            field.country_uk
-          }</div>`
+          `<div class='result list-group-item list-group-item-action'>${get_flag(
+            field.countryCode
+          )} ${field.name}, ${field.adminName1}, ${field.countryName}</div>`
       )
       .join(" ")
   );
@@ -76,6 +97,7 @@ function show_details() {
       this.government = super.getField("government", name);
       this.population = super.getField("population", name);
       this.area = super.getField("area", name);
+      this.country_en = super.getField("country_en", name);
     }
 
     output() {
@@ -100,6 +122,12 @@ function show_details() {
     $(".search-info").html(result.output());
     $(".map").css({ visibility: "visible" });
 
+    map.jumpTo({
+      center: [52.441864013671875, 41.75389768415882],
+      zoom: 14
+    });
+
+    map.getLayer();
     // Double click trigger fix
     event.stopImmediatePropagation();
   });
