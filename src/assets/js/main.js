@@ -48,19 +48,30 @@ function get_flag(country_code) {
 }
 
 function render_suggestions(term) {
-  function gather(fcl) {
-    let res;
-    $.getJSON(
-      `http://api.geonames.org/searchJSON?lang=uk&name_startsWith=${term}&featureClass=${fcl}&username=zen`,
-      function(data) {
-        res = data.geonames.filter(e => e.population > 0);
-      }
-    );
-    return res;
+  function gather(filter, fcl) {
+    function query(fltr, fcl) {
+      let res;
+      $.getJSON(
+        `http://api.geonames.org/searchJSON?lang=uk&${fltr}=${term}&featureClass=${fcl}&username=zen`,
+        function(data) {
+          console.log(data);
+          res = data.geonames.filter(e => e.population > 0);
+        }
+      );
+      return res;
+    }
+
+    gathered = query(filter, fcl);
+
+    if (!gathered.length) {
+      gathered = query("name_equals", fcl);
+    }
+
+    return gathered.slice(0, 15);
   }
 
   $(".flex-center-results").html(
-    gather("P")
+    gather("name_startsWith", "P")
       .map(
         field =>
           `<div class='result list-group-item list-group-item-action'>${get_flag(
