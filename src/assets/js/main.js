@@ -2,11 +2,23 @@ $.ajaxSetup({
   async: false
 });
 
-$(document).ready(function() {
-  get_json();
-  input_check();
-  show_details();
+const letters = /^[а-яА-Яієґї-]+$/;
+
+$("#gt").on("input", function() {
+  console.log("KEK");
+
+  let value = $(this).val();
+
+  if (value.match(letters)) {
+    render_suggestions(value);
+  } else {
+    $(".flex-center-results, .search-info").empty();
+    $(".map").css({ visibility: "hidden" });
+  }
 });
+
+get_json();
+show_details();
 
 var json;
 var flags;
@@ -19,59 +31,36 @@ function get_json() {
   });
 }
 
-function toTitleCase(phrase) {
-  return phrase
-    .toLowerCase()
-    .split(" ")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-function input_check() {
-  const category = "countries";
-  const letters = /^[а-яА-Яієґї-]+$/;
-
-  $("#gt").on("input", function() {
-    let value = toTitleCase($(this).val());
-
-    if (value && value.match(letters)) {
-      render_suggestions(value);
-    } else {
-      $(".flex-center-results, .search-info").empty();
-      $(".map").css({ visibility: "hidden" });
-    }
-  });
-}
-
 function get_flag(country_code) {
   return flags.find(e => e.code === country_code).emoji;
 }
 
 function render_suggestions(term) {
-  function gather(filter, fcl) {
-    function query(fltr, fcl) {
+  function gather(fcl) {
+    function query(filter) {
+      console.log("start");
       let res;
       $.getJSON(
-        `http://api.geonames.org/searchJSON?lang=uk&${fltr}=${term}&featureClass=${fcl}&username=zen`,
+        `http://api.geonames.org/searchJSON?lang=uk&${filter}=${term}&featureClass=${fcl}&username=zen`,
         function(data) {
-          console.log(data);
           res = data.geonames.filter(e => e.population > 0);
         }
       );
       return res;
     }
 
-    gathered = query(filter, fcl);
+    gathered = query("name_startsWith");
 
     if (!gathered.length) {
-      gathered = query("name_equals", fcl);
+      console.log("wut");
+      gathered = query("name_equals");
     }
-
+    console.log("end");
     return gathered.slice(0, 15);
   }
 
   $(".flex-center-results").html(
-    gather("name_startsWith", "P")
+    gather("P")
       .map(
         field =>
           `<div class='result list-group-item list-group-item-action'>${get_flag(
