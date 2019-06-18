@@ -269,7 +269,7 @@ body {
   font-size: 10px;
   margin: 20px;
   transition: opacity 0.23s ease-out;
-  text-indent: -9999em;
+  // text-indent: -9999em;
   width: 3em;
   height: 3em;
   border-radius: 50%;
@@ -295,7 +295,7 @@ body {
     #ffffff 10%,
     rgba(255, 255, 255, 0) 42%
   );
-  position: absolute;
+  position: fixed;
   -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
   -webkit-transform: translateZ(0);
