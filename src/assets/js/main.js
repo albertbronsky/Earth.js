@@ -1,12 +1,21 @@
-$.ajaxSetup({
-  async: false
+const $loading = $(".loader");
+$(document)
+  .ajaxStart(function() {
+    $loading.css({ opacity: 1 });
+  })
+  .ajaxStop(function() {
+    $loading.css({ opacity: 0 });
+  });
+
+var flags;
+$.getJSON(`assets/json/flags.json`, function(data) {
+  flags = data;
 });
 
+// const category = "countries";
 const letters = /^[а-яА-Яієґї-]+$/;
 
 $("#gt").on("input", function() {
-  console.log("KEK");
-
   let value = $(this).val();
 
   if (value.match(letters)) {
@@ -17,67 +26,61 @@ $("#gt").on("input", function() {
   }
 });
 
-get_json();
-show_details();
-
-var json;
-var flags;
-function get_json() {
-  $.getJSON(`assets/json/db.json`, function(data) {
-    json = data;
-  });
-  $.getJSON(`assets/json/flags.json`, function(data) {
-    flags = data;
-  });
-}
+$("body").on("click", ".result", function() {
+  show_details($(this).data("name"));
+});
 
 function get_flag(country_code) {
   return flags.find(e => e.code === country_code).emoji;
 }
 
-function render_suggestions(term) {
-  function gather(fcl) {
-    function query(filter) {
-      console.log("start");
-      let res;
-      $.getJSON(
-        `http://api.geonames.org/searchJSON?lang=uk&${filter}=${term}&featureClass=${fcl}&username=zen`,
-        function(data) {
-          res = data.geonames.filter(e => e.population > 0);
-        }
-      );
-      return res;
-    }
-
-    gathered = query("name_startsWith");
-
-    if (!gathered.length) {
-      console.log("wut");
-      gathered = query("name_equals");
-    }
-    console.log("end");
-    return gathered.slice(0, 15);
-  }
-
-  $(".flex-center-results").html(
-    gather("P")
-      .map(
-        field =>
-          `<div class='result list-group-item list-group-item-action'>${get_flag(
-            field.countryCode
-          )} ${field.name}, ${field.adminName1}, ${field.countryName}</div>`
-      )
-      .join(" ")
+function query(filter, term, fcl) {
+  return $.getJSON(
+    `http://api.geonames.org/searchJSON?lang=uk&${filter}=${term}&featureClass=${fcl}&username=zen&orderby=population&maxRows=15`
   );
 }
 
-function show_details() {
+function gather_suggestions(term, fcl) {
+  return query("name_startsWith", term, fcl).then(function(partial_name) {
+    if (partial_name.geonames.length) {
+      return partial_name;
+    } else {
+      return query("name_equals", term, fcl);
+    }
+  });
+}
+
+function render_suggestions(term) {
+  gather_suggestions(term, "A").then(function(data) {
+    if (data) {
+      console.log(data);
+      $(".flex-center-results").html(
+        data.geonames.map(
+          field =>
+            `<div class='result list-group-item list-group-item-action' data-name=${
+              field.name
+            }>${get_flag(field.countryCode)} ${
+              field.name
+            }, ${field.adminName1.slice(0, 20)}, ${field.countryName}</div>`
+        )
+      );
+    } else {
+      $(".flex-center-results").empty();
+    }
+  });
+}
+
+function show_details(country_name) {
+  console.log(country_name);
+  query("name_equals", country_name, "A").then(data => console.log(data));
+
   class Entity {
     constructor(name) {
       this.name = name;
     }
 
     getField(field, term) {
+      console.log(json.Countries);
       let retrieved = json.Countries.find(e => e["country_uk"] === term)[field];
       if (retrieved) {
         return retrieved.toLocaleString();
@@ -112,21 +115,16 @@ function show_details() {
     }
   }
 
-  $("body").on("click", ".result", function(event) {
-    let country_name = $(this).text();
-    const result = new Country(country_name);
+  const result = new Country(country_name);
 
-    $(".flex-center-results").empty();
-    $(".search-info").html(result.output());
-    $(".map").css({ visibility: "visible" });
+  $(".flex-center-results").empty();
+  $(".search-info").html(result.output());
+  $(".map").css({ visibility: "visible" });
 
-    map.jumpTo({
-      center: [52.441864013671875, 41.75389768415882],
-      zoom: 14
-    });
-
-    map.getLayer();
-    // Double click trigger fix
-    event.stopImmediatePropagation();
+  map.jumpTo({
+    center: [52.441864013671875, 41.75389768415882],
+    zoom: 14
   });
+
+  map.getLayer();
 }
