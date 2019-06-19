@@ -153,7 +153,7 @@ function show_details(country_name) {
         `Столиця: ${this.capital}`,
         `Код країни (ISO-3166): ${this.country_code}`,
         `Широта: ${this.lat}°`,
-        `Довжина: ${this.lng}°`,
+        `Довгота: ${this.lng}°`,
         `Населення: ${this.population.toLocaleString()} осіб`
       ];
 
