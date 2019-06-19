@@ -23,6 +23,7 @@ $("#gt").on("input", function() {
     render_suggestions(value);
   } else {
     $(".flex-center-results, .search-info").empty();
+    $("#mapid").css({ height: "0px" });
     $(".map").css({ visibility: "hidden" });
   }
 });
@@ -104,6 +105,8 @@ function show_details(country_name) {
       console.log(result.capital);
       $(".flex-center-results").empty();
       $(".search-info").html(result.output());
+      $("#mapid").css({ height: "690px" });
+
       $(".map").css({ visibility: "visible" });
 
       map.jumpTo({
