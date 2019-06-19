@@ -23,7 +23,7 @@ $("#gt").on("input", function() {
     render_suggestions(value);
   } else {
     $(".flex-center-results, .search-info").empty();
-    $("#mapid").css({ height: "0px" });
+    // $("#mapid").css({ height: "0px", width: "0px" });
     $(".map").css({ visibility: "hidden" });
   }
 });
@@ -105,7 +105,7 @@ function show_details(country_name) {
       console.log(result.capital);
       $(".flex-center-results").empty();
       $(".search-info").html(result.output());
-      $("#mapid").css({ height: "555px" });
+      // $("#mapid").css({ height: "555px", width: "1250px" });
 
       $(".map").css({ visibility: "visible" });
 
