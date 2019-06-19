@@ -105,7 +105,7 @@ function show_details(country_name) {
       console.log(result.capital);
       $(".flex-center-results").empty();
       $(".search-info").html(result.output());
-      $("#mapid").css({ height: "445px" });
+      $("#mapid").css({ height: "555px" });
 
       $(".map").css({ visibility: "visible" });
 
