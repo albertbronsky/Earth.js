@@ -274,7 +274,8 @@ body {
 .loader {
   opacity: 0;
   font-size: 10px;
-  margin: 20px;
+  // margin-right: 50px;
+  margin-top: 20px;
   transition: opacity 0.23s ease-out;
   // text-indent: -9999em;
   width: 3em;
