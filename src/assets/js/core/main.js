@@ -143,11 +143,11 @@ class SuggestionsQuery {
     switch (field.fcode) {
       case "CONT":
         inside = `${flag} ${field.name}`;
-        tooltip = "Материк";
+        tooltip = "Континент";
         break;
       case "PCLI":
         inside = `${flag} ${field.countryName}`;
-        tooltip = "Країна";
+        tooltip = "Держава";
         break;
       case "PPL":
       case "PPLC":
