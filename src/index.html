@@ -12,8 +12,7 @@
 
 <body>
   <div class="container row main-search">
-    <div class="search-input col-md-8 row">
-      <div class="loader"></div>
+    <div class="search-input col-md-8">
       <form action="" class="search-form row">
         <input id="gt" class="col-md-12 m" type="text" name="guide-title" autocomplete="off" />
         <div class="flex-center-results col-md-12">
@@ -37,58 +36,48 @@
           </div> -->
         </div>
       </form>
-      <!-- </div>
-            <div class="row">
-              <div class="loader"></div>
-              <form action="" class=" col-md-11 search-form row">
-                <input placeholder="Введіть назву географічного об'єкту для пошуку" id="gt" class="col-md-12 m"
-                  type="text" name="guide-title" autocomplete="off">
-                <div class="flex-center-results col-md-12"></div>
-              </form>
-
-
-            </div> -->
-
-      <div class="row search-option flex-center-option col-md-4">
-        <div class="col-12 option-label col-sm-7">Критерій пошуку:</div>
-        <div class="btn-group btn-group-toggle col-12 col-sm-5 option-group" data-toggle="">
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" />
-            <label class="custom-control-label" for="defaultGroupExample1">Материки</label>
-          </div>
-
-          <!-- Group of default radios - option 2 -->
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" />
-            <label class="custom-control-label" for="defaultGroupExample2">Країни</label>
-          </div>
-
-          <!-- Group of default radios - option 3 -->
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" />
-            <label class="custom-control-label" for="defaultGroupExample3">Регіони</label>
-          </div>
-
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="groupOfDefaultRadios" />
-            <label class="custom-control-label" for="defaultGroupExample4">Міста</label>
-          </div>
-        </div>
-        <!-- Group of default radios - option 1 -->
-      </div>
     </div>
 
-    <div class="map col-12" style="visibility: hidden;">
-      <div class="search-info  col-md-4">
-        <!-- <div class="info">Країна: Україна</div>
+    <div class="row search-option flex-center-option col-md-4">
+      <div class="col-12 option-label col-sm-7">Критерій пошуку:</div>
+      <div class="btn-group btn-group-toggle col-12 col-sm-5 option-group" data-toggle="">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" />
+          <label class="custom-control-label" for="defaultGroupExample1">Материки</label>
+        </div>
+
+        <!-- Group of default radios - option 2 -->
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" />
+          <label class="custom-control-label" for="defaultGroupExample2">Країни</label>
+        </div>
+
+        <!-- Group of default radios - option 3 -->
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" />
+          <label class="custom-control-label" for="defaultGroupExample3">Регіони</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="groupOfDefaultRadios" />
+          <label class="custom-control-label" for="defaultGroupExample4">Міста</label>
+        </div>
+      </div>
+      <!-- Group of default radios - option 1 -->
+    </div>
+  </div>
+
+  <div class="map col-12" style="visibility: hidden;">
+    <div class="search-info  col-md-4">
+      <!-- <div class="info">Країна: Україна</div>
       <div class="info">Столиця: Київ</div>
       <div class="info">Населення: 6734636434</div>
       <div class="info">Площа: 603628 км²</div>
       <div class="info">Форма правління: унітарна парламентсько-президентська республіка</div> -->
-      </div>
-      <div id="mapid" class="col-md-8"></div>
     </div>
-    <!-- <div id="regions_div" style="width: 900px; height: 500px;"></div> -->
+    <div id="mapid" class="col-md-8"></div>
+  </div>
+  <!-- <div id="regions_div" style="width: 900px; height: 500px;"></div> -->
 </body>
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
