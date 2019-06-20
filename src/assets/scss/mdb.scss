@@ -209,12 +209,11 @@ body {
   border-radius: 1.2rem !important;
   max-width: 600px;
   min-width: 190px;
-  height: 18px;
+  // height: 18px;
   padding-right: 15px;
   padding-left: 15px;
   align-items: center;
   color: #1b1b1b;
-  border-bottom: 1.2px solid #adb5bd !important;
   border-right: 1.2px solid #adb5bd !important;
   border-left: 1.2px solid #adb5bd !important;
 }
@@ -227,7 +226,11 @@ body {
 .result:hover:last-child {
   background-color: #f2f2f2 !important;
   color: #1b1b1b !important;
-  // border-bottom: 1.2px solid #289dff !important;
+  border-bottom: 1.2px solid #adb5bd !important;
+}
+
+.result:last-child {
+  border-bottom: 1.2px solid #adb5bd !important;
 }
 
 .result:hover {
@@ -237,8 +240,8 @@ body {
 }
 
 .flex-center-results {
-  // display: flex;
-  display: none;
+  display: flex;
+  // display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
