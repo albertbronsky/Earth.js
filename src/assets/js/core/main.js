@@ -53,7 +53,6 @@ function get_flag(country_code) {
 class SuggestionsQuery {
   constructor(term) {
     this.term = term;
-    this.currentRequest = null;
     if (this.term.match(/^[А-Яа-яёЁЇїІіЄєҐґʼ]+$/)) {
       this.build_query();
     } else {
@@ -80,18 +79,13 @@ class SuggestionsQuery {
     filter = "name_startsWith",
     args = "&featureCode=ADM1&featureCode=PPL&featureCode=PPLC&featureCode=PPLA&featureCode=PCLI&featureCode=CONT"
   }) {
-    this.currentRequest = jQuery.ajax({
+    jQuery.ajax({
       context: this,
       type: "GET",
       data:
         "lang=uk&username=zen&orderby=relevance&maxRows=15&" +
         `${filter}=${this.term}&${args}`,
       url: "http://api.geonames.org/searchJSON?",
-      beforeSend: function() {
-        if (this.currentRequest) {
-          this.currentRequest.abort();
-        }
-      },
       success: function(data) {
         if (data.geonames.length) {
           this.fill_suggestions(
@@ -115,22 +109,26 @@ class SuggestionsQuery {
     });
   }
 
-  wipe_suggestions() {
-    suggestions_box.empty();
-    // this.remove_tooltips();
-  }
-
   remove_tooltips() {
     $(".tooltip").remove();
   }
 
+  wipe_suggestions() {
+    suggestions_box.empty();
+    this.remove_tooltips();
+  }
+
   fill_suggestions(content) {
     suggestions_box.html(content);
-    // this.remove_tooltips();
+    this.remove_tooltips();
     $(".result").tooltip();
   }
 
   render_html(field) {
+    // if ($.active > 1) {
+    //   console.log($.active);
+    //   return this.build_query();
+    // }
     let flag;
 
     if (field.fcode === "CONT") {
@@ -145,7 +143,7 @@ class SuggestionsQuery {
     switch (field.fcode) {
       case "CONT":
         inside = `${flag} ${field.name}`;
-        tooltip = "Континент";
+        tooltip = "Материк";
         break;
       case "PCLI":
         inside = `${flag} ${field.countryName}`;
