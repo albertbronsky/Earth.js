@@ -89,6 +89,7 @@ body {
   min-width: 190px;
   border-radius: 1.2rem;
   border: 1.2px solid #adb5bd !important;
+  outline: transparent;
 }
 
 .m {
@@ -96,9 +97,9 @@ body {
   display: flex;
 }
 
-// #gt:focus {
-//   border-color: #289dff;
-// }
+#gt:focus {
+  border-color: #adb5bd !important;
+}
 
 .custom-select:focus {
   border-color: transparent;
@@ -240,8 +241,8 @@ body {
 }
 
 .flex-center-results {
-  display: flex;
-  // display: none;
+  // display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
