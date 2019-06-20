@@ -1,15 +1,15 @@
-function wipe() {
-  $(".flex-center-results, .search-info").empty();
-  $(".map").css({ visibility: "hidden" });
-}
+// function wipe() {
+//   $(".flex-center-results, .search-info").empty();
+//   $(".map").css({ visibility: "hidden" });
+// }
 
-function trigger_search() {
-  if (window.user_input.match(/^[а-яА-Яієґї-]+$/)) {
-    render_suggestions();
-  } else {
-    wipe();
-  }
-}
+// function trigger_search() {
+//   if (window.user_input.match(/^[а-яА-Яієґї-]+$/)) {
+//     render_suggestions();
+//   } else {
+//     wipe();
+//   }
+// }
 
 function get_flag(country_code) {
   return flags.find(e => e.code === country_code).emoji;
@@ -80,18 +80,22 @@ class SuggestionsQuery {
     filter = "name_startsWith",
     args = "&featureCode=ADM1&featureCode=PPL&featureCode=PPLC&featureCode=PPLA&featureCode=PCLI&featureCode=CONT"
   }) {
-    this.currentRequest = jQuery.ajax({
+    if (this.currentRequest) {
+      this.currentRequest.abort();
+    }
+
+    this.currentRequest = $.ajax({
       context: this,
       type: "GET",
       data:
         "lang=uk&username=zen&orderby=relevance&maxRows=15&" +
         `${filter}=${this.term}&${args}`,
       url: "http://api.geonames.org/searchJSON?",
-      beforeSend: function() {
-        if (this.currentRequest && this.currentRequest.readyState !== 4) {
-          this.currentRequest.abort();
-        }
-      },
+      // beforeSend: function() {
+      //   if (this.currentRequest) {
+      //     this.currentRequest.abort();
+      //   }
+      // },
       success: function(data) {
         if (data.geonames.length) {
           this.fill_suggestions(
@@ -117,10 +121,16 @@ class SuggestionsQuery {
 
   wipe_suggestions() {
     suggestions_box.empty();
+    // this.remove_tooltips();
+  }
+
+  remove_tooltips() {
+    $(".tooltip").remove();
   }
 
   fill_suggestions(content) {
     suggestions_box.html(content);
+    // this.remove_tooltips();
     $(".result").tooltip();
   }
 
