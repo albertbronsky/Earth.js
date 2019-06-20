@@ -80,22 +80,18 @@ class SuggestionsQuery {
     filter = "name_startsWith",
     args = "&featureCode=ADM1&featureCode=PPL&featureCode=PPLC&featureCode=PPLA&featureCode=PCLI&featureCode=CONT"
   }) {
-    if (this.currentRequest) {
-      this.currentRequest.abort();
-    }
-
-    this.currentRequest = $.ajax({
+    this.currentRequest = jQuery.ajax({
       context: this,
       type: "GET",
       data:
         "lang=uk&username=zen&orderby=relevance&maxRows=15&" +
         `${filter}=${this.term}&${args}`,
       url: "http://api.geonames.org/searchJSON?",
-      // beforeSend: function() {
-      //   if (this.currentRequest) {
-      //     this.currentRequest.abort();
-      //   }
-      // },
+      beforeSend: function() {
+        if (this.currentRequest) {
+          this.currentRequest.abort();
+        }
+      },
       success: function(data) {
         if (data.geonames.length) {
           this.fill_suggestions(
