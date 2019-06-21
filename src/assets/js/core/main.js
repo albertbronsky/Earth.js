@@ -1,285 +1,437 @@
-// function wipe() {
-//   $(".flex-center-results, .search-info").empty();
-//   $(".map").css({ visibility: "hidden" });
-// }
-
-// function trigger_search() {
-//   if (window.user_input.match(/^[а-яА-Яієґї-]+$/)) {
-//     render_suggestions();
-//   } else {
-//     wipe();
-//   }
-// }
-
-function get_flag(country_code) {
-  return flags.find(e => e.code === country_code).emoji;
-}
-
-// function suggestions_query(filter, term) {
-//   if (category === "countries") {
-//     return make_query("A", "PCLI");
-//   }
-//   if (category === "cities") {
-//     return make_query("P", "");
-//   }
-
-//   function make_query(fcl, fcd) {
-//     return $.getJSON(
-//       `http://api.geonames.org/searchJSON?lang=uk&${filter}=${term}&featureClass=${fcl}&featureCode=${fcd}&username=zen&orderby=population&maxRows=15`
-//     );
-//   }
-// }
-
-// function country_query(term) {
-//   return $.getJSON(
-//     `http://api.geonames.org/countryInfoJSON?&lang=uk&country=${term}&username=zen&style=full`
-//   );
-// }
-
-// function gather_suggestions(term) {
-//   if (category === "cities" || category === "countries") {
-//     return suggestions_query("name_startsWith", term).then(function(
-//       partial_name
-//     ) {
-//       if (partial_name.geonames.length) {
-//         return partial_name;
-//       } else {
-//         return suggestions_query("name_equals", term);
-//       }
-//     });
-//   }
-// }
-
-class SuggestionsQuery {
-  constructor(term) {
-    this.term = term;
-    if (this.term.match(/^[А-Яа-яёЁЇїІіЄєҐґʼ]+$/)) {
-      this.build_query();
-    } else {
-      this.wipe_suggestions();
-    }
-  }
-
-  build_query() {
-    switch (window.category) {
-      case "countries":
-        break;
-      case "cities":
-        break;
-      case "subdivisions":
-        break;
-      case "continents":
-        break;
-      default:
-        this.make_query({});
-    }
-  }
-
-  make_query({
+class Base {
+  geonames_query({
+    input = true,
+    lang = "uk",
+    service = "searchJSON",
     filter = "name_startsWith",
-    args = "&featureCode=ADM1&featureCode=PPL&featureCode=PPLC&featureCode=PPLA&featureCode=PCLI&featureCode=CONT"
-  }) {
-    jQuery.ajax({
+    term,
+    args = "&orderby=relevance&maxRows=12",
+    fcodes = "&featureCode=ADM1&featureCode=PPL&featureCode=PPLC&featureCode=PPLA&featureCode=PCLI&featureCode=CONT"
+  } = {}) {
+    $.ajax({
       context: this,
       type: "GET",
-      data:
-        "lang=uk&username=zen&orderby=relevance&maxRows=15&" +
-        `${filter}=${this.term}&${args}`,
-      url: "http://api.geonames.org/searchJSON?",
+      data: `username=zen&lang=${lang}&${filter}=${term}${args}${fcodes}`,
+      url: `http://api.geonames.org/${service}?`,
       success: function(data) {
-        if (data.geonames.length) {
-          this.fill_suggestions(
-            data.geonames.map(field => {
-              if (field.population > 0) {
-                return this.render_html(field);
-              }
-            })
-          );
-        } else if (!data.geonames.length && filter !== "name") {
-          this.make_query({ filter: "name" });
-        } else {
-          this.wipe_suggestions();
+        if ((input && this.term === window.user_input) || !input) {
+          this.parse_geonames(data, filter);
         }
       },
       error: function(e) {
-        alert(
-          "Помилка завантаження данних, перевірте підключення до Інтернету"
-        );
+        this.show_error();
       }
     });
   }
 
-  remove_tooltips() {
+  osm_query({ filter, term, args = "" } = {}) {
+    $.ajax({
+      context: this,
+      type: "GET",
+      data:
+        `${filter}=${term}${args}` +
+        "&format=json&accept-language=uk&polygon_geojson=1",
+      url: `https://nominatim.openstreetmap.org/search?`,
+      success: function(data) {
+        this.parse_osm(data);
+      },
+      error: function(e) {
+        this.show_error();
+      }
+    });
+  }
+
+  get_flag(country_code) {
+    return flags.find(e => e.code === country_code).emoji;
+  }
+
+  show_error() {
+    alert("Помилка завантаження данних, перевірте підключення до Інтернету");
+  }
+
+  hide_suggestions() {
+    suggestions_box.empty();
     $(".tooltip").remove();
   }
+}
 
-  wipe_suggestions() {
-    suggestions_box.empty();
-    this.remove_tooltips();
+class SuggestionsQuery extends Base {
+  constructor(term) {
+    super();
+    this.term = term;
+    if (this.term.match(/^[А-Яа-яёЁЇїІіЄєҐґʼ-]+$/)) {
+      this.build_query();
+    } else {
+      this.hide_suggestions();
+    }
   }
 
-  fill_suggestions(content) {
+  build_query() {
+    switch (category) {
+      case "countries":
+        this.fcodes = "&featureCode=PCLI";
+        this.geonames_query({ term: this.term, fcodes: this.fcodes });
+        break;
+      case "cities":
+        this.fcodes = "&featureCode=PPL&featureCode=PPLC&featureCode=PPLA";
+        this.geonames_query({
+          term: this.term,
+          fcodes: this.fcodes
+        });
+        break;
+      case "subdivisions":
+        this.fcodes = "&featureCode=ADM1";
+        this.geonames_query({ term: this.term, fcodes: this.fcodes });
+        break;
+      case "continents":
+        this.fcodes = "&featureCode=CONT";
+        this.geonames_query({ term: this.term, fcodes: this.fcodes });
+        break;
+      default:
+        this.geonames_query({ term: this.term });
+    }
+  }
+
+  parse_geonames(data, filter) {
+    if (data.geonames.length) {
+      this.fill(
+        data.geonames.map(field => {
+          if (field.population > 0) {
+            return this.render_html(field);
+          }
+        })
+      );
+    } else if (!data.geonames.length && filter !== "name") {
+      this.geonames_query({
+        filter: "name",
+        term: this.term,
+        fcodes: this.fcodes
+      });
+    } else {
+      this.hide_suggestions();
+    }
+  }
+
+  fill(content) {
+    this.hide_suggestions();
     suggestions_box.html(content);
-    this.remove_tooltips();
     $(".result").tooltip();
   }
 
   render_html(field) {
-    // if ($.active > 1) {
-    //   console.log($.active);
-    //   return this.build_query();
-    // }
     let flag;
 
     if (field.fcode === "CONT") {
-      flag = get_flag(field.toponymName);
+      flag = this.get_flag(field.toponymName);
     } else {
-      flag = get_flag(field.countryCode);
+      flag = this.get_flag(field.countryCode);
     }
 
     let inside;
     let tooltip;
+    let type;
+    let country = field.countryCode;
+    let name = field.name;
 
     switch (field.fcode) {
       case "CONT":
+        type = "continent";
         inside = `${flag} ${field.name}`;
         tooltip = "Материк";
         break;
       case "PCLI":
+        type = "country";
         inside = `${flag} ${field.countryName}`;
         tooltip = "Країна";
+        name = field.countryName;
         break;
       case "PPL":
       case "PPLC":
       case "PPLA":
-        inside = `${flag} ${field.name}, ${field.adminName1.slice(0, 20)}, ${
+        type = "city";
+        inside = `${flag} ${field.name}, ${field.adminName1}, ${
           field.countryName
         }`;
         tooltip = "Місто";
         break;
       case "ADM1":
-        inside = `${flag} ${field.name}, ${field.countryName}`;
+        type = "subdivision";
+        inside = `${flag} ${field.adminName1}, ${field.countryName}`;
         tooltip = "Регіон";
         break;
     }
 
     return (
-      '<div class="result list-group-item list-group-item-action"' +
-      `data-name="${field.name}" ` +
-      `data-code="${field.countryCode}" ` +
-      `data-toponym='${field.toponymName}' ` +
-      `data-placement="left" title="${tooltip}">${inside}</div>`
+      '<div class="result list-group-item list-group-item-action" data-placement="left" ' +
+      `data-type="${type}" ` +
+      `data-name="${name}" ` +
+      `data-country="${country}" ` +
+      `data-population="${field.population}" ` +
+      `data-toponym="${field.toponymName}" ` +
+      `title="${tooltip}">${inside}</div>`
     );
   }
 }
 
-// class Suggestion {
-//   constructor(term) {
-//     this.term = term;
-//   }
-// }
+class Details extends Base {
+  constructor(type, country, name, toponym, population) {
+    super();
 
-// class CountrySuggestion extends Suggestion {
-//   constructor(term) {
-//     super(term);
-//   }
-// }
+    switch (type) {
+      case "continent":
+        new ContinentDetails(...arguments);
+        break;
+      case "country":
+        new CountryDetails(...arguments);
+        break;
+      case "city":
+        new CityDetails(...arguments);
+        break;
+      case "subdivision":
+        new SubdivisionDetails(...arguments);
+        break;
+    }
+  }
 
-//   function render_html(field) {
-//     const flag = get_flag(field.countryCode);
+  fill(content) {
+    this.hide_suggestions();
+    search_info.html(content);
+    map_box.css({ visibility: "visible" });
+  }
 
-//     let inside;
+  filter_osm(data) {
+    let field = data.find(e => e.class === "boundary");
+    if (!field) {
+      field = data.find(e => e.class === "place");
+    }
+    return field;
+  }
 
-//     if (category === "countries") {
-//       inside = `${flag} ${field.name}`;
-//     }
+  parse_osm(data) {
+    let field = this.filter_osm(data);
+    this.geojson = field.geojson;
+    this.lon = field.lon;
+    this.lat = field.lat;
 
-//     if (category === "cities") {
-//       inside = `${flag} ${field.name}, ${field.adminName1.slice(0, 20)}, ${
-//         field.countryName
-//       }`;
-//     }
+    this.render_html(field);
+    this.render_map();
+  }
 
-//     return `<div class='result list-group-item list-group-item-action' data-name=${
-//       field.name
-//     } data-code=${field.countryCode} data-toponym='${
-//       field.toponymName
-//     }'>${inside}</div>`;
-//   }
+  render_map() {
+    if (!map.getSource("highlight")) {
+      map.addSource("highlight", {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          features: []
+        }
+      });
 
-//   gather_suggestions(term).then(function(data) {
-//     if (data) {
-//       $(".flex-center-results").html(
-//         data.geonames.map(field => render_html(field))
-//       );
-//     } else {
-//       $(".flex-center-results").empty();
-//     }
-//   });
-// }
+      map.addLayer({
+        id: "selection",
+        type: "fill",
+        source: "highlight",
+        paint: {
+          "fill-color": "#4285f4",
+          "fill-opacity": 0.8
+        }
+      });
+    }
 
-// function country_details(country_name) {
-//   country_query(country_name).then(function(data) {
-//     const country = data.geonames[0];
-//     const result = new Country(country);
+    if (this.type === "country") {
+      if (!this.area) {
+        this.calculated_zoom = 3.5;
+      } else if (this.area < 20) {
+        this.calculated_zoom = 14;
+      } else if (this.area < 100000) {
+        this.calculated_zoom = 5;
+      } else if (this.area < 200000) {
+        this.calculated_zoom = 4;
+      } else if (this.area < 1000000) {
+        this.calculated_zoom = 3;
+      } else if (this.area < 2000000) {
+        this.calculated_zoom = 2;
+      } else {
+        this.calculated_zoom = 1.5;
+      }
+    }
 
-//     $.getJSON(
-//       `assets/json/countries-polygon/${result.country_name_en}.json`,
-//       function(data) {
-//         let coordinates = data.features[0].geometry.coordinates[0];
-//         let center = data.features[0].geometry.coordinates[0][0];
-//         // let zoom =
-//         // ;
-//         // render_map(data.features[0].geometry.coordinates[0]);
-//       }
-//     );
-//     // console.log(map);
+    map.getSource("highlight").setData({
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          geometry: this.geojson
+        }
+      ]
+    });
+    map.flyTo({
+      center: [this.lon, this.lat],
+      zoom: this.calculated_zoom
+    });
+  }
+}
 
-//     $(".flex-center-results").empty();
-//     $(".search-info").html(result.output());
-//     $(".map").css({ visibility: "visible" });
-//   });
+class SubdivisionDetails extends Details {
+  constructor(type, country, name, toponym, population) {
+    super();
+    this.calculated_zoom = 4.5;
 
-//   class Entity {
-//     constructor(obj) {
-//       this.obj = obj;
-//     }
+    this.type = type;
+    this.code = country;
+    this.name = name;
+    this.toponym = toponym;
+    this.population = population;
 
-//     // getField(field, term) {
-//     // console.log(json.Countries);
-//     // let retrieved = json.Countries.find(e => e["country_uk"] === term)[field];
-//     // if (retrieved) {
-//     //   return retrieved.toLocaleString();
-//     // } else {
-//     //   return "немає даних";
-//     // }
-//     // }
-//   }
+    this.osm_query({
+      filter: "state",
+      term: this.name,
+      args: `&countrycodes=${this.code}`
+    });
+  }
 
-//   class Country extends Entity {
-//     constructor(obj) {
-//       super(obj);
-//       this.country_name = this.obj.countryName;
-//       this.capital = this.obj.capital;
-//       this.country_code = this.obj.countryCode;
-//       this.currency = this.obj.currencyCode;
-//       this.population = this.obj.population;
-//       this.continent = this.obj.continent;
-//       this.continent_name = this.obj.continentName;
-//       this.area = this.obj.areaInSqKm;
-//     }
+  render_html(field) {
+    let items = [
+      `Назва регіону: ${this.name}`,
+      `Код країни: ${this.get_flag(this.code)}${this.code}`,
+      `Довгота: ${field.lon}`,
+      `Широта: ${field.lat}`,
+      `Населення: ${Number(this.population).toLocaleString()} осіб`
+    ];
 
-//     output() {
-//       let items = [
-//         `Назва країни: ${this.country_name}`,
-//         `Столиця: ${this.capital}`,
-//         `Код країни (ISO-3166): ${this.country_code}`,
-//         `Населення: ${this.population.toLocaleString()} осіб`,
-//         `Валюта: ${this.currency}`,
-//         `Материк: ${this.continent} / ${continent_name}`,
-//         `Площа: ${this.area} км²`
-//       ];
+    this.fill(items.map(item => `<div>${item}</div>`).join(" "));
+  }
+}
 
-//       return items.map(field => `<div>${field}</div>`).join(" ");
-//     }
-//   }
+class CityDetails extends Details {
+  constructor(type, country, name, toponym, population) {
+    super();
+    this.calculated_zoom = 7;
+
+    this.type = type;
+    this.code = country;
+    this.name = name;
+    this.toponym = toponym;
+    this.population = population;
+    this.osm_query({
+      filter: "q",
+      term: this.name,
+      args: `&countrycodes=${this.code}`
+    });
+  }
+
+  render_html(field) {
+    let items = [
+      `Назва міста: ${this.name}`,
+      `Код країни: ${this.get_flag(this.code)}${this.code}`,
+      `Довгота: ${field.lon}`,
+      `Широта: ${field.lat}`,
+      `Населення: ${Number(this.population).toLocaleString()} осіб`
+    ];
+
+    this.fill(items.map(item => `<div>${item}</div>`).join(" "));
+  }
+}
+
+class ContinentDetails extends Details {
+  constructor(type, country, name, toponym, population) {
+    super();
+    this.calculated_zoom = 1.5;
+
+    this.type = type;
+    this.code = country;
+    this.name = name;
+    this.toponym = toponym;
+    this.population = population;
+    this.osm_query({
+      filter: "q",
+      term: this.name,
+      args: ""
+    });
+  }
+
+  parse_osm(data) {
+    let field = data.find(e => e.type === "continent");
+    this.geojson = continents_polygon.find(
+      e => e.properties.CONTINENT === this.toponym
+    ).geometry;
+
+    this.lon = field.lon;
+    this.lat = field.lat;
+
+    this.render_html(field);
+    this.render_map();
+  }
+
+  render_html(field) {
+    let items = [
+      `Назва материка: ${this.get_flag(this.toponym)} ${this.name}`,
+      `Довгота: ${field.lon}`,
+      `Широта: ${field.lat}`,
+      `Населення: ${Number(this.population).toLocaleString()} осіб`
+    ];
+
+    this.fill(items.map(item => `<div>${item}</div>`).join(" "));
+  }
+}
+
+class CountryDetails extends Details {
+  constructor(type, country, name, toponym, population) {
+    super();
+    this.type = type;
+    this.code = country;
+    this.name = name;
+    this.toponym = toponym;
+    this.population = population;
+
+    this.geonames_query({
+      input: false,
+      service: "countryInfoJSON",
+      filter: this.type,
+      term: this.code,
+      args: "",
+      fcodes: ""
+    });
+  }
+
+  parse_geonames(data) {
+    if (data.geonames.length) {
+      data.geonames.map(field => {
+        this.render_html(field);
+      });
+    } else {
+      this.fill("Помилка бази даних");
+    }
+  }
+
+  parse_osm(data) {
+    let field = this.filter_osm(data);
+    this.geojson = field.geojson;
+
+    this.lon = field.lon;
+    this.lat = field.lat;
+
+    this.render_map();
+  }
+
+  render_html(field) {
+    this.area = Number(field.areaInSqKm);
+
+    let items = [
+      `Назва країни: ${this.get_flag(field.countryCode)} ${field.countryName}`,
+      `Столиця: ${field.capital}`,
+      `Код країни: ${field.countryCode}`,
+      `Населення: ${Number(field.population).toLocaleString()} осіб`,
+      `Валюта: ${field.currencyCode}`,
+      `Материк: ${field.continent} / ${field.continentName}`,
+      `Площа: ${this.area.toLocaleString()} км²`
+    ];
+
+    this.osm_query({
+      filter: "q",
+      term: this.name,
+      args: `&countrycodes=${field.countryCode}`
+    });
+    this.fill(items.map(item => `<div>${item}</div>`).join(" "));
+  }
+}

@@ -1,6 +1,9 @@
-// Enabling loading animation
 const loader = $(".loader");
+
 const suggestions_box = $(".flex-center-results");
+const map_box = $(".map");
+const search_info = $(".search-info");
+
 $(document)
   .ajaxStart(function() {
     loader.css({ opacity: 1 });
@@ -9,27 +12,35 @@ $(document)
     loader.css({ opacity: 0 });
   });
 
-// Getting emoji flags
 $.getJSON(`assets/json/flags.json`, function(data) {
   window.flags = data;
 });
 
-$("#gt").on("input", function() {
-  new SuggestionsQuery($(this).val());
+$.getJSON(`assets/json/continents-polygon.json`, function(data) {
+  window.continents_polygon = data.features;
 });
 
-$("body").on("click", ".custom-control", function() {
+$("#gt").on("input", function() {
+  window.user_input = $(this).val();
+  new SuggestionsQuery(window.user_input);
+});
+
+$(".custom-control").on("click", function() {
   window.category = $(this).attr("id");
-  trigger_search($("#gt").val());
+});
+
+$("#all.custom-control").on("click", function() {
+  window.category = null;
 });
 
 $("body").on("click", ".result", function() {
-  console.log(
-    $(this).data("code"),
-    $(this)
-      .data("toponym")
-      .toLowerCase()
-      .replace(" ", "_")
+  const target = $(this);
+  new Details(
+    target.data("type"),
+    target.data("country"),
+    target.data("name"),
+    target.data("toponym"),
+    target.data("population")
   );
 });
 
@@ -39,32 +50,3 @@ var map = new mapboxgl.Map({
   container: "mapid",
   style: "mapbox://styles/mapbox/streets-v11"
 });
-
-function render_map(coordinates, center, zoom) {
-  map.addLayer({
-    id: "highlight",
-    type: "fill",
-    source: {
-      type: "geojson",
-      data: {
-        type: "Feature",
-        geometry: {
-          type: "Polygon",
-          coordinates: [coordinates]
-        }
-      }
-    },
-    layout: {},
-    paint: {
-      "fill-color": "#4285f4",
-      "fill-opacity": 0.8
-    }
-  });
-
-  map.jumpTo({
-    center: [31.783447265624996, 52.11240908504091],
-    zoom: 3
-  });
-
-  map.getLayer("highlight");
-}
