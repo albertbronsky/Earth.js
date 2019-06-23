@@ -24,27 +24,6 @@ class Base {
     });
   }
 
-  osm_query({
-    filter = "q",
-    term = this.name,
-    args = `&countrycodes=${this.code}`
-  } = {}) {
-    $.ajax({
-      context: this,
-      type: "GET",
-      data:
-        `${filter}=${term}${args}` +
-        "&format=json&accept-language=uk&polygon_geojson=1",
-      url: `https://nominatim.openstreetmap.org/search?`,
-      success: function(data) {
-        this.parse_osm(data);
-      },
-      error: function(e) {
-        this.show_error();
-      }
-    });
-  }
-
   get_flag(country_code) {
     return flags.find(e => e.code === country_code).emoji;
   }
@@ -207,6 +186,27 @@ class Details extends Base {
     }
   }
 
+  osm_query({
+    filter = "q",
+    term = this.name,
+    args = `&countrycodes=${this.code}`
+  } = {}) {
+    $.ajax({
+      context: this,
+      type: "GET",
+      data:
+        `${filter}=${term}${args}` +
+        "&format=json&accept-language=uk&polygon_geojson=1",
+      url: `https://nominatim.openstreetmap.org/search?`,
+      success: function(data) {
+        this.parse_osm(data);
+      },
+      error: function(e) {
+        this.show_error();
+      }
+    });
+  }
+
   fill(content) {
     this.hide_suggestions();
     search_info.html(content);
@@ -214,10 +214,13 @@ class Details extends Base {
   }
 
   filter_osm(data) {
-    if (data.find(e => e.type === this.osm_type)) {
-      return data.find(e => e.type === this.osm_type);
-    } else if (data.find(e => e.class === "boundary")) {
-      return data.find(e => e.class === "boundary");
+    let has_type = data.find(e => e.type === this.osm_type);
+    let has_boundary = data.find(e => e.class === "boundary");
+
+    if (has_type) {
+      return has_type;
+    } else if (has_boundary) {
+      return has_boundary;
     } else {
       switch (this.fail_stage) {
         case undefined:
