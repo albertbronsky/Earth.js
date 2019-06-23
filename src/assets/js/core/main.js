@@ -36,14 +36,6 @@ class Base {
     suggestions_box.empty();
     $(".tooltip").remove();
   }
-
-  hide_map() {
-    map_box.css({ visibility: "hidden" });
-  }
-
-  show_map() {
-    map_box.css({ visibility: "visible" });
-  }
 }
 
 class SuggestionsQuery extends Base {
@@ -205,6 +197,14 @@ class Details extends Base {
         this.show_error();
       }
     });
+  }
+
+  hide_map() {
+    map_box.css({ visibility: "hidden" });
+  }
+
+  show_map() {
+    map_box.css({ visibility: "visible" });
   }
 
   fill(content) {
