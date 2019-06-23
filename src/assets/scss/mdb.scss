@@ -245,7 +245,7 @@ body {
 }
 
 #mapid {
-  height: 490px;
+  height: 480px;
   width: 1250px;
   padding-right: 0px;
   padding-left: 0px;
@@ -257,7 +257,7 @@ body {
   padding: 20px;
   flex-wrap: wrap;
   position: absolute;
-  top: 200px;
+  top: 215px;
 }
 
 .search-info {
@@ -265,6 +265,7 @@ body {
   line-height: 50px;
   font-size: 25px;
   font-weight: 400;
+  background: #fff;
 }
 
 .loader {
