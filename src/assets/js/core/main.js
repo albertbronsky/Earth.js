@@ -214,10 +214,11 @@ class Details extends Base {
   }
 
   filter_osm(data) {
-    console.log(this.type);
-    let field = data.find(e => e.type === this.osm_type);
-
-    if (!field) {
+    if (data.find(e => e.type === this.osm_type)) {
+      return data.find(e => e.type === this.osm_type);
+    } else if (data.find(e => e.class === "boundary")) {
+      return data.find(e => e.class === "boundary");
+    } else {
       switch (this.fail_stage) {
         case undefined:
           this.fail_stage = 0;
@@ -226,8 +227,6 @@ class Details extends Base {
         case 0:
           return data.find(e => e.class === "place");
       }
-    } else {
-      return field;
     }
   }
 
