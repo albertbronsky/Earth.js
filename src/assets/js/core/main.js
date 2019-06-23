@@ -294,8 +294,8 @@ class SubdivisionDetails extends Details {
     let items = [
       `Назва регіону: ${this.name}`,
       `Код країни: ${this.get_flag(this.code)}${this.code}`,
-      `Довгота: ${field.lon}`,
-      `Широта: ${field.lat}`,
+      `Довгота: ${field.lon}°`,
+      `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
     ];
 
@@ -324,8 +324,8 @@ class CityDetails extends Details {
     let items = [
       `Назва міста: ${this.name}`,
       `Код країни: ${this.get_flag(this.code)}${this.code}`,
-      `Довгота: ${field.lon}`,
-      `Широта: ${field.lat}`,
+      `Довгота: ${field.lon}°`,
+      `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
     ];
 
@@ -366,8 +366,8 @@ class ContinentDetails extends Details {
   render_html(field) {
     let items = [
       `Назва материка: ${this.get_flag(this.toponym)} ${this.name}`,
-      `Довгота: ${field.lon}`,
-      `Широта: ${field.lat}`,
+      `Довгота: ${field.lon}°`,
+      `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
     ];
 
