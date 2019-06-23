@@ -2,30 +2,25 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link href="assets/css/mdb.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/leaflet.css">
   <meta charset="UTF-8">
-  <link href='assets/css/mapbox-gl.css' rel='stylesheet'>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/mdb.css">
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+  <link rel="stylesheet" href='assets/css/mapbox-gl.css'>
   <title>Title</title>
 </head>
 
 <body>
 
-
   <div class="container">
-
     <div class="row">
       <div class="loader"></div>
       <form action="" class=" col-md-11 search-form row">
         <input placeholder="Введіть назву географічного об'єкту для пошуку" id="gt" class="col-md-12 m" type="text"
           name="guide-title" autocomplete="off">
         <div class="flex-center-results col-md-12">
-
         </div>
       </form>
-
-
     </div>
     <div class="row search-option flex-center-option">
       <div class="col-12 col-sm-2 option-label">Критерій пошуку:</div>
@@ -53,31 +48,22 @@
       </div>
     </div>
 
-
   </div>
+
   <div class="map col-12" style="visibility: hidden;">
-    <div class="search-info  col-md-4">
-      <!-- <div class="info">Країна: Україна</div>
-      <div class="info">Столиця: Київ</div>
-      <div class="info">Населення: 6734636434</div>
-      <div class="info">Площа: 603628 км²</div>
-      <div class="info">Форма правління: унітарна парламентсько-президентська республіка</div> -->
-    </div>
+    <div class="search-info  col-md-4"></div>
     <div id="mapid" class="col-md-8"></div>
   </div>
+
 </body>
+
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
-
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="assets/js/mdb.min.js"></script>
-
-<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
-
-<script src="assets/js/leaflet.js"></script>
-<script src='assets/js/mapbox-gl.js'></script>
-
+<script type="text/javascript" src="assets/js/leaflet.js"></script>
+<script type="text/javascript" src='assets/js/mapbox-gl.js'></script>
 <script type="text/javascript" src="assets/js/core/init.js"></script>
 <script type="text/javascript" src="assets/js/core/main.js"></script>
 
