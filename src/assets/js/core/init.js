@@ -3,6 +3,7 @@ const loader = $(".loader");
 const suggestions_box = $(".flex-center-results");
 const map_box = $(".map");
 const search_info = $(".search-info");
+window.category = null;
 
 $(document)
   .ajaxStart(function() {
@@ -26,11 +27,11 @@ $("#gt").on("input", function() {
 });
 
 $(".custom-control").on("click", function() {
-  window.category = $(this).attr("id");
+  category = $(this).attr("id");
 });
 
 $("#all.custom-control").on("click", function() {
-  window.category = null;
+  category = null;
 });
 
 $("body").on("click", ".result", function() {

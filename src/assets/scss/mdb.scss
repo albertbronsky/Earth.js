@@ -123,6 +123,12 @@ body {
   display: flex;
   justify-content: center;
   max-width: 1000px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 75px;
+  /* top: 0; */
+  /* left: 0; */
 }
 
 .option-label {
@@ -143,6 +149,9 @@ body {
   display: flex;
   flex: 1;
   justify-content: center;
+  position: absolute;
+  z-index: 99;
+  right: 0;
 }
 
 .flex-center-option {
@@ -239,7 +248,12 @@ body {
   background-color: #303132 !important;
   color: #fff !important;
 }
-
+.results {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
 .flex-center-results {
   display: flex;
   justify-content: center;
@@ -262,6 +276,8 @@ body {
   justify-content: end;
   padding: 20px;
   flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
 }
 
 .search-info {
