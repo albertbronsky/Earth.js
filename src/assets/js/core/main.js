@@ -24,7 +24,11 @@ class Base {
     });
   }
 
-  osm_query({ filter, term, args = "" } = {}) {
+  osm_query({
+    filter = "q",
+    term = this.name,
+    args = `&countrycodes=${this.code}`
+  } = {}) {
     $.ajax({
       context: this,
       type: "GET",
@@ -209,34 +213,62 @@ class Details extends Base {
 
   filter_osm(data) {
     let field = data.find(e => e.class === "boundary");
+
     if (!field) {
-      field = data.find(e => e.class === "place");
+      switch (this.fail_stage) {
+        case undefined:
+          this.fail_stage = 0;
+          this.osm_query({ term: this.toponym });
+          break;
+        case 0:
+          return data.find(e => e.class === "place");
+      }
+    } else {
+      return field;
     }
-    return field;
   }
 
   parse_osm(data) {
     let field = this.filter_osm(data);
-    this.geojson = field.geojson;
-    this.lon = field.lon;
-    this.lat = field.lat;
 
-    this.render_html(field);
-    this.render_map();
+    if (field) {
+      this.geojson = field.geojson;
+      this.lon = field.lon;
+      this.lat = field.lat;
+
+      this.render_html(field);
+      this.render_map();
+    }
   }
 
   render_map() {
     this.show_map();
 
-    if (!map.getSource("highlight")) {
-      map.addSource("highlight", {
-        type: "geojson",
-        data: {
-          type: "FeatureCollection",
-          features: []
+    if (map.getLayer("selection")) {
+      map.removeLayer("selection");
+    }
+    if (map.getSource("highlight")) {
+      map.removeSource("highlight");
+    }
+
+    map.addSource("highlight", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: []
+      }
+    });
+
+    if (this.geojson.type === "Point") {
+      map.addLayer({
+        id: "selection",
+        type: "symbol",
+        source: "highlight",
+        layout: {
+          "icon-image": "pulsing-dot"
         }
       });
-
+    } else {
       map.addLayer({
         id: "selection",
         type: "fill",
@@ -248,22 +280,30 @@ class Details extends Base {
       });
     }
 
-    if (this.type === "country") {
-      if (!this.area) {
-        this.calculated_zoom = 3.5;
-      } else if (this.area < 20) {
-        this.calculated_zoom = 14;
-      } else if (this.area < 100000) {
-        this.calculated_zoom = 5;
-      } else if (this.area < 200000) {
-        this.calculated_zoom = 4;
-      } else if (this.area < 1000000) {
-        this.calculated_zoom = 3;
-      } else if (this.area < 2000000) {
-        this.calculated_zoom = 2;
-      } else {
+    switch (this.type) {
+      case "country":
+        if (this.area < 20) {
+          this.calculated_zoom = 14;
+        } else if (this.area < 100000) {
+          this.calculated_zoom = 5;
+        } else if (this.area < 200000) {
+          this.calculated_zoom = 4;
+        } else if (this.area < 1000000) {
+          this.calculated_zoom = 3;
+        } else if (this.area < 2000000) {
+          this.calculated_zoom = 2;
+        } else {
+          this.calculated_zoom = 3.5;
+        }
+        break;
+      case "continent":
         this.calculated_zoom = 1.5;
-      }
+        break;
+      case "city":
+        this.calculated_zoom = 7.2;
+        break;
+      case "subdivision":
+        this.calculated_zoom = 3.7;
     }
 
     map.getSource("highlight").setData({
@@ -293,11 +333,7 @@ class SubdivisionDetails extends Details {
     this.toponym = toponym;
     this.population = population;
 
-    this.osm_query({
-      filter: "state",
-      term: this.name,
-      args: `&countrycodes=${this.code}`
-    });
+    this.osm_query({});
   }
 
   render_html(field) {
@@ -323,11 +359,7 @@ class CityDetails extends Details {
     this.name = name;
     this.toponym = toponym;
     this.population = population;
-    this.osm_query({
-      filter: "q",
-      term: this.name,
-      args: `&countrycodes=${this.code}`
-    });
+    this.osm_query({});
   }
 
   render_html(field) {
@@ -354,32 +386,33 @@ class ContinentDetails extends Details {
     this.toponym = toponym;
     this.population = population;
     this.osm_query({
-      filter: "q",
-      term: this.name,
       args: ""
     });
   }
 
   parse_osm(data) {
-    let field;
+    let keyword;
 
-    if (this.toponym === "Antarctica") {
-      field = data.find(e => e.type === "region");
-      this.geojson = continents_polygon.find(
-        e => e.properties.CONTINENT === this.toponym
-      ).geometry;
-    } else {
-      field = data.find(e => e.type === "continent");
-      this.geojson = continents_polygon.find(
-        e => e.properties.CONTINENT === this.toponym
-      ).geometry;
+    switch (this.toponym) {
+      case "Antarctica":
+        keyword = "region";
+        break;
+      default:
+        keyword = "continent";
     }
 
-    this.lon = field.lon;
-    this.lat = field.lat;
+    let field = data.find(e => e.type === keyword);
+    if (field) {
+      this.geojson = continents_polygon.find(
+        e => e.properties.CONTINENT === this.toponym
+      ).geometry;
 
-    this.render_html(field);
-    this.render_map();
+      this.lon = field.lon;
+      this.lat = field.lat;
+
+      this.render_html(field);
+      this.render_map();
+    }
   }
 
   render_html(field) {
@@ -425,12 +458,14 @@ class CountryDetails extends Details {
 
   parse_osm(data) {
     let field = this.filter_osm(data);
-    this.geojson = field.geojson;
+    if (field) {
+      this.geojson = field.geojson;
 
-    this.lon = field.lon;
-    this.lat = field.lat;
+      this.lon = field.lon;
+      this.lat = field.lat;
 
-    this.render_map();
+      this.render_map();
+    }
   }
 
   render_html(field) {
@@ -445,12 +480,7 @@ class CountryDetails extends Details {
       `Материк: ${field.continent} / ${field.continentName}`,
       `Площа: ${this.area.toLocaleString()} км²`
     ];
-
-    this.osm_query({
-      filter: "q",
-      term: this.name,
-      args: `&countrycodes=${field.countryCode}`
-    });
+    this.osm_query({});
     this.fill(items.map(item => `<div>${item}</div>`).join(" "));
   }
 }
