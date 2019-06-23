@@ -354,10 +354,19 @@ class ContinentDetails extends Details {
   }
 
   parse_osm(data) {
-    let field = data.find(e => e.type === "continent");
-    this.geojson = continents_polygon.find(
-      e => e.properties.CONTINENT === this.toponym
-    ).geometry;
+    let field;
+
+    if (this.toponym === "Antarctica") {
+      field = data.find(e => e.type === "region");
+      this.geojson = continents_polygon.find(
+        e => e.properties.CONTINENT === this.toponym
+      ).geometry;
+    } else {
+      field = data.find(e => e.type === "continent");
+      this.geojson = continents_polygon.find(
+        e => e.properties.CONTINENT === this.toponym
+      ).geometry;
+    }
 
     this.lon = field.lon;
     this.lat = field.lat;
