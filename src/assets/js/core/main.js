@@ -52,7 +52,14 @@ class Base {
   hide_suggestions() {
     suggestions_box.empty();
     $(".tooltip").remove();
-    $(".map").css({ visibility: "hidden" });
+  }
+
+  hide_map() {
+    map_box.css({ visibility: "hidden" });
+  }
+
+  show_map() {
+    map_box.css({ visibility: "visible" });
   }
 }
 
@@ -197,7 +204,7 @@ class Details extends Base {
   fill(content) {
     this.hide_suggestions();
     search_info.html(content);
-    map_box.css({ visibility: "visible" });
+    this.show_map();
   }
 
   filter_osm(data) {
@@ -219,7 +226,7 @@ class Details extends Base {
   }
 
   render_map() {
-    $(".map").css({ visibility: "visible" });
+    this.show_map();
 
     if (!map.getSource("highlight")) {
       map.addSource("highlight", {
