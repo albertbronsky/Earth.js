@@ -64,12 +64,6 @@
 @import "free/steppers";
 @import "free/loader";
 @import "free/treeview";
-// Free addons
-// @import "addons/datatables";
-// @import "addons/datatables-select";
-// @import "addons/directives";
-
-// Your custom styles
 @import "custom-styles";
 
 body {
@@ -81,7 +75,6 @@ body {
 }
 
 #gt {
-  // border: 1.2px solid #323232;
   background-color: #fff;
   color: #1b1b1b;
   height: 35px;
@@ -104,7 +97,6 @@ body {
 .custom-select:focus {
   border-color: transparent;
   box-shadow: 0 0 0 0 transparent;
-  // outline: #289dff solid 1.8px;
 }
 
 .custom-select {
@@ -118,7 +110,6 @@ body {
   background-origin: initial;
   background-clip: initial;
   color: #1b1b1b;
-  // border: 1.2px solid #323232;
   border-radius: 0;
 }
 
@@ -127,16 +118,11 @@ body {
   justify-content: center;
   max-width: 1000px;
   margin-top: 20px !important;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 75px;
 }
 
 .option-label {
   flex: 1;
   margin-top: -4px;
-  // align-self: center;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -151,9 +137,7 @@ body {
   display: flex;
   flex: 1;
   justify-content: center;
-  position: absolute;
   z-index: 99;
-  right: 0;
 }
 
 .flex-center-option {
@@ -194,11 +178,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
-// .custom-control-label::before,
-// .custom-control-label::after {
-//   display: block;
-// }
 
 .btn-group,
 .btn-group-vertical {
@@ -249,7 +228,6 @@ body {
 
 .flex-center-results {
   display: flex;
-  // display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: -18px;
@@ -262,6 +240,8 @@ body {
 .main-search {
   margin-top: 20px;
   margin-bottom: 20px;
+  align-self: center;
+  position: absolute;
 }
 
 #mapid {
@@ -276,6 +256,8 @@ body {
   justify-content: end;
   padding: 20px;
   flex-wrap: wrap;
+  position: absolute;
+  top: 200px;
 }
 
 .search-info {
