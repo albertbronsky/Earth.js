@@ -52,6 +52,7 @@ class Base {
   hide_suggestions() {
     suggestions_box.empty();
     $(".tooltip").remove();
+    $(".map").css({ visibility: "hidden" });
   }
 }
 
@@ -218,6 +219,8 @@ class Details extends Base {
   }
 
   render_map() {
+    $(".map").css({ visibility: "visible" });
+
     if (!map.getSource("highlight")) {
       map.addSource("highlight", {
         type: "geojson",
