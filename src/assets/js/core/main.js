@@ -178,6 +178,7 @@ class SuggestionsQuery extends Base {
       `data-type="${type}" ` +
       `data-name="${name}" ` +
       `data-country="${country}" ` +
+      `data-state="${field.adminName1}" ` +
       `data-population="${field.population}" ` +
       `data-toponym="${field.toponymName}" ` +
       `title="${tooltip}">${inside}</div>`
@@ -186,8 +187,9 @@ class SuggestionsQuery extends Base {
 }
 
 class Details extends Base {
-  constructor(type, country, name, toponym, population) {
+  constructor(type, country, state, name, toponym, population) {
     super();
+    this.osm_type = "administrative";
 
     switch (type) {
       case "continent":
@@ -212,9 +214,11 @@ class Details extends Base {
   }
 
   filter_osm(data) {
-    let field = data.find(e => e.class === "boundary");
-
-    if (!field) {
+    if (data.find(e => e.type === this.osm_type)) {
+      return data.find(e => e.type === this.osm_type);
+    } else if (data.find(e => e.class === "boundary")) {
+      return data.find(e => e.class === "boundary");
+    } else {
       switch (this.fail_stage) {
         case undefined:
           this.fail_stage = 0;
@@ -223,8 +227,6 @@ class Details extends Base {
         case 0:
           return data.find(e => e.class === "place");
       }
-    } else {
-      return field;
     }
   }
 
@@ -300,7 +302,10 @@ class Details extends Base {
         this.calculated_zoom = 1.5;
         break;
       case "city":
-        this.calculated_zoom = 7.2;
+        // this.calculated_zoom = Math.pow(this.population, 1 / 7);
+        console.log(this.calculated_zoom);
+        this.calculated_zoom = 8.9;
+        // this.calculated_zoom = 7.2;
         break;
       case "subdivision":
         this.calculated_zoom = 3.7;
@@ -323,17 +328,17 @@ class Details extends Base {
 }
 
 class SubdivisionDetails extends Details {
-  constructor(type, country, name, toponym, population) {
+  constructor(type, country, state, name, toponym, population) {
     super();
-    this.calculated_zoom = 4.5;
 
     this.type = type;
     this.code = country;
     this.name = name;
+    this.state = state;
     this.toponym = toponym;
     this.population = population;
 
-    this.osm_query({});
+    this.osm_query({ filter: "state" });
   }
 
   render_html(field) {
@@ -350,16 +355,21 @@ class SubdivisionDetails extends Details {
 }
 
 class CityDetails extends Details {
-  constructor(type, country, name, toponym, population) {
+  constructor(type, country, state, name, toponym, population) {
     super();
-    this.calculated_zoom = 7;
 
     this.type = type;
     this.code = country;
     this.name = name;
+    this.state = state;
     this.toponym = toponym;
     this.population = population;
-    this.osm_query({});
+    this.osm_type = "city";
+
+    this.osm_query({
+      filter: "city",
+      args: `&state=${this.state}&countrycodes=${this.code}`
+    });
   }
 
   render_html(field) {
@@ -376,32 +386,25 @@ class CityDetails extends Details {
 }
 
 class ContinentDetails extends Details {
-  constructor(type, country, name, toponym, population) {
+  constructor(type, country, state, name, toponym, population) {
     super();
-    this.calculated_zoom = 1.5;
 
     this.type = type;
     this.code = country;
     this.name = name;
+    this.state = state;
     this.toponym = toponym;
     this.population = population;
+    this.osm_type = "continent";
+
     this.osm_query({
       args: ""
     });
   }
 
   parse_osm(data) {
-    let keyword;
+    let field = this.filter_osm(data);
 
-    switch (this.toponym) {
-      case "Antarctica":
-        keyword = "region";
-        break;
-      default:
-        keyword = "continent";
-    }
-
-    let field = data.find(e => e.type === keyword);
     if (field) {
       this.geojson = continents_polygon.find(
         e => e.properties.CONTINENT === this.toponym
@@ -428,11 +431,12 @@ class ContinentDetails extends Details {
 }
 
 class CountryDetails extends Details {
-  constructor(type, country, name, toponym, population) {
+  constructor(type, country, state, name, toponym, population) {
     super();
     this.type = type;
     this.code = country;
     this.name = name;
+    this.state = state;
     this.toponym = toponym;
     this.population = population;
 
@@ -480,7 +484,9 @@ class CountryDetails extends Details {
       `Материк: ${field.continent} / ${field.continentName}`,
       `Площа: ${this.area.toLocaleString()} км²`
     ];
-    this.osm_query({});
+    this.osm_query({
+      filter: "country"
+    });
     this.fill(items.map(item => `<div>${item}</div>`).join(" "));
   }
 }
