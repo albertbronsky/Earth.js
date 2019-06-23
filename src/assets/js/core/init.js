@@ -39,6 +39,7 @@ $("body").on("click", ".result", function() {
   new Details(
     target.data("type"),
     target.data("country"),
+    target.data("state"),
     target.data("name"),
     target.data("toponym"),
     target.data("population")
