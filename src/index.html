@@ -89,6 +89,17 @@
   window.onresize = function (event) {
     flexFont();
   };
+
+  $("#gt").on("input", function () {
+    $(this).css({
+      "border-bottom-right-radius": "0",
+      "border-bottom-left-radius": "0",
+      "border-bottom": "0",
+      "border-top-right-radius": "1.2rem!important",
+      "border-top-left-radius": "1.2rem!important",
+
+    });
+  });
 </script>
 
 </html>
