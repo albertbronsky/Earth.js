@@ -80,5 +80,21 @@
 
 <script type="text/javascript" src="assets/js/core/init.js"></script>
 <script type="text/javascript" src="assets/js/core/main.js"></script>
+<script>
+  flexFont = function () {
+    var divs = document.getElementsByClassName("flex-center-results");
+    for (var i = 0; i < divs.length; i++) {
+      var relFontsize = divs[i].offsetWidth * 0.025;
+      divs[i].style.fontSize = relFontsize + 'px';
+    }
+  };
+
+  window.onload = function (event) {
+    flexFont();
+  };
+  window.onresize = function (event) {
+    flexFont();
+  };
+</script>
 
 </html>
