@@ -18,7 +18,7 @@ class Base {
           this.parse_geonames(data, filter);
         }
       },
-      error: function(e) {
+      error: function() {
         this.show_error();
       }
     });
@@ -193,7 +193,7 @@ class Details extends Base {
       success: function(data) {
         this.parse_osm(data);
       },
-      error: function(e) {
+      error: function() {
         this.show_error();
       }
     });
