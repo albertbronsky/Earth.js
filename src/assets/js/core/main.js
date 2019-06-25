@@ -18,28 +18,7 @@ class Base {
           this.parse_geonames(data, filter);
         }
       },
-      error: function(e) {
-        this.show_error();
-      }
-    });
-  }
-
-  osm_query({
-    filter = "q",
-    term = this.name,
-    args = `&countrycodes=${this.code}`
-  } = {}) {
-    $.ajax({
-      context: this,
-      type: "GET",
-      data:
-        `${filter}=${term}${args}` +
-        "&format=json&accept-language=uk&polygon_geojson=1",
-      url: `https://nominatim.openstreetmap.org/search?`,
-      success: function(data) {
-        this.parse_osm(data);
-      },
-      error: function(e) {
+      error: function() {
         this.show_error();
       }
     });
@@ -56,14 +35,6 @@ class Base {
   hide_suggestions() {
     suggestions_box.empty();
     $(".tooltip").remove();
-  }
-
-  hide_map() {
-    map_box.css({ visibility: "hidden" });
-  }
-
-  show_map() {
-    map_box.css({ visibility: "visible" });
   }
 }
 
@@ -207,6 +178,35 @@ class Details extends Base {
     }
   }
 
+  osm_query({
+    filter = "q",
+    term = this.name,
+    args = `&countrycodes=${this.code}`
+  } = {}) {
+    $.ajax({
+      context: this,
+      type: "GET",
+      data:
+        `${filter}=${term}${args}` +
+        "&format=json&accept-language=uk&polygon_geojson=1",
+      url: `https://nominatim.openstreetmap.org/search?`,
+      success: function(data) {
+        this.parse_osm(data);
+      },
+      error: function() {
+        this.show_error();
+      }
+    });
+  }
+
+  hide_map() {
+    map_box.css({ visibility: "hidden" });
+  }
+
+  show_map() {
+    map_box.css({ visibility: "visible" });
+  }
+
   fill(content) {
     this.hide_suggestions();
     search_info.html(content);
@@ -214,30 +214,35 @@ class Details extends Base {
   }
 
   filter_osm(data) {
-    if (data.find(e => e.type === this.osm_type)) {
-      return data.find(e => e.type === this.osm_type);
-    } else if (data.find(e => e.class === "boundary")) {
-      return data.find(e => e.class === "boundary");
-    } else {
+    const has_type = data.find(e => e.type === this.osm_type);
+
+    if (has_type) return has_type;
+
+    const has_boundary = data.find(e => e.class === "boundary");
+
+    if (has_boundary) return has_boundary;
+    else {
       switch (this.fail_stage) {
         case undefined:
           this.fail_stage = 0;
           this.osm_query({ term: this.toponym });
           break;
         case 0:
-          return data.find(e => e.class === "place");
+          const has_place = data.find(e => e.class === "place");
+
+          if (has_place) return has_place;
+          else return data.find(e => e.geojson);
       }
     }
   }
 
   parse_osm(data) {
-    let field = this.filter_osm(data);
+    const field = this.filter_osm(data);
 
     if (field) {
       this.geojson = field.geojson;
       this.lon = field.lon;
       this.lat = field.lat;
-
       this.render_html(field);
       this.render_map();
     }
@@ -284,31 +289,23 @@ class Details extends Base {
 
     switch (this.type) {
       case "country":
-        if (this.area < 20) {
-          this.calculated_zoom = 14;
-        } else if (this.area < 100000) {
-          this.calculated_zoom = 5;
-        } else if (this.area < 200000) {
-          this.calculated_zoom = 4;
-        } else if (this.area < 1000000) {
-          this.calculated_zoom = 3;
-        } else if (this.area < 2000000) {
-          this.calculated_zoom = 2;
-        } else {
-          this.calculated_zoom = 3.5;
-        }
+        if (this.area < 20) this.calculated_zoom = 14;
+        else if (this.area < 100000) this.calculated_zoom = 5;
+        else if (this.area < 200000) this.calculated_zoom = 4;
+        else if (this.area < 1000000) this.calculated_zoom = 3;
+        else if (this.area < 2000000) this.calculated_zoom = 2;
+        else this.calculated_zoom = 3.5;
         break;
       case "continent":
         this.calculated_zoom = 1.5;
         break;
       case "city":
-        // this.calculated_zoom = Math.pow(this.population, 1 / 7);
-        console.log(this.calculated_zoom);
-        this.calculated_zoom = 8.9;
-        // this.calculated_zoom = 7.2;
+        // Power curve equation
+        this.calculated_zoom =
+          17.37104 * Math.pow(this.population, -0.05202411);
         break;
       case "subdivision":
-        this.calculated_zoom = 3.7;
+        this.calculated_zoom = 4;
     }
 
     map.getSource("highlight").setData({
@@ -330,19 +327,17 @@ class Details extends Base {
 class SubdivisionDetails extends Details {
   constructor(type, country, state, name, toponym, population) {
     super();
-
     this.type = type;
     this.code = country;
     this.name = name;
     this.state = state;
     this.toponym = toponym;
     this.population = population;
-
     this.osm_query({ filter: "state" });
   }
 
   render_html(field) {
-    let items = [
+    const items = [
       `Назва регіону: ${this.name}`,
       `Код країни: ${this.get_flag(this.code)}${this.code}`,
       `Довгота: ${field.lon}°`,
@@ -357,7 +352,6 @@ class SubdivisionDetails extends Details {
 class CityDetails extends Details {
   constructor(type, country, state, name, toponym, population) {
     super();
-
     this.type = type;
     this.code = country;
     this.name = name;
@@ -365,7 +359,6 @@ class CityDetails extends Details {
     this.toponym = toponym;
     this.population = population;
     this.osm_type = "city";
-
     this.osm_query({
       filter: "city",
       args: `&state=${this.state}&countrycodes=${this.code}`
@@ -373,7 +366,7 @@ class CityDetails extends Details {
   }
 
   render_html(field) {
-    let items = [
+    const items = [
       `Назва міста: ${this.name}`,
       `Код країни: ${this.get_flag(this.code)}${this.code}`,
       `Довгота: ${field.lon}°`,
@@ -388,7 +381,6 @@ class CityDetails extends Details {
 class ContinentDetails extends Details {
   constructor(type, country, state, name, toponym, population) {
     super();
-
     this.type = type;
     this.code = country;
     this.name = name;
@@ -396,14 +388,13 @@ class ContinentDetails extends Details {
     this.toponym = toponym;
     this.population = population;
     this.osm_type = "continent";
-
     this.osm_query({
       args: ""
     });
   }
 
   parse_osm(data) {
-    let field = this.filter_osm(data);
+    const field = this.filter_osm(data);
 
     if (field) {
       this.geojson = continents_polygon.find(
@@ -419,7 +410,7 @@ class ContinentDetails extends Details {
   }
 
   render_html(field) {
-    let items = [
+    const items = [
       `Назва материка: ${this.get_flag(this.toponym)} ${this.name}`,
       `Довгота: ${field.lon}°`,
       `Широта: ${field.lat}°`,
@@ -439,7 +430,6 @@ class CountryDetails extends Details {
     this.state = state;
     this.toponym = toponym;
     this.population = population;
-
     this.geonames_query({
       input: false,
       service: "countryInfoJSON",
@@ -455,19 +445,16 @@ class CountryDetails extends Details {
       data.geonames.map(field => {
         this.render_html(field);
       });
-    } else {
-      this.fill("Помилка бази даних");
-    }
+    } else this.fill("Помилка бази даних");
   }
 
   parse_osm(data) {
-    let field = this.filter_osm(data);
+    const field = this.filter_osm(data);
+
     if (field) {
       this.geojson = field.geojson;
-
       this.lon = field.lon;
       this.lat = field.lat;
-
       this.render_map();
     }
   }
@@ -475,7 +462,7 @@ class CountryDetails extends Details {
   render_html(field) {
     this.area = Number(field.areaInSqKm);
 
-    let items = [
+    const items = [
       `Назва країни: ${this.get_flag(field.countryCode)} ${field.countryName}`,
       `Столиця: ${field.capital}`,
       `Код країни: ${field.countryCode}`,
@@ -484,9 +471,11 @@ class CountryDetails extends Details {
       `Материк: ${field.continent} / ${field.continentName}`,
       `Площа: ${this.area.toLocaleString()} км²`
     ];
+
     this.osm_query({
       filter: "country"
     });
+
     this.fill(items.map(item => `<div>${item}</div>`).join(" "));
   }
 }

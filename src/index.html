@@ -2,70 +2,70 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link href="assets/css/mdb.css" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <link href="assets/css/mapbox-gl.css" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/mdb.css">
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+  <link rel="stylesheet" href='assets/css/mapbox-gl.css'>
   <title>Title</title>
 </head>
 
 <body>
-  <div class="container row main-search">
-    <div class="search-input col-md-8">
+
+  <div class="container">
+    <div class="row">
       <div class="loader"></div>
-      <form action="" class="search-form row col-md-11">
+      <form action="" class=" col-md-11 search-form row">
         <input placeholder="Введіть назву географічного об'єкту для пошуку" id="gt" class="col-md-12 m" type="text"
-          name="guide-title" autocomplete="off" />
-        <div class="flex-center-results col-md-12"></div>
+          name="guide-title" autocomplete="off">
+        <div class="flex-center-results col-md-12">
+        </div>
       </form>
     </div>
-
-    <div class="row search-option flex-center-option col-md-4">
-      <div class="col-12 option-label col-sm-7">Критерій пошуку:</div>
-      <div class="btn-group btn-group-toggle col-12 col-sm-5 option-group" data-toggle="">
-        <div id="continents" class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" />
-          <label class="custom-control-label" for="defaultGroupExample1">Континенти</label>
+    <div class="row search-option flex-center-option">
+      <div class="col-12 col-sm-2 option-label">Критерій пошуку:</div>
+      <div class="btn-group btn-group-toggle col-12 col-sm-5 option-group" data-toggle="buttons">
+        <div id="continents" class="custom-control custom-radio btn btn-secondary col option">
+          <input type="radio" class="custom-control-input" id="option1" name="groupOfDefaultRadios">
+          <label class="custom-control-label" for="option1">Материки</label>
         </div>
-
-        <!-- Group of default radios - option 2 -->
-        <div id="countries" class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" />
-          <label class="custom-control-label" for="defaultGroupExample2">Держави</label>
+        <div id="countries" class="custom-control custom-radio btn btn-secondary col option">
+          <input type="radio" class="custom-control-input" id="option2" name="groupOfDefaultRadios" checked>
+          <label class="custom-control-label" for="option2">Країни</label>
         </div>
-
-        <!-- Group of default radios - option 3 -->
-        <div id="subdivisions" class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" />
-          <label class="custom-control-label" for="defaultGroupExample3">Регіони</label>
+        <div id="subdivisions" class="custom-control custom-radio btn btn-secondary col option">
+          <input type="radio" class="custom-control-input" id="option3" name="groupOfDefaultRadios">
+          <label class="custom-control-label" for="option3">Регіони</label>
         </div>
-
-        <div id="cities" class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="groupOfDefaultRadios" />
-          <label id="cities" class="custom-control-label" for="defaultGroupExample4">Міста</label>
+        <div id="cities" class="custom-control custom-radio btn btn-secondary col option">
+          <input type="radio" class="custom-control-input" id="option4" name="groupOfDefaultRadios">
+          <label class="custom-control-label" for="option4"> Міста</label>
         </div>
-        <div id="all" class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios" />
-          <label class="custom-control-label" for="defaultGroupExample5">
-            Загальний пошук</label>
+        <div id="all" class="custom-control custom-radio btn btn-secondary col option active">
+          <input type="radio" class="custom-control-input" id="option5" name="groupOfDefaultRadios">
+          <label class="custom-control-label" for="option5"> Загальний пошук</label>
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="map col-12" style="visibility: hidden;">
-    <div class="search-info  col-md-4">
-    </div>
+    <div class="search-info  col-md-4"></div>
     <div id="mapid" class="col-md-8"></div>
   </div>
+
 </body>
+
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
-
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+<script type="text/javascript" src="assets/js/leaflet.js"></script>
+<script type="text/javascript" src='assets/js/mapbox-gl.js'></script>
+<script type="text/javascript" src="assets/js/core/init.js"></script>
+<script type="text/javascript" src="assets/js/core/main.js"></script>
 
 <!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
 
