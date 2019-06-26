@@ -1,9 +1,11 @@
 const loader = $(".loader");
 
+const input_box = $("#gt");
 const suggestions_box = $(".flex-center-results");
 const map_box = $(".map");
 const search_info = $(".search-info");
 window.category = null;
+window.results_counter = 0;
 
 $(document)
   .ajaxStart(function() {
@@ -21,7 +23,13 @@ $.getJSON(`assets/json/continents-polygon.json`, function(data) {
   window.continents_polygon = data.features;
 });
 
-$("#gt").on("input", function() {
+function hide_suggestions() {
+  suggestions_box.empty();
+  $(".tooltip").remove();
+  input_box.blur();
+}
+
+input_box.on("input", function() {
   window.user_input = $(this).val();
   new SuggestionsQuery(window.user_input);
 });
@@ -32,6 +40,39 @@ $(".custom-control").on("click", function() {
 
 $("#all.custom-control").on("click", function() {
   category = null;
+});
+
+$(document).keydown(function(e) {
+  if ($(".result").length > 0) {
+    const current = $(".result[data-focused=true]");
+    switch (e.which) {
+      case 38: // up
+        if (current.prev().length) {
+          current.attr("data-focused", false);
+          current.prev().attr("data-focused", true);
+        }
+        break;
+
+      case 40: // down
+        if (current.next().length) {
+          current.attr("data-focused", false);
+          current.next().attr("data-focused", true);
+        }
+        break;
+
+      case 27: // escape
+        hide_suggestions();
+        break;
+
+      case 13: // enter
+        current.trigger("click");
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  }
 });
 
 $("body").on("click", ".result", function() {
