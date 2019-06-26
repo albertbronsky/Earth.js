@@ -302,7 +302,8 @@ class Details extends Base {
         else if (this.area < 200000) this.calculated_zoom = 4;
         else if (this.area < 1000000) this.calculated_zoom = 3;
         else if (this.area < 2000000) this.calculated_zoom = 2;
-        else this.calculated_zoom = 3.5;
+        else this.calculated_zoom = 1.5;
+        console.log(this.calculated_zoom);
         break;
       case "continent":
         this.calculated_zoom = 1.5;

@@ -26,7 +26,6 @@ $.getJSON(`assets/json/continents-polygon.json`, function(data) {
 function hide_suggestions() {
   suggestions_box.empty();
   $(".tooltip").remove();
-  input_box.blur();
 }
 
 input_box.on("input", function() {
