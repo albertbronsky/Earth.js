@@ -50,7 +50,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYW5ubWdlcmlhbiIsImEiOiJjandtOTdqZmUwMHFiM3lxa213bTVqc202In0.RPkZsjxRE_EkSelXcm_7og";
 var map = new mapboxgl.Map({
   container: "mapid",
-  style: "mapbox://styles/mapbox/streets-v11"
+  style: "mapbox://styles/mapbox/light-v10"
 });
 
 var size = 200;
