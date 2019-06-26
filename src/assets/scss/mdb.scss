@@ -92,6 +92,11 @@ body {
 
 #gt:focus {
   border-color: #adb5bd !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom: 0 !important;
+  border-top-right-radius: 1.2rem !important;
+  border-top-left-radius: 1.2rem !important;
 }
 
 .custom-select:focus {

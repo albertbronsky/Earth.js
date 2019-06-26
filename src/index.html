@@ -7,7 +7,7 @@
   <meta charset="UTF-8" />
   <link href="assets/css/mapbox-gl.css" rel="stylesheet" />
 
-  <title>Title</title>
+  <title>Довідник географа</title>
 </head>
 
 <body>
@@ -29,13 +29,11 @@
           <label class="custom-control-label" for="defaultGroupExample1">Континенти</label>
         </div>
 
-        <!-- Group of default radios - option 2 -->
         <div id="countries" class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" />
           <label class="custom-control-label" for="defaultGroupExample2">Держави</label>
         </div>
 
-        <!-- Group of default radios - option 3 -->
         <div id="subdivisions" class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" />
           <label class="custom-control-label" for="defaultGroupExample3">Регіони</label>
@@ -45,6 +43,7 @@
           <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="groupOfDefaultRadios" />
           <label id="cities" class="custom-control-label" for="defaultGroupExample4">Міста</label>
         </div>
+
         <div id="all" class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios" />
           <label class="custom-control-label" for="defaultGroupExample5">
@@ -64,7 +63,6 @@
 <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
 
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
 <script type="text/javascript" src="assets/js/mdb.min.js"></script>
 
 <script src="assets/js/leaflet.js"></script>
@@ -72,6 +70,7 @@
 
 <script type="text/javascript" src="assets/js/core/init.js"></script>
 <script type="text/javascript" src="assets/js/core/main.js"></script>
+
 <script>
   flexFont = function () {
     var divs = document.getElementsByClassName("flex-center-results");
@@ -87,17 +86,6 @@
   window.onresize = function (event) {
     flexFont();
   };
-
-  $("#gt").on("input", function () {
-    $(this).css({
-      "border-bottom-right-radius": "0",
-      "border-bottom-left-radius": "0",
-      "border-bottom": "0",
-      "border-top-right-radius": "1.2rem!important",
-      "border-top-left-radius": "1.2rem!important",
-
-    });
-  });
 </script>
 
 </html>
