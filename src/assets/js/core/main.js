@@ -120,12 +120,12 @@ class SuggestionsQuery extends Base {
       case "CONT":
         type = "continent";
         inside = `${flag} ${field.name}`;
-        tooltip = "Материк";
+        tooltip = "Континент";
         break;
       case "PCLI":
         type = "country";
         inside = `${flag} ${field.countryName}`;
-        tooltip = "Країна";
+        tooltip = "Держава";
         name = field.countryName;
         break;
       case "PPL":
@@ -341,7 +341,7 @@ class SubdivisionDetails extends Details {
   render_html(field) {
     const items = [
       `Назва регіону: ${this.name}`,
-      `Код країни: ${this.get_flag(this.code)}${this.code}`,
+      `Код держави: ${this.get_flag(this.code)}${this.code}`,
       `Довгота: ${field.lon}°`,
       `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
@@ -370,7 +370,7 @@ class CityDetails extends Details {
   render_html(field) {
     const items = [
       `Назва міста: ${this.name}`,
-      `Код країни: ${this.get_flag(this.code)}${this.code}`,
+      `Код держави: ${this.get_flag(this.code)}${this.code}`,
       `Довгота: ${field.lon}°`,
       `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
@@ -413,7 +413,7 @@ class ContinentDetails extends Details {
 
   render_html(field) {
     const items = [
-      `Назва материка: ${this.get_flag(this.toponym)} ${this.name}`,
+      `Назва континента: ${this.get_flag(this.toponym)} ${this.name}`,
       `Довгота: ${field.lon}°`,
       `Широта: ${field.lat}°`,
       `Населення: ${Number(this.population).toLocaleString()} осіб`
@@ -465,12 +465,12 @@ class CountryDetails extends Details {
     this.area = Number(field.areaInSqKm);
 
     const items = [
-      `Назва країни: ${this.get_flag(field.countryCode)} ${field.countryName}`,
+      `Назва держави: ${this.get_flag(field.countryCode)} ${field.countryName}`,
       `Столиця: ${field.capital}`,
-      `Код країни: ${field.countryCode}`,
+      `Код держави: ${field.countryCode}`,
       `Населення: ${Number(field.population).toLocaleString()} осіб`,
       `Валюта: ${field.currencyCode}`,
-      `Материк: ${field.continent} / ${field.continentName}`,
+      `Континент: ${field.continent} / ${field.continentName}`,
       `Площа: ${this.area.toLocaleString()} км²`
     ];
 
