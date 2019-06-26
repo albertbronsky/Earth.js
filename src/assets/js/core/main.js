@@ -31,11 +31,6 @@ class Base {
   show_error() {
     alert("Помилка завантаження данних, перевірте підключення до Інтернету");
   }
-
-  hide_suggestions() {
-    suggestions_box.empty();
-    $(".tooltip").remove();
-  }
 }
 
 class SuggestionsQuery extends Base {
@@ -45,7 +40,7 @@ class SuggestionsQuery extends Base {
     if (this.term.match(/^[А-Яа-яёЁЇїІіЄєҐґʼ-]+$/)) {
       this.build_query();
     } else {
-      this.hide_suggestions();
+      hide_suggestions();
     }
   }
 
@@ -91,17 +86,20 @@ class SuggestionsQuery extends Base {
         fcodes: this.fcodes
       });
     } else {
-      this.hide_suggestions();
+      hide_suggestions();
     }
   }
 
   fill(content) {
-    this.hide_suggestions();
+    hide_suggestions();
     suggestions_box.html(content);
     $(".result").tooltip();
+    window.results_counter = 0;
   }
 
   render_html(field) {
+    window.results_counter++;
+
     let flag;
 
     if (field.fcode === "CONT") {
@@ -144,8 +142,17 @@ class SuggestionsQuery extends Base {
         break;
     }
 
+    function check_first() {
+      if (window.results_counter === 1) {
+        return "data-focused=true";
+      } else {
+        return "data-focused=false";
+      }
+    }
+
     return (
       '<div class="result list-group-item list-group-item-action" data-placement="left" ' +
+      `${check_first()} ` +
       `data-type="${type}" ` +
       `data-name="${name}" ` +
       `data-country="${country}" ` +
@@ -208,7 +215,7 @@ class Details extends Base {
   }
 
   fill(content) {
-    this.hide_suggestions();
+    hide_suggestions();
     search_info.html(content);
     this.show_map();
   }
@@ -295,7 +302,7 @@ class Details extends Base {
         else if (this.area < 200000) this.calculated_zoom = 4;
         else if (this.area < 1000000) this.calculated_zoom = 3;
         else if (this.area < 2000000) this.calculated_zoom = 2;
-        else this.calculated_zoom = 3.5;
+        else this.calculated_zoom = 1.5;
         break;
       case "continent":
         this.calculated_zoom = 1.5;
