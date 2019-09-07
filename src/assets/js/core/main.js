@@ -11,7 +11,7 @@ class Base {
     $.ajax({
       context: this,
       type: "GET",
-      data: `username=zen&lang=${lang}&${filter}=${term}${args}${fcodes}`,
+      data: `username=annmgerian&lang=${lang}&${filter}=${term}${args}${fcodes}`,
       url: `http://api.geonames.org/${service}?`,
       success: function(data) {
         if ((input && this.term === window.user_input) || !input) {
